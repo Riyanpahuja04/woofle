@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+class User: Codable {
+    var id: UUID
+    var name: String
+    var currGoal: String
+    var pastGoals: [String?]
+}

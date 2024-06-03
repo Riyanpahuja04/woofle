@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+class Goal: Codable {
+    var id: UUID
+    var statement: String
+    var activities: [String]
+}
