@@ -32,6 +32,8 @@ struct goalInputScreen: View {
     @State private var backgroundMaskColor: Color = Color(red: 255/255, green: 253/255, blue: 248/255)
     @State private var showHelp: Bool = false
     
+    
+    
     func currentButtonColor() -> Color {
         if !userInputText.isEmpty && userInputText.count < 61 {
             
@@ -74,6 +76,8 @@ struct goalInputScreen: View {
     }
     
     var body: some View {
+        
+        ZStack {
             
             VStack {
                 
@@ -90,7 +94,7 @@ struct goalInputScreen: View {
                                 withAnimation(.easeInOut(duration: 0.3)) {
                                     enableBackgroundMask()
                                     showHelp.toggle()
-                                                    }
+                                }
                             }
                         }
                 }
@@ -162,7 +166,7 @@ struct goalInputScreen: View {
                             // Else; Try Again and show Error
                             
                         }
-
+                        
                     }
                     .frame(minWidth: 160, maxWidth: .infinity)
                     .padding(.horizontal, 25)
@@ -195,41 +199,45 @@ struct goalInputScreen: View {
             
             if showHelp {
                 VStack {
-                        Text("What you want to discover?").font(.system(size: CGFloat(18))).bold()
-                            .foregroundColor(Color(red: 0.16, green: 0.16, blue: 0.21))
-                            .padding(.bottom, 10)
-                            .padding(.top, 30)
-                        
-                        Text("What are the things you have wanted to try for so long but have not put into practice? \nWe encourage you to log in your goal and discover new experience by stepping out of the comfort zone. \nEnjoy your discovery journey!")
-                            .font(.system(size: CGFloat(16)))
-                            .foregroundColor(Color(red: 0.16, green: 0.16, blue: 0.21))
-                            .padding(.horizontal, 40)
-                        
-                        Button("Got It!") {
-                            withAnimation(.easeInOut(duration: 0.3)) {
-                                disableBackgroundMask()
-                                showHelp.toggle()
-                            }
-                            
-                        }
-                        .foregroundColor(.white)
-                        .bold()
-                        .padding(.vertical, 10)
+                    Text("What you want to discover?").font(.system(size: CGFloat(18))).bold()
+                        .foregroundColor(Color(red: 0.16, green: 0.16, blue: 0.21))
+                        .padding(.bottom, 10)
+                        .padding(.top, 30)
+                    
+                    Text("What are the things you have wanted to try for so long but have not put into practice? \nWe encourage you to log in your goal and discover new experience by stepping out of the comfort zone. \nEnjoy your discovery journey!")
+                        .font(.system(size: CGFloat(16)))
+                        .foregroundColor(Color(red: 0.16, green: 0.16, blue: 0.21))
                         .padding(.horizontal, 40)
-                        .background(_orangeColor)
-                        .cornerRadius(10)
-                        .padding()
                     
-                        Spacer().frame(height: 20)
-                    
+                    Button("Got It!") {
+                        withAnimation(.easeInOut(duration: 0.3)) {
+                            disableBackgroundMask()
+                            showHelp.toggle()
+                        }
+                        
                     }
+                    .foregroundColor(.white)
+                    .bold()
+                    .padding(.vertical, 10)
+                    .padding(.horizontal, 40)
+                    .background(_orangeColor)
+                    .cornerRadius(10)
+                    .padding()
+                    
+                    Spacer().frame(height: 20)
+                    
+                }
                 
                 .frame(minWidth: 200, maxWidth: 300)
                 .background(.white)
                 .cornerRadius(20)
                 .padding()
-                }
+            }
+            
         }
+        
+    }
+    
 }
 
 
