@@ -11,7 +11,7 @@ import SwiftUI
 struct woofleApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            goalInputScreen()
         }
     }
 }

@@ -198,29 +198,23 @@ struct goalInputScreen: View {
             .background(backgroundMaskColor)
             
             if showHelp {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 20)
-                        .padding(.horizontal, 60)
-                        .padding(.vertical, 220)
-                        .foregroundColor(.white)
-                        .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
-                        
-                        
-                    VStack {
+                VStack {
                         Text("What you want to discover?").font(.system(size: CGFloat(18))).bold()
                             .foregroundColor(Color(red: 0.16, green: 0.16, blue: 0.21))
-                            .padding(.vertical, 10)
+                            .padding(.bottom, 10)
+                            .padding(.top, 30)
                         
                         Text("What are the things you have wanted to try for so long but have not put into practice? \nWe encourage you to log in your goal and discover new experience by stepping out of the comfort zone. \nEnjoy your discovery journey!")
                             .font(.system(size: CGFloat(16)))
                             .foregroundColor(Color(red: 0.16, green: 0.16, blue: 0.21))
-                            .padding(.horizontal, 80)
+                            .padding(.horizontal, 40)
                         
                         Button("Got It!") {
                             withAnimation(.easeInOut(duration: 0.3)) {
                                 disableBackgroundMask()
                                 showHelp.toggle()
                             }
+                            
                         }
                         .foregroundColor(.white)
                         .bold()
@@ -229,10 +223,17 @@ struct goalInputScreen: View {
                         .background(_orangeColor)
                         .cornerRadius(10)
                         .padding()
-                    }
                     
+                        Spacer().frame(height: 20)
+                    
+                    }
+                
+                .frame(minWidth: 200, maxWidth: 300)
+                .background(.white)
+                .cornerRadius(20)
+                .padding()
                 }
-            }
+
         }
         
     }
