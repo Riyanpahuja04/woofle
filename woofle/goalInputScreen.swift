@@ -183,7 +183,7 @@ struct goalInputScreen: View {
                     
                 } 
                 .padding(.bottom, 20)
-                // END Submit Button HStack
+                // END Submit Button HStack 
                 
                 HStack(alignment: .center) {
                     Circle().fixedSize().foregroundColor(_buttonGrey)
