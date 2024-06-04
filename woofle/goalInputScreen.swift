@@ -16,10 +16,21 @@ struct goalInputScreen: View {
     private let _defaultBackgroundColor: Color = Color(red: 255/255, green: 253/255, blue: 248/255)
     // END TEMP COLORS
     
+    // Temp Strings for Random Goal Selection
+    private let _randomGoals: [String] = [
+        "Play 'stand by me' using basic chords on the guitar",
+        "Learn how to program in Swift",
+        "I need to learn how to swim",
+        "Attend local book club once a month"
+    ]
+    // END TEMP STRINGS
+    
     @State private var userInputText: String = ""
     @State private var opacityMaskValue: Double = 1
     @State private var backgroundMaskColor: Color = Color(red: 255/255, green: 253/255, blue: 248/255)
     @State private var showHelp: Bool = false
+    
+    
     
     func currentButtonColor() -> Color {
         if !userInputText.isEmpty && userInputText.count < 61 {
@@ -78,8 +89,10 @@ struct goalInputScreen: View {
                         .padding(.horizontal, 30)
                         .onTapGesture {
                             if !showHelp {
-                                enableBackgroundMask()
-                                showHelp.toggle()
+                                withAnimation(.easeInOut(duration: 0.3)) {
+                                    enableBackgroundMask()
+                                    showHelp.toggle()
+                                                    }
                             }
                         }
                 }
@@ -111,6 +124,13 @@ struct goalInputScreen: View {
                         .font(.title)
                         .padding(.trailing, 30.0)
                         .padding(.leading, 5)
+                        .onTapGesture {
+                            
+                            // TODO: Link to API when Implemented to Fetch Random Goal
+                            // Until Then, RETURN from a preset list of locally defined temp strings.
+                            
+                            userInputText = _randomGoals.randomElement() ?? "Unable to retrieve random goal"
+                        }
                     
                     
                 } // END Text Input and Dice Button HStack
@@ -134,7 +154,7 @@ struct goalInputScreen: View {
                     Button("Submit")
                     {
                         
-                        if !userInputText.isEmpty {
+                        if !userInputText.isEmpty && !showHelp {
                             
                             // Function Call to Backend
                             // Networking with ChatGPT, if prompt is compatable, return true
@@ -187,8 +207,10 @@ struct goalInputScreen: View {
                             .padding(.horizontal, 80)
                         
                         Button("Got It!") {
-                            disableBackgroundMask()
-                            showHelp.toggle()
+                            withAnimation(.easeInOut(duration: 0.3)) {
+                                disableBackgroundMask()
+                                showHelp.toggle()
+                            }
                         }
                         .foregroundColor(.white)
                         .bold()
@@ -199,7 +221,7 @@ struct goalInputScreen: View {
                         .padding()
                     }
                     
-                }.animation(.easeIn, value: showHelp)
+                }
             }
         }
         
