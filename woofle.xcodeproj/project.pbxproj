@@ -20,6 +20,7 @@
 		B3A8DCB02C0D635A00ED5B9A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DCAF2C0D635A00ED5B9A /* User.swift */; };
 		B3A8DCB22C0D63B200ED5B9A /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DCB12C0D63B200ED5B9A /* Goal.swift */; };
 		B3A8DCB42C0D641400ED5B9A /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DCB32C0D641400ED5B9A /* Activity.swift */; };
+		B3A8DCB72C0D662100ED5B9A /* ActivitySelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DCB62C0D662100ED5B9A /* ActivitySelection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		B3A8DCAF2C0D635A00ED5B9A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B3A8DCB12C0D63B200ED5B9A /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		B3A8DCB32C0D641400ED5B9A /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		B3A8DCB62C0D662100ED5B9A /* ActivitySelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySelection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 		B3A8DCA82C0D54A400ED5B9A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B3A8DCB52C0D65FD00ED5B9A /* activity */,
 				B3A8DC7C2C08095400ED5B9A /* ContentView.swift */,
 			);
 			path = View;
@@ -167,6 +170,14 @@
 				B3A8DCAB2C0D555000ED5B9A /* SampleSwiftController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		B3A8DCB52C0D65FD00ED5B9A /* activity */ = {
+			isa = PBXGroup;
+			children = (
+				B3A8DCB62C0D662100ED5B9A /* ActivitySelection.swift */,
+			);
+			path = activity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +316,7 @@
 				B3A8DCB42C0D641400ED5B9A /* Activity.swift in Sources */,
 				B3A8DC7B2C08095400ED5B9A /* woofleApp.swift in Sources */,
 				B3A8DCB02C0D635A00ED5B9A /* User.swift in Sources */,
+				B3A8DCB72C0D662100ED5B9A /* ActivitySelection.swift in Sources */,
 				B3A8DCB22C0D63B200ED5B9A /* Goal.swift in Sources */,
 				B3A8DCAC2C0D555000ED5B9A /* SampleSwiftController.swift in Sources */,
 			);
