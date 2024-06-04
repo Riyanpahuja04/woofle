@@ -32,8 +32,6 @@ struct goalInputScreen: View {
     @State private var backgroundMaskColor: Color = Color(red: 255/255, green: 253/255, blue: 248/255)
     @State private var showHelp: Bool = false
     
-    
-    
     func currentButtonColor() -> Color {
         if !userInputText.isEmpty && userInputText.count < 61 {
             
@@ -76,8 +74,6 @@ struct goalInputScreen: View {
     }
     
     var body: some View {
-        
-        ZStack {
             
             VStack {
                 
@@ -233,11 +229,7 @@ struct goalInputScreen: View {
                 .cornerRadius(20)
                 .padding()
                 }
-
         }
-        
-    }
-    
 }
 
 
