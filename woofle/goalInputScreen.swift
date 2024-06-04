@@ -14,6 +14,8 @@ struct goalInputScreen: View {
     private let _grayColor: Color = (Color(red: 189/255, green: 189/255, blue: 189/255))
     private let _orangeColor: Color = (Color(red: 255/255, green: 157/255, blue: 74/255))
     private let _defaultBackgroundColor: Color = Color(red: 255/255, green: 253/255, blue: 248/255)
+    private let _buttonGrey: Color = Color(red: 225/255, green: 225/255, blue: 225/255)
+    private let _currentPageIndicatorColor: Color = Color(red: 75/255, green: 134/255, blue: 131/255)
     // END TEMP COLORS
     
     // Temp Strings for Random Goal Selection
@@ -179,7 +181,15 @@ struct goalInputScreen: View {
                     
                     Spacer().frame(minWidth: 0, maxWidth: 25)
                     
-                } // END Submit Button HStack
+                } 
+                .padding(.bottom, 20)
+                // END Submit Button HStack
+                
+                HStack(alignment: .center) {
+                    Circle().fixedSize().foregroundColor(_buttonGrey)
+                    Circle().fixedSize().foregroundColor(_buttonGrey)
+                    Circle().fixedSize().foregroundColor(_currentPageIndicatorColor)
+                }.padding(.bottom, 10)
                 
             }
             // Opacity Mask for Info Menu
