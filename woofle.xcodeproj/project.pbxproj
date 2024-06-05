@@ -15,6 +15,8 @@
 		B3A8DC8C2C08095600ED5B9A /* woofleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DC8B2C08095600ED5B9A /* woofleTests.swift */; };
 		B3A8DC962C08095600ED5B9A /* woofleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DC952C08095600ED5B9A /* woofleUITests.swift */; };
 		B3A8DC982C08095600ED5B9A /* woofleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DC972C08095600ED5B9A /* woofleUITestsLaunchTests.swift */; };
+		B3A8DCAC2C0D555000ED5B9A /* SampleSwiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DCAB2C0D555000ED5B9A /* SampleSwiftController.swift */; };
+		B3A8DCAE2C0D556100ED5B9A /* SampleSwiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DCAD2C0D556100ED5B9A /* SampleSwiftModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		B3A8DC912C08095600ED5B9A /* woofleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = woofleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3A8DC952C08095600ED5B9A /* woofleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = woofleUITests.swift; sourceTree = "<group>"; };
 		B3A8DC972C08095600ED5B9A /* woofleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = woofleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B3A8DCAB2C0D555000ED5B9A /* SampleSwiftController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSwiftController.swift; sourceTree = "<group>"; };
+		B3A8DCAD2C0D556100ED5B9A /* SampleSwiftModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSwiftModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +100,10 @@
 		B3A8DC792C08095400ED5B9A /* woofle */ = {
 			isa = PBXGroup;
 			children = (
+				B3A8DCAA2C0D54C200ED5B9A /* Controller */,
+				B3A8DCA92C0D54BB00ED5B9A /* Model */,
+				B3A8DCA82C0D54A400ED5B9A /* View */,
 				B3A8DC7A2C08095400ED5B9A /* woofleApp.swift */,
-				B3A8DC7C2C08095400ED5B9A /* ContentView.swift */,
 				B3A8DC7E2C08095500ED5B9A /* Assets.xcassets */,
 				B3A8DC802C08095500ED5B9A /* Preview Content */,
 				88C425F02C0E904800ADECAD /* goalInputScreen.swift */,
@@ -128,6 +134,30 @@
 				B3A8DC972C08095600ED5B9A /* woofleUITestsLaunchTests.swift */,
 			);
 			path = woofleUITests;
+			sourceTree = "<group>";
+		};
+		B3A8DCA82C0D54A400ED5B9A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B3A8DC7C2C08095400ED5B9A /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B3A8DCA92C0D54BB00ED5B9A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B3A8DCAD2C0D556100ED5B9A /* SampleSwiftModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B3A8DCAA2C0D54C200ED5B9A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B3A8DCAB2C0D555000ED5B9A /* SampleSwiftController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +292,9 @@
 			files = (
 				B3A8DC7D2C08095400ED5B9A /* ContentView.swift in Sources */,
 				88C425F12C0E904800ADECAD /* goalInputScreen.swift in Sources */,
+				B3A8DCAE2C0D556100ED5B9A /* SampleSwiftModel.swift in Sources */,
 				B3A8DC7B2C08095400ED5B9A /* woofleApp.swift in Sources */,
+				B3A8DCAC2C0D555000ED5B9A /* SampleSwiftController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
