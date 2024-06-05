@@ -11,7 +11,6 @@ struct whyDownloadScreen: View {
     
     @State private var opacityMaskValue: Double = 1
     @State private var backgroundMaskColor: Color = Color(red: 255/255, green: 253/255, blue: 248/255)
-    @State private var userSelectedAny: Bool = false
     @State private var showHelp: Bool = false
     @State private var selectedButtonState: [String: Bool] = ["Vibing": false, "Personal Growth": false, "Discover New Experience": false, "Fun": false, "Overcome My Fear": false]
     
@@ -70,6 +69,7 @@ struct whyDownloadScreen: View {
                                     selectedButtonState["Vibing"]?.toggle()
                                 }
                             }
+                            .padding(.horizontal, 5)
                         
                         Text("+ Personal Growth")
                             .font(.system(size: 17))
@@ -84,7 +84,7 @@ struct whyDownloadScreen: View {
                                     selectedButtonState["Personal Growth"]?.toggle()
                                 }
                             }
-                        
+                            .padding(.horizontal, 5)
                     }
                     
                     HStack {
@@ -102,7 +102,7 @@ struct whyDownloadScreen: View {
                                     selectedButtonState["Discover New Experience"]?.toggle()
                                 }
                             }
-                        
+                            .padding(5)
                     }
                     
                     HStack {
@@ -120,6 +120,7 @@ struct whyDownloadScreen: View {
                                     selectedButtonState["Fun"]?.toggle()
                                 }
                             }
+                            .padding(.horizontal, 5)
                         
                         Text("+ Overcome My Fear")
                             .font(.system(size: 17))
@@ -134,8 +135,8 @@ struct whyDownloadScreen: View {
                                     selectedButtonState["Overcome My Fear"]?.toggle()
                                 }
                             }
-                        
                     }
+                    .padding(.horizontal, 5)
                     
                 }
                 
@@ -147,19 +148,26 @@ struct whyDownloadScreen: View {
                     
                     Spacer().frame(minWidth: 0, maxWidth: 25)
                     
-                    Button(currentButtonText())
+                    Button("Submit")
                     {
                         
-                        //TODO: Submit Selected Values to API for Data Collection
-                        
-                        // TODO: On non-error return from API, switch current scene to WhyDownloadScreen()
+                        if selectedButtonState.values.contains(true) {
+                            
+                            
+                            // TODO: Submit Selected Values to API for Data Collection
+                            
+                            // TODO: On non-error return from API, switch current scene to WhyDownloadScreen()
+                            
+                        }
+
+                        // Else, Do Nothing
                         
                     }
                     .frame(minWidth: 160, maxWidth: .infinity)
                     .padding(.horizontal, 25)
                     .padding(.vertical, 14)
                     .foregroundColor(.white)
-                    .background(_orangeColor)
+                    .background(currentButtonColor())
                     .font(.system(size: 16))
                     .fontWeight(.semibold)
                     .cornerRadius(8)
@@ -238,16 +246,6 @@ struct whyDownloadScreen: View {
     private let _selectedButtonColor: Color = Color(red: 0.43, green: 0.6, blue: 0.59)
     // END TEMP COLORS
     
-    func currentButtonText() -> String {
-        
-        if userSelectedAny
-        { return "Submit" }
-        
-        else
-        { return "Skip" }
-        
-    }
-    
     func enableBackgroundMask() {
         backgroundMaskColor = _grayColor
         opacityMaskValue = 0.19
@@ -265,6 +263,16 @@ struct whyDownloadScreen: View {
         
         else
         { return _unselectedButtonColor }
+        
+    }
+    
+    func currentButtonColor() -> Color {
+        
+        if selectedButtonState.values.contains(true)
+        { return _orangeColor }
+        
+        else 
+        { return _grayColor }
         
     }
     
