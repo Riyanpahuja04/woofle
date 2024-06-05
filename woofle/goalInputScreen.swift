@@ -9,71 +9,10 @@ import SwiftUI
 
 struct goalInputScreen: View {
     
-    
-    // Temp colors until global color variables are made (just for my reference)
-    private let _grayColor: Color = (Color(red: 189/255, green: 189/255, blue: 189/255))
-    private let _orangeColor: Color = (Color(red: 255/255, green: 157/255, blue: 74/255))
-    private let _defaultBackgroundColor: Color = Color(red: 255/255, green: 253/255, blue: 248/255)
-    private let _buttonGrey: Color = Color(red: 225/255, green: 225/255, blue: 225/255)
-    private let _currentPageIndicatorColor: Color = Color(red: 75/255, green: 134/255, blue: 131/255)
-    // END TEMP COLORS
-    
-    // Temp Strings for Random Goal Selection
-    private let _randomGoals: [String] = [
-        "Play 'stand by me' using basic chords on the guitar",
-        "Learn how to program in Swift",
-        "I need to learn how to swim",
-        "Attend local book club once a month"
-    ]
-    // END TEMP STRINGS
-    
     @State private var userInputText: String = ""
     @State private var opacityMaskValue: Double = 1
     @State private var backgroundMaskColor: Color = Color(red: 255/255, green: 253/255, blue: 248/255)
     @State private var showHelp: Bool = false
-    
-    
-    
-    func currentButtonColor() -> Color {
-        if !userInputText.isEmpty && userInputText.count < 61 {
-            
-            return _orangeColor
-            
-            // Function Call to Backend
-            // Networking with ChatGPT, if prompt is compatable, return true
-            
-            // If Return Value == True
-            // Switch to next page
-            // Else; Try Again and show Error
-            
-        }
-        
-        else {
-            return _grayColor
-        }
-    }
-    
-    func characterCounterColor() -> Color {
-        
-        if userInputText.count > 60 {
-            return .red
-        }
-        
-        else {
-            return .black
-        }
-        
-    }
-    
-    func enableBackgroundMask() {
-        backgroundMaskColor = _grayColor
-        opacityMaskValue = 0.19
-    }
-    
-    func disableBackgroundMask() {
-        backgroundMaskColor = _defaultBackgroundColor
-        opacityMaskValue = 1
-    }
     
     var body: some View {
         
@@ -200,7 +139,7 @@ struct goalInputScreen: View {
             if showHelp {
                 VStack {
                     Text("What you want to discover?").font(.system(size: CGFloat(18))).bold()
-                        .foregroundColor(Color(red: 0.16, green: 0.16, blue: 0.21))
+                        .foregroundColor(_helpScreenTextColor)
                         .padding(.bottom, 10)
                         .padding(.top, 30)
                     
@@ -236,6 +175,65 @@ struct goalInputScreen: View {
             
         }
         
+    }
+    
+    // Temp colors until global color variables are made (just for my reference)
+    private let _grayColor: Color = (Color(red: 189/255, green: 189/255, blue: 189/255))
+    private let _orangeColor: Color = (Color(red: 255/255, green: 157/255, blue: 74/255))
+    private let _defaultBackgroundColor: Color = Color(red: 255/255, green: 253/255, blue: 248/255)
+    private let _buttonGrey: Color = Color(red: 225/255, green: 225/255, blue: 225/255)
+    private let _currentPageIndicatorColor: Color = Color(red: 75/255, green: 134/255, blue: 131/255)
+    private let _helpScreenTextColor: Color = Color(red: 0.16, green: 0.16, blue: 0.21)
+    // END TEMP COLORS
+    
+    // Temp Strings for Random Goal Selection
+    private let _randomGoals: [String] = [
+        "Play 'stand by me' using basic chords on the guitar",
+        "Learn how to program in Swift",
+        "I need to learn how to swim",
+        "Attend local book club once a month"
+    ]
+    // END TEMP STRINGS
+    
+    func currentButtonColor() -> Color {
+        if !userInputText.isEmpty && userInputText.count < 61 {
+            
+            return _orangeColor
+            
+            // Function Call to Backend
+            // Networking with ChatGPT, if prompt is compatable, return true
+            
+            // If Return Value == True
+            // Switch to next page
+            // Else; Try Again and show Error
+            
+        }
+        
+        else {
+            return _grayColor
+        }
+    }
+    
+    func characterCounterColor() -> Color {
+        
+        if userInputText.count > 60 {
+            return .red
+        }
+        
+        else {
+            return .black
+        }
+        
+    }
+    
+    func enableBackgroundMask() {
+        backgroundMaskColor = _grayColor
+        opacityMaskValue = 0.19
+    }
+    
+    func disableBackgroundMask() {
+        backgroundMaskColor = _defaultBackgroundColor
+        opacityMaskValue = 1
     }
     
 }
