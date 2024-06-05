@@ -7,10 +7,15 @@
 
 import SwiftUI
 
-struct ActivitySelectionButton: View {
+struct ActivitySelectionCard: View {
     var task: String
     var description: String
     @Binding var selectedTask: String?
+    
+    let _taskColor: Color = Color(red: 0.09, green: 0.09, blue: 0.09)
+    let _teal: Color = Color(red: 0.43, green: 0.6, blue: 0.59)
+    let _descriptionColor: Color = Color(red: 0.16, green: 0.16, blue: 0.22)
+    
     var body: some View {
         VStack(spacing: 0) {
             Button(action: {
@@ -27,14 +32,14 @@ struct ActivitySelectionButton: View {
                     )
                     .fontWeight(.medium)
                     .multilineTextAlignment(.center)
-                    .foregroundColor(isSelectedTask() ? Color.white : Color(red: 0.09, green: 0.09, blue: 0.09))
+                    .foregroundColor(isSelectedTask() ? Color.white : _taskColor)
                     .padding()
                     .frame(maxWidth: .infinity)
-                    .background(isSelectedTask() ? Color(red: 0.43, green: 0.6, blue: 0.59) : Color.clear)
+                    .background(isSelectedTask() ? _teal  : Color.clear)
             }
             .overlay(
                 Rectangle()
-                    .stroke(Color(red: 0.43, green: 0.6, blue: 0.59), lineWidth: 1)
+                    .stroke(_teal, lineWidth: 1)
                 
             )
             .cornerRadiusCustom(10, corners: isSelectedTask() ? [.topLeft, .topRight] : .allCorners)
@@ -43,17 +48,17 @@ struct ActivitySelectionButton: View {
             if(selectedTask == task) {
                 Text(description)
                     .font(
-                    Font.custom("SF Pro", size: 15)
-                    .weight(.medium)
+                        Font.system(size: 15)
                     )
-                    .foregroundStyle(Color(red: 0.16, green: 0.16, blue: 0.22))
+                    .fontWeight(.medium)
+                    .foregroundStyle(_descriptionColor)
                     .frame(maxWidth: .infinity, minHeight: 90)
                     .padding(.horizontal, 23)
                     .padding(.vertical, 20)
                     .background(.white)
                     .overlay(
                         Rectangle()
-                            .stroke(Color(UIColor.systemTeal), lineWidth: 1)
+                            .stroke(_teal, lineWidth: 1)
                     )
                     .cornerRadiusCustom(10, corners: [.bottomLeft, .bottomRight])
                     .padding(.horizontal, 50)
@@ -94,5 +99,5 @@ extension View {
 }
 
 #Preview {
-    ActivitySelectionButton(task: "Learn Basic Chords", description: "The four most common guitar chords are E-Minor, C, G and D. Youtube Tutorials would be a good place to start!", selectedTask: .constant("Learn Basic Chords"))
+    ActivitySelectionCard(task: "Learn Basic Chords", description: "The four most common guitar chords are E-Minor, C, G and D. Youtube Tutorials would be a good place to start!", selectedTask: .constant("Learn Basic Chords"))
 }
