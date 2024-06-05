@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		88C425F12C0E904800ADECAD /* goalInputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C425F02C0E904800ADECAD /* goalInputScreen.swift */; };
+		B39B7CB52C0E9822000B9089 /* ActivitySelectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39B7CB42C0E9822000B9089 /* ActivitySelectionButton.swift */; };
 		B3A8DC7B2C08095400ED5B9A /* woofleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DC7A2C08095400ED5B9A /* woofleApp.swift */; };
 		B3A8DC7D2C08095400ED5B9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DC7C2C08095400ED5B9A /* ContentView.swift */; };
 		B3A8DC7F2C08095500ED5B9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3A8DC7E2C08095500ED5B9A /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		88C425F02C0E904800ADECAD /* goalInputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalInputScreen.swift; sourceTree = "<group>"; };
+		B39B7CB42C0E9822000B9089 /* ActivitySelectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySelectionButton.swift; sourceTree = "<group>"; };
 		B3A8DC772C08095400ED5B9A /* woofle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = woofle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3A8DC7A2C08095400ED5B9A /* woofleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = woofleApp.swift; sourceTree = "<group>"; };
 		B3A8DC7C2C08095400ED5B9A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				B3A8DCB62C0D662100ED5B9A /* ActivitySelection.swift */,
+				B39B7CB42C0E9822000B9089 /* ActivitySelectionButton.swift */,
 			);
 			path = activity;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				B3A8DCB02C0D635A00ED5B9A /* User.swift in Sources */,
 				B3A8DCB72C0D662100ED5B9A /* ActivitySelection.swift in Sources */,
 				B3A8DCB22C0D63B200ED5B9A /* Goal.swift in Sources */,
+				B39B7CB52C0E9822000B9089 /* ActivitySelectionButton.swift in Sources */,
 				B3A8DCAC2C0D555000ED5B9A /* SampleSwiftController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

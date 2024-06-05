@@ -1,93 +1,130 @@
-//
-//  ActivitySelection.swift
-//  woofle
-//
-//  Created by Riyan Pahuja on 3/6/2024.
-//
-
 import SwiftUI
 
 struct ActivitySelection: View {
+    @State private var selectedTask: String?
+    @State private var isSpinning: Bool = false
     // TODO: fetch api data to show
     var body: some View {
-        ZStack {
-            Image("ActivitySelectionBg")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-            
-            VStack(spacing: 5) {
-                // TODO: populate data from api
-                Text("Level 0")
-                    .font( .title)
-                    .fontWeight(.bold)
-                    .foregroundStyle(Color(red: 71 / 255, green: 75 / 255, blue: 109 / 255))
+        ScrollView {
+            ZStack {
+                Image("TopBgActivity")
+                    .resizable()
+                    .scaledToFill()
                 
-                
-                // TODO: populate data from api
-                Text("Playing “Stand By Me” Using Basic Chords On Guitar")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                    .foregroundStyle(Color(red: 40 / 255, green: 42 / 255, blue: 55 / 255))
-                    .padding(.horizontal, 50)
-                    .multilineTextAlignment(.center)
-                
-                Text("Let's break it down!")
-                    .font(.title3)
-                    .foregroundStyle(Color(red: 23 / 255, green: 23 / 255, blue: 23 / 255))
-                    .fontWeight(.medium)
-                
-                HStack {
-                    Text("Select Your Activity")
-                        .foregroundStyle(Color(red: 174 / 255, green: 169 / 255, blue: 169 / 255))
-                    .fontWeight(.regular)
-                    .padding(.leading, 120)
-                    .padding(.trailing, 35)
-                    
-                    
-                    // TODO: Add tappable functionality
-                    Button(action: {}) {
-                        Image(systemName: "arrow.triangle.2.circlepath")
-                            .padding(.trailing, 50)
-                            .foregroundStyle(Color(red: 71 / 255, green: 75 / 255, blue: 109 / 255))
+                VStack(spacing: 5) {
+                    // TODO: populate data from api
+                    VStack(alignment:.leading, spacing: 7) {
+                        Text("Playing “Stand By Me” Using Basic Chords On Guitar")
+                            .font(.system(size: 20))
+                            .fontWeight(.medium)
+                            .foregroundStyle(Color(red: 1, green: 0.99, blue: 0.95))
+                        
+                        
+                        // TODO: populate data from api
+                        Text("What activity you want to do?")
+                            .font(.system(size: 35))
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color(red: 0.28, green: 0.29, blue: 0.43))
                     }
-                }
-                
-                Spacer()
-                
-                ForEach(0..<3) { el in
+                    .padding(.horizontal, 60)
+                    
+                    
+                    Spacer()
+                    
+                    VStack {
+                        Text("LEVEL 0")
+                            .font(.system(size: 24)
+                            )
+                            .fontWeight(.semibold)
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(Color(red: 0.28, green: 0.29, blue: 0.43))
+                            .padding(.bottom, 30)
+                        ForEach(sample.indices, id: \.self) { index in
+                            ActivitySelectionButton(
+                                task: sample[index]["task"]!,
+                                description: sample[index]["description"]!,
+                                selectedTask: $selectedTask
+                            )
+                        }
+                    }
+                    
+                    Spacer()
+                    
+                    HStack(spacing: 2) {
+                        Text("Don’t like these options?")
+                            .font(.system(size: 15))
+                            .multilineTextAlignment(.center)
+                            .foregroundStyle(Color(red: 0.09, green: 0.09, blue: 0.09))
+                        
+                        
+                        Button(action: {
+                            isSpinning.toggle()
+                        }) {
+                            HStack(spacing: 2) {
+                                Text("Refresh now")
+                                    .font(
+                                        Font.custom("SF Pro", size: 15)
+                                            .weight(.medium)
+                                    )
+                                    .multilineTextAlignment(.center)
+                                    .foregroundStyle(Color(red: 0.43, green: 0.6, blue: 0.59))
+                                
+                                Image(systemName: "arrow.triangle.2.circlepath")
+                                    .foregroundStyle(Color(red: 0.43, green: 0.6, blue: 0.59))
+                                    .rotationEffect(.degrees(isSpinning ? 360 : 0))
+                                    .animation(Animation.linear(duration: 1).repeatCount(1, autoreverses: false), value: isSpinning)
+                                
+                                
+                            }
+                            
+                        }
+                    }
+                    .padding(.bottom, 30)
+                    
                     Button(action: {}) {
                         // TODO: Add tappable functionality
-                        Text("Update Profile Picture")
-                            .padding()
+                        Text("Submit")
+                            .font(
+                                Font.custom("SF Pro", size: 16)
+                                    .weight(.semibold)
+                            )
+                            .foregroundStyle(.white)
                             .frame(maxWidth: .infinity)
-                            .background(Color(red: 217/255, green: 217/255, blue: 217/255))
-                            .foregroundColor(Color(red: 40/255, green: 42/255, blue: 55/255))
-                            .cornerRadius(8)
+                            .padding(.vertical, 14)
+                            .padding(.horizontal, 25)
+                            .background(Color(red: 1, green: 0.62, blue: 0.29))
+                            .foregroundStyle(Color(red: 40/255, green: 42/255, blue: 55/255))
                     }
-                    .padding(.horizontal, 50)
-                    .padding(.bottom)
-                }
-                
-                Spacer()
-                
-                Button(action: {}) {
-                    // TODO: Add tappable functionality
-                    Text("Accept")
-                        .padding(.all, 35)
-                        .foregroundStyle(Color(red: 40/255, green: 42/255, blue: 55/255))
-                        .background(Color(red: 217/255, green: 217/255, blue: 217/255))
-                        
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .shadow(color: .black.opacity(0.05), radius: 1, x: 0, y: 1)
+                    .padding(.horizontal, 25)
                     
+                    Spacer()
                 }
-                .clipShape(Circle())
-                
-               Spacer()
+                .safeAreaPadding(.top, 68)
             }
-            .safeAreaPadding(.top, 100)
+            .ignoresSafeArea()
         }
+        .ignoresSafeArea()
     }
 }
 
 #Preview {
     ActivitySelection()
 }
+
+// TODO: Delete this once API is ready
+let sample = [
+    [
+        "task": "Learn Basic Chords",
+        "description": "The four most common guitar chords are E-Minor, C, G and D. Youtube Tutorials would be a good place to start!"
+    ],
+    [
+        "task": "Learn the Song Structure",
+        "description": "Learn the Song Structure: Identify verses, chorus, bridge. Online sources like Yousician might give you a best way to learn!"
+    ],
+    [
+        "task": "Learn to Read Chord Diagrams",
+        "description": "Learn the Song Structure: Identify verses, chorus, bridge. Online sources like Yousician might give you a best way to learn!"
+    ]
+]

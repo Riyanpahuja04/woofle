@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "unclicked activity-bg.png",
+      "filename" : "TopBgActivity.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "unclicked activity-bg 1.png",
+      "filename" : "TopBgActivity@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "unclicked activity-bg 2.png",
+      "filename" : "TopBgActivity@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
