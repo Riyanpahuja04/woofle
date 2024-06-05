@@ -152,6 +152,8 @@ struct whyDownloadScreen: View {
                         
                         //TODO: Submit Selected Values to API for Data Collection
                         
+                        // TODO: On non-error return from API, switch current scene to WhyDownloadScreen()
+                        
                     }
                     .frame(minWidth: 160, maxWidth: .infinity)
                     .padding(.horizontal, 25)

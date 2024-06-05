@@ -78,6 +78,9 @@ struct nameInputScreen: View {
                         if !userInputText.isEmpty {
                             
                             // TODO: Call to backend API, save name as Global Variable for use later
+                            
+                            // TODO: On non-error return from API, switch current scene to WhyDownloadScreen()
+                            
                         }
                         
                     }
