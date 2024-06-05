@@ -44,7 +44,7 @@ struct ActivitySelection: View {
                                 .foregroundStyle(_titleColor)
                                 .padding(.bottom, 30)
                             ForEach(_sample.indices, id: \.self) { index in
-                                ActivitySelectionButton(
+                                ActivitySelectionCard(
                                     task: _sample[index]["task"]!,
                                     description: _sample[index]["description"]!,
                                     selectedTask: $selectedTask

@@ -7,13 +7,15 @@
 
 import SwiftUI
 
+// Global Variable to enable access for extension as well
+let _teal: Color = Color(red: 0.43, green: 0.6, blue: 0.59)
+
 struct ActivitySelectionCard: View {
     var task: String
     var description: String
     @Binding var selectedTask: String?
     
     let _taskColor: Color = Color(red: 0.09, green: 0.09, blue: 0.09)
-    let _teal: Color = Color(red: 0.43, green: 0.6, blue: 0.59)
     let _descriptionColor: Color = Color(red: 0.16, green: 0.16, blue: 0.22)
     
     var body: some View {
@@ -94,7 +96,7 @@ struct RoundedCorner: Shape {
 extension View {
     func cornerRadiusCustom(_ radius: CGFloat, corners: UIRectCorner) -> some View {
         clipShape(RoundedCorner(radius: radius, corners: corners))
-            .overlay(RoundedCorner(radius: radius, corners: corners).stroke(Color(red: 0.43, green: 0.6, blue: 0.59), lineWidth: 1))
+            .overlay(RoundedCorner(radius: radius, corners: corners).stroke(_teal, lineWidth: 1))
     }
 }
 
