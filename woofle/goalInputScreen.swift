@@ -111,9 +111,8 @@ struct goalInputScreen: View {
                     .padding(.vertical, 14)
                     .foregroundColor(.white)
                     .background(currentButtonColor())
-                    .font(
-                        Font.custom("SF Pro", size: 16)
-                            .weight(.semibold))
+                    .font(.system(size: 16))
+                    .fontWeight(.semibold)
                     .cornerRadius(8)
                     .scaledToFit()
                     
