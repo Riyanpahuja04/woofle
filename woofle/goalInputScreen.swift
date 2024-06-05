@@ -45,9 +45,8 @@ struct goalInputScreen: View {
                 
                 
                 Text("What is your Goal?")
-                    .font(
-                        Font.custom("SF Pro", size: 24)
-                            .weight(.semibold))
+                    .font(.system(size: 30))
+                    .fontWeight(.semibold)
                     .padding(.vertical, 15)
                 
                 
