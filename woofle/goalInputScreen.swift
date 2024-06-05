@@ -136,14 +136,14 @@ struct goalInputScreen: View {
             
             if showHelp {
                 VStack {
-                    Text("What you want to discover?").font(.system(size: CGFloat(18))).bold()
+                    Text("What you want to discover?").font(.system(size: 18)).bold()
                         .foregroundColor(_helpScreenTextColor)
                         .padding(.bottom, 10)
                         .padding(.top, 30)
                     
                     Text("What are the things you have wanted to try for so long but have not put into practice? \nWe encourage you to log in your goal and discover new experience by stepping out of the comfort zone. \nEnjoy your discovery journey!")
-                        .font(.system(size: CGFloat(16)))
-                        .foregroundColor(Color(red: 0.16, green: 0.16, blue: 0.21))
+                        .font(.system(size: 16))
+                        .foregroundColor(_helpScreenTextColor)
                         .padding(.horizontal, 40)
                     
                     Button("Got It!") {
