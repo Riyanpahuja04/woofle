@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		880FC53D2C0FE7D700A78F3E /* nameInputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */; };
+		880FC53F2C0FEEF800A78F3E /* whyDownloadScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */; };
 		88C425F12C0E904800ADECAD /* goalInputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C425F02C0E904800ADECAD /* goalInputScreen.swift */; };
 		B3A8DC7B2C08095400ED5B9A /* woofleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DC7A2C08095400ED5B9A /* woofleApp.swift */; };
 		B3A8DC7D2C08095400ED5B9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DC7C2C08095400ED5B9A /* ContentView.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nameInputScreen.swift; sourceTree = "<group>"; };
+		880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whyDownloadScreen.swift; sourceTree = "<group>"; };
 		88C425F02C0E904800ADECAD /* goalInputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalInputScreen.swift; sourceTree = "<group>"; };
 		B3A8DC772C08095400ED5B9A /* woofle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = woofle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3A8DC7A2C08095400ED5B9A /* woofleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = woofleApp.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				B3A8DC802C08095500ED5B9A /* Preview Content */,
 				88C425F02C0E904800ADECAD /* goalInputScreen.swift */,
 				880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */,
+				880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */,
 			);
 			path = woofle;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				880FC53D2C0FE7D700A78F3E /* nameInputScreen.swift in Sources */,
 				88C425F12C0E904800ADECAD /* goalInputScreen.swift in Sources */,
 				B3A8DC7B2C08095400ED5B9A /* woofleApp.swift in Sources */,
+				880FC53F2C0FEEF800A78F3E /* whyDownloadScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
