@@ -24,11 +24,12 @@ struct Onboarding2View: View {
                         .frame(height: 250, alignment: .leading)
                     
                     Text("Take baby steps, connect with others, and achieve your goals effortlessly.")
-                        .font(Font.custom("SF Pro", size: 22))
+                        .font(Font.system(size: 22))
                         .multilineTextAlignment(.center)
                         .foregroundColor(.white)
-                        .padding(.horizontal, 20)
+                        .padding(.horizontal, 30)
                         .padding(.top, 0)
+                        .fixedSize(horizontal: false, vertical: true)
                 }
                             
                 Spacer()
