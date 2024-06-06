@@ -56,227 +56,149 @@ struct WhyDownloadScreen: View {
                     
                     HStack {
                         
-                        Text("+ Vibing")
-                            .font(.system(size: 17))
-                            .fontWeight(.medium)
-                            .foregroundColor(.white)
-                            .padding(.vertical, 8)
-                            .padding(.horizontal, 20)
-                            .background(userSelectionButtonColor(buttonKey: "Vibing"))
-                            .cornerRadius(28)
-                            .onTapGesture {
-                                withAnimation(.easeInOut(duration: 0.1)) {
-                                    selectedButtonState["Vibing"]?.toggle()
-                                }
-                            }
-                            .padding(.horizontal, 5)
+                        ToggleButton(labelName: "Vibing", selectedButtonState: $selectedButtonState)
                         
-                        Text("+ Personal Growth")
-                            .font(.system(size: 17))
-                            .fontWeight(.medium)
-                            .foregroundColor(.white)
-                            .padding(.vertical, 8)
-                            .padding(.horizontal, 20)
-                            .background(userSelectionButtonColor(buttonKey: "Personal Growth"))
-                            .cornerRadius(28)
-                            .onTapGesture {
-                                withAnimation(.easeInOut(duration: 0.1)) {
-                                    selectedButtonState["Personal Growth"]?.toggle()
-                                }
-                            }
-                            .padding(.horizontal, 5)
+                        ToggleButton(labelName: "Personal Growth", selectedButtonState: $selectedButtonState)
                     }
                     
                     HStack {
                         
-                        Text("+ Discover New Experience")
-                            .font(.system(size: 17))
-                            .fontWeight(.medium)
-                            .foregroundColor(.white)
-                            .padding(.vertical, 8)
-                            .padding(.horizontal, 20)
-                            .background(userSelectionButtonColor(buttonKey: "Discover New Experience"))
-                            .cornerRadius(28)
-                            .onTapGesture {
-                                withAnimation(.easeInOut(duration: 0.1)) {
-                                    selectedButtonState["Discover New Experience"]?.toggle()
-                                }
-                            }
-                            .padding(5)
+                        ToggleButton(labelName: "Discover New Experience", selectedButtonState: $selectedButtonState)
                     }
                     
                     HStack {
                         
-                        Text("+ Fun")
-                            .font(.system(size: 17))
-                            .fontWeight(.medium)
-                            .foregroundColor(.white)
-                            .padding(.vertical, 8)
-                            .padding(.horizontal, 20)
-                            .background(userSelectionButtonColor(buttonKey: "Fun"))
-                            .cornerRadius(28)
-                            .onTapGesture {
-                                withAnimation(.easeInOut(duration: 0.1)) {
-                                    selectedButtonState["Fun"]?.toggle()
-                                }
-                            }
-                            .padding(.horizontal, 5)
+                        ToggleButton(labelName: "Fun", selectedButtonState: $selectedButtonState)
                         
-                        Text("+ Overcome My Fear")
-                            .font(.system(size: 17))
-                            .fontWeight(.medium)
-                            .foregroundColor(.white)
-                            .padding(.vertical, 8)
-                            .padding(.horizontal, 20)
-                            .background(userSelectionButtonColor(buttonKey: "Overcome My Fear"))
-                            .cornerRadius(28)
-                            .onTapGesture {
-                                withAnimation(.easeInOut(duration: 0.1)) {
-                                    selectedButtonState["Overcome My Fear"]?.toggle()
-                                }
-                            }
+                        ToggleButton(labelName: "Overcome My Fear", selectedButtonState: $selectedButtonState)
+                        
                     }
-                    .padding(.horizontal, 5)
                     
-                }
-                
-                Spacer()
-                Spacer()
-                
-                // Submit Button HSTACK
-                HStack {
+                    Spacer()
+                    Spacer()
                     
-                    Spacer().frame(minWidth: 0, maxWidth: 25)
-                    
-                    Button("Submit")
-                    {
+                    // Submit Button HSTACK
+                    HStack {
                         
-                        if selectedButtonState.values.contains(true) {
+                        Spacer().frame(minWidth: 0, maxWidth: 25)
+                        
+                        Button("Submit")
+                        {
                             
+                            if selectedButtonState.values.contains(true) {
+                                
+                                
+                                // TODO: Submit Selected Values to API for Data Collection
+                                
+                                // TODO: On non-error return from API, switch current scene to WhyDownloadScreen()
+                                
+                            }
                             
-                            // TODO: Submit Selected Values to API for Data Collection
-                            
-                            // TODO: On non-error return from API, switch current scene to WhyDownloadScreen()
+                            // Else, Do Nothing
                             
                         }
-
-                        // Else, Do Nothing
-                        
-                    }
-                    .frame(minWidth: 160, maxWidth: .infinity)
-                    .padding(.horizontal, 25)
-                    .padding(.vertical, 14)
-                    .foregroundColor(.white)
-                    .background(currentButtonColor())
-                    .font(.system(size: 16))
-                    .fontWeight(.semibold)
-                    .cornerRadius(8)
-                    .scaledToFit()
-                    
-                    Spacer().frame(minWidth: 0, maxWidth: 25)
-                    
-                }
-                .padding(.bottom, 20)
-                
-                // Current Page (1 of 3) Icons
-                HStack(alignment: .center) {
-                    Circle().fixedSize().foregroundColor(_buttonGrey)
-                    Circle().fixedSize().foregroundColor(_currentPageIndicatorColor)
-                    Circle().fixedSize().foregroundColor(_buttonGrey)
-                }
-                .padding(.bottom, 10)
-                
-            }
-            // Opacity Mask for Info Menu
-            .mask(Rectangle().opacity(opacityMaskValue))
-            // Background colour for the page
-            .background(backgroundMaskColor)
-            
-            if showHelp {
-                
-                // Info Pane VSTACK
-                VStack {
-                    Text("What Brought us Together?").font(.system(size: 18)).bold()
-                        .foregroundColor(_helpScreenTextColor)
-                        .padding(.bottom, 10)
-                        .padding(.top, 30)
-                    
-                    Text("We would love to know what made you interested in Woofle and the journey of discovery\n\nPlease select any of the available boxes which helps to describe why you chose to download Woofle.")
+                        .frame(minWidth: 160, maxWidth: .infinity)
+                        .padding(.horizontal, 25)
+                        .padding(.vertical, 14)
+                        .foregroundColor(.white)
+                        .background(currentButtonColor())
                         .font(.system(size: 16))
-                        .foregroundColor(_helpScreenTextColor)
-                        .padding(.horizontal, 40)
-                    
-                    Button("Got It!") {
-                        withAnimation(.easeInOut(duration: 0.3)) {
-                            disableBackgroundMask()
-                            showHelp.toggle()
-                        }
+                        .fontWeight(.semibold)
+                        .cornerRadius(8)
+                        .scaledToFit()
+                        
+                        Spacer().frame(minWidth: 0, maxWidth: 25)
                         
                     }
-                    .foregroundColor(.white)
-                    .bold()
-                    .padding(.vertical, 10)
-                    .padding(.horizontal, 40)
-                    .background(_orangeColor)
-                    .cornerRadius(10)
+                    .padding(.bottom, 20)
+                    
+                    // Current Page (1 of 3) Icons
+                    HStack(alignment: .center) {
+                        Circle().fixedSize().foregroundColor(_buttonGrey)
+                        Circle().fixedSize().foregroundColor(_currentPageIndicatorColor)
+                        Circle().fixedSize().foregroundColor(_buttonGrey)
+                    }
+                    .padding(.bottom, 10)
+                }
+                }
+                // Opacity Mask for Info Menu
+                .mask(Rectangle().opacity(opacityMaskValue))
+                // Background colour for the page
+                .background(backgroundMaskColor)
+                
+                if showHelp {
+                    
+                    // Info Pane VSTACK
+                    VStack {
+                        Text("What Brought us Together?").font(.system(size: 18)).bold()
+                            .foregroundColor(_helpScreenTextColor)
+                            .padding(.bottom, 10)
+                            .padding(.top, 30)
+                        
+                        Text("We would love to know what made you interested in Woofle and the journey of discovery\n\nPlease select any of the available boxes which helps to describe why you chose to download Woofle.")
+                            .font(.system(size: 16))
+                            .foregroundColor(_helpScreenTextColor)
+                            .padding(.horizontal, 40)
+                        
+                        Button("Got It!") {
+                            withAnimation(.easeInOut(duration: 0.3)) {
+                                disableBackgroundMask()
+                                showHelp.toggle()
+                            }
+                            
+                        }
+                        .foregroundColor(.white)
+                        .bold()
+                        .padding(.vertical, 10)
+                        .padding(.horizontal, 40)
+                        .background(_orangeColor)
+                        .cornerRadius(10)
+                        .padding()
+                        
+                        Spacer().frame(height: 20)
+                        
+                    }
+                    .frame(minWidth: 200, maxWidth: 300)
+                    .background(.white)
+                    .cornerRadius(20)
                     .padding()
                     
-                    Spacer().frame(height: 20)
-                    
                 }
-                .frame(minWidth: 200, maxWidth: 300)
-                .background(.white)
-                .cornerRadius(20)
-                .padding()
-                
             }
+        }
+
+        // Temp colors until global color variables are made (just for my reference)
+        private let _grayColor: Color = (Color(red: 189/255, green: 189/255, blue: 189/255))
+        private let _orangeColor: Color = (Color(red: 255/255, green: 157/255, blue: 74/255))
+        private let _defaultBackgroundColor: Color = Color(red: 255/255, green: 253/255, blue: 248/255)
+        private let _buttonGrey: Color = Color(red: 225/255, green: 225/255, blue: 225/255)
+        private let _currentPageIndicatorColor: Color = Color(red: 75/255, green: 134/255, blue: 131/255)
+        private let _helpScreenTextColor: Color = Color(red: 0.16, green: 0.16, blue: 0.21)
+        private let _unselectedButtonColor: Color = Color(red: 0.63, green: 0.75, blue: 0.68)
+        private let _selectedButtonColor: Color = Color(red: 0.43, green: 0.6, blue: 0.59)
+        // END TEMP COLORS
+        
+        func enableBackgroundMask() {
+            backgroundMaskColor = _grayColor
+            opacityMaskValue = 0.19
+        }
+        
+        func disableBackgroundMask() {
+            backgroundMaskColor = _defaultBackgroundColor
+            opacityMaskValue = 1
+        }
+        
+        func currentButtonColor() -> Color {
+            
+            if selectedButtonState.values.contains(true)
+            { return _orangeColor }
+            
+            else
+            { return _grayColor }
             
         }
-            
     }
-    
-    // Temp colors until global color variables are made (just for my reference)
-    private let _grayColor: Color = (Color(red: 189/255, green: 189/255, blue: 189/255))
-    private let _orangeColor: Color = (Color(red: 255/255, green: 157/255, blue: 74/255))
-    private let _defaultBackgroundColor: Color = Color(red: 255/255, green: 253/255, blue: 248/255)
-    private let _buttonGrey: Color = Color(red: 225/255, green: 225/255, blue: 225/255)
-    private let _currentPageIndicatorColor: Color = Color(red: 75/255, green: 134/255, blue: 131/255)
-    private let _helpScreenTextColor: Color = Color(red: 0.16, green: 0.16, blue: 0.21)
-    private let _unselectedButtonColor: Color = Color(red: 0.63, green: 0.75, blue: 0.68)
-    private let _selectedButtonColor: Color = Color(red: 0.43, green: 0.6, blue: 0.59)
-    // END TEMP COLORS
-    
-    func enableBackgroundMask() {
-        backgroundMaskColor = _grayColor
-        opacityMaskValue = 0.19
-    }
-    
-    func disableBackgroundMask() {
-        backgroundMaskColor = _defaultBackgroundColor
-        opacityMaskValue = 1
-    }
-    
-    func userSelectionButtonColor(buttonKey: String) -> Color {
-        
-        if selectedButtonState[buttonKey] ?? false
-        { return _selectedButtonColor }
-        
-        else
-        { return _unselectedButtonColor }
-        
-    }
-    
-    func currentButtonColor() -> Color {
-        
-        if selectedButtonState.values.contains(true)
-        { return _orangeColor }
-        
-        else 
-        { return _grayColor }
-        
-    }
-    
-}
+
 
 
 #Preview {
