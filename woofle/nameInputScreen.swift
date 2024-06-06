@@ -1,8 +1,8 @@
 //
-//  goalInputScreen.swift
+//  nameInputScreen.swift
 //  woofle
 //
-//  Created by James Handley on 4/6/2024.
+//  Created by James Handley on 5/6/2024.
 //
 
 import SwiftUI
@@ -10,8 +10,6 @@ import SwiftUI
 struct nameInputScreen: View {
     
     @State private var userInputText: String = ""
-    @State private var opacityMaskValue: Double = 1
-    @State private var showHelp: Bool = false
     
     var body: some View {
         VStack {
@@ -105,8 +103,6 @@ struct nameInputScreen: View {
                 }.padding(.bottom, 10)
                 
             }
-            // Opacity Mask for Info Menu
-            .mask(Rectangle().opacity(opacityMaskValue))
             // Background colour for the page
             .background(_defaultBackgroundColor)
             
@@ -133,7 +129,7 @@ struct nameInputScreen: View {
     
     func characterCounterColor() -> Color {
         
-        if userInputText.count > 60 
+        if userInputText.count > 30 
         { return .red }
         
         else
