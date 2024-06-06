@@ -1,5 +1,5 @@
 //
-//  LevelDropdown.swift
+//  LevelDropdownExpanded.swift
 //  woofle
 //
 //  Created by James Handley on 6/6/2024.
@@ -65,6 +65,9 @@ struct LevelDropdownExpanded: View {
                         .padding(.top, 20)
                         .padding(.bottom, 10)
                         .padding(.trailing, 40)
+                        .onTapGesture {
+                            //TODO: ADD FEATURE
+                        }
                     
                 }
                 
@@ -84,12 +87,12 @@ struct LevelDropdownExpanded: View {
                     VStack() {
                         ZStack {
                             Rectangle()
-                                .frame(width: .infinity, height: 40)
+                                .frame(width: .infinity, height: 50)
                                 .foregroundColor(_greenHeaderColor)
                                 .scaledToFill()
                             
                             Text(goal)
-                                .frame(width: .infinity, height: 40)
+                                .frame(width: .infinity, height: 50)
                                 .font(
                                     .system(size: 20)
                                     .weight(.medium)
@@ -108,7 +111,6 @@ struct LevelDropdownExpanded: View {
                             .foregroundColor(_helpScreenTextColor)
                             .padding(.vertical, 5)
                             .padding(.bottom, 10)
-                        
                     }
                     .background(.white)
                     .cornerRadius(10)
@@ -140,6 +142,7 @@ struct LevelDropdownExpanded: View {
     private let _helpScreenTextColor: Color = Color(red: 0.16, green: 0.16, blue: 0.21)
     private let _dropdownImageColor: Color = Color(red: 0.28, green: 0.29, blue: 0.43)
     private let _greenHeaderColor: Color = Color(red: 0.43, green: 0.6, blue: 0.59)
+    private let _teal: Color = Color(red: 0.43, green: 0.6, blue: 0.59)
     // END TEMP COLORS
     
     
