@@ -31,6 +31,9 @@
 		B3A8DCB42C0D641400ED5B9A /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DCB32C0D641400ED5B9A /* Activity.swift */; };
 		B3A8DCB72C0D662100ED5B9A /* ActivitySelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DCB62C0D662100ED5B9A /* ActivitySelection.swift */; };
 		D3AD359B2C0FF88E008BC3F6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AD359A2C0FF88E008BC3F6 /* MapView.swift */; };
+		BC747DCF2C1139350047FE6D /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC747DCE2C1139350047FE6D /* Onboarding.swift */; };
+		BC747DD12C113D270047FE6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC747DD02C113D270047FE6D /* Assets.xcassets */; };
+		BC747DD52C1160C90047FE6D /* Onboarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC747DD42C1160C90047FE6D /* Onboarding2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,9 @@
 		B3A8DCB32C0D641400ED5B9A /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		B3A8DCB62C0D662100ED5B9A /* ActivitySelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySelection.swift; sourceTree = "<group>"; };
 		D3AD359A2C0FF88E008BC3F6 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		BC747DCE2C1139350047FE6D /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		BC747DD02C113D270047FE6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC747DD42C1160C90047FE6D /* Onboarding2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +204,7 @@
 			children = (
 				8820B9E82C113EDE00F01434 /* Level */,
 				8820B9E32C11365500F01434 /* onboarding */,
+				BC747DCD2C1139140047FE6D /* Onboading */,
 				B37BEF722C0FEC1D004E34D8 /* Core */,
 				B3A8DCB52C0D65FD00ED5B9A /* activity */,
 			);
@@ -230,6 +237,16 @@
 				B39B7CB42C0E9822000B9089 /* ActivitySelectionCard.swift */,
 			);
 			path = activity;
+			sourceTree = "<group>";
+		};
+		BC747DCD2C1139140047FE6D /* Onboading */ = {
+			isa = PBXGroup;
+			children = (
+				BC747DCE2C1139350047FE6D /* Onboarding.swift */,
+				BC747DD42C1160C90047FE6D /* Onboarding2.swift */,
+				BC747DD02C113D270047FE6D /* Assets.xcassets */,
+			);
+			path = Onboading;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3A8DC822C08095500ED5B9A /* Preview Assets.xcassets in Resources */,
+				BC747DD12C113D270047FE6D /* Assets.xcassets in Resources */,
 				B3A8DC7F2C08095500ED5B9A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,7 +390,9 @@
 				8820B9F02C1170F500F01434 /* LevelDropdownNewActivity.swift in Sources */,
 				8820B9EE2C116C2600F01434 /* LevelDropdownNoActivity.swift in Sources */,
 				B3A8DC7B2C08095400ED5B9A /* woofleApp.swift in Sources */,
+				BC747DD52C1160C90047FE6D /* Onboarding2.swift in Sources */,
 				B3A8DCB02C0D635A00ED5B9A /* User.swift in Sources */,
+				BC747DCF2C1139350047FE6D /* Onboarding.swift in Sources */,
 				B37BEF762C0FEE57004E34D8 /* WoofleActionButton.swift in Sources */,
 				B3A8DCB72C0D662100ED5B9A /* ActivitySelection.swift in Sources */,
 				8820B9E52C11369000F01434 /* toggleButton.swift in Sources */,
