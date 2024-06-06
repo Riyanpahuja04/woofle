@@ -35,9 +35,6 @@ struct LevelDropdown: View {
                             //TODO: CODE
                         }
                 }
-                .onTapGesture{
-                    //TODO: CODE
-                }
                 .shadow(radius:2, x: 0, y: 4)
             VStack {
                 
@@ -48,19 +45,28 @@ struct LevelDropdown: View {
                         .weight(.bold)
                     )
                     .multilineTextAlignment(.center)
+                    .padding(.top, 20)
+                    .padding(.bottom, 10)
                 
                 Text(levelName)
                     .foregroundColor(_dropdownImageColor)
                     .font(
                         .system(size: 20)
-                        .weight(.bold)
+                        .weight(.semibold)
                     )
                     .multilineTextAlignment(.center)
+                    .padding(.horizontal, 20)
                 
                 Text(goal)
                     .frame(width: .infinity, height: 40)
+                    .font(
+                        .system(size: 20)
+                        .weight(.medium)
+                    )
+                    .padding(.horizontal, 60)
                     .background(_greenHeaderColor)
                     .cornerRadius(10)
+                    .foregroundColor(_defaultBackgroundColor)
                 
             }
             

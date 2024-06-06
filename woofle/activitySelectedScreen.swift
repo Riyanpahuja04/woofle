@@ -13,6 +13,7 @@ struct activitySelectedScreen: View {
             
             MapView()
             LevelDropdown()
+            
         }
     }
 }
