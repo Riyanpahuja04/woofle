@@ -40,7 +40,7 @@ struct LevelDropdownExpanded: View {
            
             VStack {
                 
-                HStack {
+                ZStack {
                     
                     Spacer()
                     
@@ -53,7 +53,6 @@ struct LevelDropdownExpanded: View {
                         .multilineTextAlignment(.center)
                         .padding(.top, 20)
                         .padding(.bottom, 10)
-                        .padding(.leading, 60)
                         .frame(maxWidth: .infinity, alignment: .center)
                     
                     Image(systemName: "ellipsis.circle")
@@ -62,14 +61,15 @@ struct LevelDropdownExpanded: View {
                             .weight(.medium)
                         )
                         .foregroundColor(_dropdownImageColor)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
                         .padding(.top, 20)
                         .padding(.bottom, 10)
-                        .padding(.trailing, 40)
+                        .padding(.trailing, 50)
                         .onTapGesture {
                             //TODO: ADD FEATURE
                         }
                     
-                }
+                }.padding(.top, 30)
                 
                 Text(levelName)
                     .foregroundColor(_dropdownImageColor)
@@ -116,9 +116,16 @@ struct LevelDropdownExpanded: View {
                     .cornerRadius(10)
                     .padding(.horizontal, 40)
                     
-                    Spacer()
-                    
                 }
+                
+                HStack {
+                    Spacer().frame(width: 80)
+                    WoofleActionButton(text: "Complete") {
+                        //TODO: ADD CODE
+                    }.frame(width: .infinity, height: 60)
+                    Spacer().frame(width: 80)
+                }.padding(.bottom, 30)
+                
                 
             }
             
@@ -147,8 +154,8 @@ struct LevelDropdownExpanded: View {
     
     
     func frameHeight() -> CGFloat {
-        if amDeployed { return 400 }
-        else { return 220 }
+        if amDeployed { return 430 }
+        else { return 240 }
     }
     
 }

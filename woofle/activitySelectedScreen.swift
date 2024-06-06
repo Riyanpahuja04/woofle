@@ -12,7 +12,7 @@ struct activitySelectedScreen: View {
         ZStack(alignment: .top) {
             
             MapView()
-            LevelDropdownNoActivity()
+            LevelDropdownExpanded()
             
         }
     }

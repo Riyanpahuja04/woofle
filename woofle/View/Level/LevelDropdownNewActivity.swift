@@ -1,5 +1,5 @@
 //
-//  LevelDropdownNoActivity.swift
+//  LevelDropdownNewActivity.swift
 //  woofle
 //
 //  Created by James Handley on 6/6/2024.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct LevelDropdownNoActivity: View {
+struct LevelDropdownNewActivity: View {
     
-    @State private var amDeployed: Bool = false
+    @State private var amDeployed: Bool = true
     
     // ViewModel will return these values once complete
     @State private var currentLevel: String = "LEVEL 0"
@@ -47,10 +47,27 @@ struct LevelDropdownNoActivity: View {
                     )
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 20)
-                    .padding(.top, 20)
+                    .padding(.top, -40)
             }
             
-            Image(systemName: "chevron.down")
+            Text("Ready for the next level?")
+                .foregroundColor(_dropdownImageColor)
+                .font(
+                    .system(size: 15)
+                )
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 20)
+                .padding(.top, 35)
+            
+            HStack {
+                Spacer().frame(width: 60)
+                WoofleActionButton(text: "Let's do it!") {
+                    //TODO: ADD CODE
+                }.frame(width: .infinity, height: 60)
+                Spacer().frame(width: 60)
+            }.padding(.top, 130)
+            
+            Image(systemName: "chevron.up")
                 .font(.title)
                 .padding(.horizontal, 30)
                 .foregroundColor(_dropdownImageColor)
@@ -81,5 +98,5 @@ struct LevelDropdownNoActivity: View {
 }
 
 #Preview {
-    LevelDropdownNoActivity()
+    LevelDropdownNewActivity()
 }

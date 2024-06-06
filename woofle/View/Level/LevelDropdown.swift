@@ -94,8 +94,8 @@ struct LevelDropdown: View {
     
     
     func frameHeight() -> CGFloat {
-        if amDeployed { return 400 }
-        else { return 220 }
+        if amDeployed { return 440 }
+        else { return 240 }
     }
     
 }
