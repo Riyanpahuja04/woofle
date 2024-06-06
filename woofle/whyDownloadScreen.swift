@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct whyDownloadScreen: View {
+struct WhyDownloadScreen: View {
     
     @State private var opacityMaskValue: Double = 1
     @State private var backgroundMaskColor: Color = Color(red: 255/255, green: 253/255, blue: 248/255)
@@ -280,5 +280,5 @@ struct whyDownloadScreen: View {
 
 
 #Preview {
-    whyDownloadScreen()
+    WhyDownloadScreen()
 }
