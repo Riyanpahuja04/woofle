@@ -34,6 +34,7 @@
 		BC747DCF2C1139350047FE6D /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC747DCE2C1139350047FE6D /* Onboarding.swift */; };
 		BC747DD12C113D270047FE6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC747DD02C113D270047FE6D /* Assets.xcassets */; };
 		BC747DD52C1160C90047FE6D /* Onboarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC747DD42C1160C90047FE6D /* Onboarding2.swift */; };
+		D3AD359B2C0FF88E008BC3F6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AD359A2C0FF88E008BC3F6 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		BC747DCE2C1139350047FE6D /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		BC747DD02C113D270047FE6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC747DD42C1160C90047FE6D /* Onboarding2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2.swift; sourceTree = "<group>"; };
+		D3AD359A2C0FF88E008BC3F6 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,17 +125,20 @@
 		8820B9E32C11365500F01434 /* onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				BC747DCE2C1139350047FE6D /* Onboarding.swift */,
 				8820B9E42C11369000F01434 /* toggleButton.swift */,
+				BC747DD42C1160C90047FE6D /* Onboarding2.swift */,
+				BC747DD02C113D270047FE6D /* Assets.xcassets */,
 			);
 			path = onboarding;
 			sourceTree = "<group>";
 		};
-		B37BEF722C0FEC1D004E34D8 /* Core */ = {
+		B37BEF722C0FEC1D004E34D8 /* core */ = {
 			isa = PBXGroup;
 			children = (
 				B37BEF752C0FEE57004E34D8 /* WoofleActionButton.swift */,
 			);
-			path = Core;
+			path = core;
 			sourceTree = "<group>";
 		};
 		B3A8DC6E2C08095400ED5B9A = {
@@ -204,8 +209,7 @@
 			children = (
 				8820B9E82C113EDE00F01434 /* Level */,
 				8820B9E32C11365500F01434 /* onboarding */,
-				BC747DCD2C1139140047FE6D /* Onboading */,
-				B37BEF722C0FEC1D004E34D8 /* Core */,
+				B37BEF722C0FEC1D004E34D8 /* core */,
 				B3A8DCB52C0D65FD00ED5B9A /* activity */,
 			);
 			path = View;
@@ -237,16 +241,6 @@
 				B39B7CB42C0E9822000B9089 /* ActivitySelectionCard.swift */,
 			);
 			path = activity;
-			sourceTree = "<group>";
-		};
-		BC747DCD2C1139140047FE6D /* Onboading */ = {
-			isa = PBXGroup;
-			children = (
-				BC747DCE2C1139350047FE6D /* Onboarding.swift */,
-				BC747DD42C1160C90047FE6D /* Onboarding2.swift */,
-				BC747DD02C113D270047FE6D /* Assets.xcassets */,
-			);
-			path = Onboading;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
