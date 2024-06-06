@@ -14,6 +14,7 @@
 		B3A8DC8C2C08095600ED5B9A /* woofleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DC8B2C08095600ED5B9A /* woofleTests.swift */; };
 		B3A8DC962C08095600ED5B9A /* woofleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DC952C08095600ED5B9A /* woofleUITests.swift */; };
 		B3A8DC982C08095600ED5B9A /* woofleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DC972C08095600ED5B9A /* woofleUITestsLaunchTests.swift */; };
+		D3AD359B2C0FF88E008BC3F6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AD359A2C0FF88E008BC3F6 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		B3A8DC912C08095600ED5B9A /* woofleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = woofleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3A8DC952C08095600ED5B9A /* woofleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = woofleUITests.swift; sourceTree = "<group>"; };
 		B3A8DC972C08095600ED5B9A /* woofleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = woofleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D3AD359A2C0FF88E008BC3F6 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				B3A8DC7A2C08095400ED5B9A /* woofleApp.swift */,
+				D3AD359A2C0FF88E008BC3F6 /* MapView.swift */,
 				B3A8DC7C2C08095400ED5B9A /* ContentView.swift */,
 				B3A8DC7E2C08095500ED5B9A /* Assets.xcassets */,
 				B3A8DC802C08095500ED5B9A /* Preview Content */,
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3A8DC7D2C08095400ED5B9A /* ContentView.swift in Sources */,
+				D3AD359B2C0FF88E008BC3F6 /* MapView.swift in Sources */,
 				B3A8DC7B2C08095400ED5B9A /* woofleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
