@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		880FC53D2C0FE7D700A78F3E /* nameInputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */; };
+		880FC53F2C0FEEF800A78F3E /* whyDownloadScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */; };
+		8820B9E52C11369000F01434 /* toggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8820B9E42C11369000F01434 /* toggleButton.swift */; };
 		88C425F12C0E904800ADECAD /* goalInputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C425F02C0E904800ADECAD /* goalInputScreen.swift */; };
 		B37BEF762C0FEE57004E34D8 /* WoofleActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37BEF752C0FEE57004E34D8 /* WoofleActionButton.swift */; };
 		B39B7CB52C0E9822000B9089 /* ActivitySelectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39B7CB42C0E9822000B9089 /* ActivitySelectionCard.swift */; };
@@ -44,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nameInputScreen.swift; sourceTree = "<group>"; };
+		880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whyDownloadScreen.swift; sourceTree = "<group>"; };
+		8820B9E42C11369000F01434 /* toggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toggleButton.swift; sourceTree = "<group>"; };
 		88C425F02C0E904800ADECAD /* goalInputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalInputScreen.swift; sourceTree = "<group>"; };
 		B37BEF752C0FEE57004E34D8 /* WoofleActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoofleActionButton.swift; sourceTree = "<group>"; };
 		B39B7CB42C0E9822000B9089 /* ActivitySelectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySelectionCard.swift; sourceTree = "<group>"; };
@@ -91,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8820B9E32C11365500F01434 /* onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				8820B9E42C11369000F01434 /* toggleButton.swift */,
+			);
+			path = onboarding;
+			sourceTree = "<group>";
+		};
 		B37BEF722C0FEC1D004E34D8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +145,8 @@
 				B3A8DC7E2C08095500ED5B9A /* Assets.xcassets */,
 				B3A8DC802C08095500ED5B9A /* Preview Content */,
 				88C425F02C0E904800ADECAD /* goalInputScreen.swift */,
+				880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */,
+				880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */,
 			);
 			path = woofle;
 			sourceTree = "<group>";
@@ -163,6 +179,7 @@
 		B3A8DCA82C0D54A400ED5B9A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8820B9E32C11365500F01434 /* onboarding */,
 				B37BEF722C0FEC1D004E34D8 /* Core */,
 				B3A8DCB52C0D65FD00ED5B9A /* activity */,
 				B3A8DC7C2C08095400ED5B9A /* ContentView.swift */,
@@ -329,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3A8DC7D2C08095400ED5B9A /* ContentView.swift in Sources */,
+				880FC53D2C0FE7D700A78F3E /* nameInputScreen.swift in Sources */,
 				D3AD359B2C0FF88E008BC3F6 /* MapView.swift in Sources */,
 				88C425F12C0E904800ADECAD /* goalInputScreen.swift in Sources */,
 				B3A8DCAE2C0D556100ED5B9A /* SampleSwiftModel.swift in Sources */,
@@ -337,9 +355,11 @@
 				B3A8DCB02C0D635A00ED5B9A /* User.swift in Sources */,
 				B37BEF762C0FEE57004E34D8 /* WoofleActionButton.swift in Sources */,
 				B3A8DCB72C0D662100ED5B9A /* ActivitySelection.swift in Sources */,
+				8820B9E52C11369000F01434 /* toggleButton.swift in Sources */,
 				B3A8DCB22C0D63B200ED5B9A /* Goal.swift in Sources */,
 				B39B7CB52C0E9822000B9089 /* ActivitySelectionCard.swift in Sources */,
 				B3A8DCAC2C0D555000ED5B9A /* SampleSwiftController.swift in Sources */,
+				880FC53F2C0FEEF800A78F3E /* whyDownloadScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
