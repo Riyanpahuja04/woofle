@@ -47,7 +47,7 @@ struct WelcomePage: View {
         ZStack {
             Color(red: 0.427, green: 0.6, blue: 0.518)
                 .ignoresSafeArea()
-
+            
             VStack {
                 HStack {
                     Spacer()
@@ -59,7 +59,7 @@ struct WelcomePage: View {
                 Spacer()
             }
             .ignoresSafeArea(edges: .top)
-
+            
             VStack {
                 Spacer()
                     .frame(height: -100)
@@ -97,10 +97,10 @@ struct WelcomePage: View {
                     .frame(width: 390, height: 551)
             }
             .ignoresSafeArea(edges: .bottom)
-
+            
             VStack {
                 Spacer()
-                    .frame(height: 140)
+                    .frame(height: 260)
                 
                 TextField("User Name or Email", text: $username)
                     .padding()
@@ -112,7 +112,7 @@ struct WelcomePage: View {
                             .inset(by: 0.5)
                             .stroke(Color(red: 0.157, green: 0.165, blue: 0.216), lineWidth: 1)
                     )
-                    .padding(.horizontal, 47)
+                    .padding(.horizontal, 40)
                 
                 Spacer()
                     .frame(height: 30)
@@ -130,10 +130,10 @@ struct WelcomePage: View {
                     .padding(.horizontal, 47)
                 
                 Spacer()
-                    .frame(height: 15)
+                    .frame(height: 10)
                 
                 Button(action: {
-    
+                    
                 }) {
                     Text("Forgot Password?")
                         .font(.system(size: 16))
@@ -143,7 +143,7 @@ struct WelcomePage: View {
                 .padding(.trailing, 47)
                 
                 Spacer()
-                    .frame(height: 50)
+                    .frame(height: 20)
                 
                 Button(action: {
                     
@@ -166,6 +166,75 @@ struct WelcomePage: View {
                     .multilineTextAlignment(.center)
                     .foregroundColor(Color(red: 0.16, green: 0.16, blue: 0.22))
                 
+                Spacer()
+                    .frame(height: 43)
+                
+                HStack(spacing: 51) {
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(Color(red: 0.94, green: 0.94, blue: 0.94))
+                            .frame(width: 49, height: 49)
+                            .cornerRadius(10)
+                        
+                        Button(action: {
+                        }) {
+                            Image("googleicon")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 30.46, height: 30.46)
+                        }
+                    }
+                    .padding(.leading, 70)
+                    
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(Color(red: 0.94, green: 0.94, blue: 0.94))
+                            .frame(width: 49, height: 49)
+                            .cornerRadius(10)
+                        
+                        Button(action: {
+                        }) {
+                            Image("appleicon")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 30.46, height: 30.46)
+                        }
+                    }
+                    
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(Color(red: 0.94, green: 0.94, blue: 0.94))
+                            .frame(width: 49, height: 49)
+                            .cornerRadius(10)
+                        
+                        Button(action: {
+                        }) {
+                            Image("facebookicon")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 60, height: 60)
+                        }
+                    }
+                    .padding(.trailing, 60)
+                }
+                
+                Spacer()
+                    .frame(height: 40)
+
+                HStack {
+                    Text("Don’t have an account?")
+                        .font(Font.custom("SF Pro", size: 16))
+                        .foregroundColor(Color(hex: "#282A37"))
+                    
+                    Button(action: {
+                        // Action for Sign Up button
+                    }) {
+                        Text("Sign Up")
+                            .font(Font.custom("SF Pro", size: 16))
+                            .foregroundColor(Color(hex: "#4E5FF5"))
+                    }
+                }
+                .multilineTextAlignment(.center)
             }
         }
     }
