@@ -19,7 +19,6 @@ struct Onboarding2View: View {
                     Image("Thrive-text")
                         .padding(.top, 40)
                         .padding(.leading, 0)
-                        .padding(.trailing, 0.00015)
                         .padding(.vertical, 0)
                         .frame(height: 250, alignment: .leading)
                     

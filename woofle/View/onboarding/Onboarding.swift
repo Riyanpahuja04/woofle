@@ -23,10 +23,10 @@ struct OnboardingView: View {
                     
                 
                 Text("We are here to help people who want to discover new personal experiences. ")
-                  .font(Font.custom("SF Pro", size: 22))
+                  .font(.system(size: 22))
                   .multilineTextAlignment(.center)
                   .foregroundColor(.white)
-                  .padding(.horizontal, 20)
+                  .padding(.horizontal, 30)
                   .padding(.top, 10)
                             
                 Spacer()
