@@ -25,6 +25,7 @@
 		D30C7DDB2C11429E0021483A /* animatedWoofles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C7DDA2C11429E0021483A /* animatedWoofles.swift */; };
 		D30C7DDE2C1142F70021483A /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D30C7DDD2C1142F70021483A /* SDWebImageSwiftUI */; };
 		D30C7DE02C1143580021483A /* goalCompletionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C7DDF2C1143570021483A /* goalCompletionScreen.swift */; };
+		D30C7DE52C12DAC80021483A /* DarumadropOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D30C7DE42C12DAC80021483A /* DarumadropOne-Regular.ttf */; };
 		D3AD359B2C0FF88E008BC3F6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AD359A2C0FF88E008BC3F6 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,8 @@
 		D30C7DD82C1142960021483A /* goalInputScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = goalInputScreen.swift; path = ../../goalInputScreen.swift; sourceTree = "<group>"; };
 		D30C7DDA2C11429E0021483A /* animatedWoofles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = animatedWoofles.swift; path = ../../animatedWoofles.swift; sourceTree = "<group>"; };
 		D30C7DDF2C1143570021483A /* goalCompletionScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = goalCompletionScreen.swift; path = ../../goalCompletionScreen.swift; sourceTree = "<group>"; };
+		D30C7DE42C12DAC80021483A /* DarumadropOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DarumadropOne-Regular.ttf"; path = "../../../../Downloads/DarumadropOne-Regular.ttf"; sourceTree = "<group>"; };
+		D30C7DE62C12DBD20021483A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D3AD359A2C0FF88E008BC3F6 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +129,8 @@
 		B3A8DC792C08095400ED5B9A /* woofle */ = {
 			isa = PBXGroup;
 			children = (
+				D30C7DE62C12DBD20021483A /* Info.plist */,
+				D30C7DE32C12DAB80021483A /* Fonts */,
 				B3A8DCAA2C0D54C200ED5B9A /* Controller */,
 				B3A8DCA92C0D54BB00ED5B9A /* Model */,
 				B3A8DCA82C0D54A400ED5B9A /* View */,
@@ -200,6 +205,14 @@
 				B39B7CB42C0E9822000B9089 /* ActivitySelectionCard.swift */,
 			);
 			path = activity;
+			sourceTree = "<group>";
+		};
+		D30C7DE32C12DAB80021483A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D30C7DE42C12DAC80021483A /* DarumadropOne-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +325,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D30C7DE52C12DAC80021483A /* DarumadropOne-Regular.ttf in Resources */,
 				B3A8DC822C08095500ED5B9A /* Preview Assets.xcassets in Resources */,
 				B3A8DC7F2C08095500ED5B9A /* Assets.xcassets in Resources */,
 			);
@@ -517,6 +531,7 @@
 				DEVELOPMENT_TEAM = 76JC544WPM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = woofle/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -546,6 +561,7 @@
 				DEVELOPMENT_TEAM = 76JC544WPM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = woofle/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
