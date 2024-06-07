@@ -9,9 +9,15 @@
 import SwiftUI
 
 struct Onboarding2View: View {
+    
+    private var backgroundColor: Color = Color(red: 0.63, green: 0.78, blue: 0.68)
+    private var pageviewcontroller : Color = Color(red: 0.29, green: 0.53, blue: 0.51)
+    private var pageviewcontrollerdisabled : Color = Color(red: 0.88, green: 0.88, blue: 0.88)
+    
     var body: some View {
+
         ZStack {
-            Color(red: 0.63, green: 0.78, blue: 0.68)
+            Color(backgroundColor)
             VStack {
                 Spacer()
                 
@@ -47,11 +53,11 @@ struct Onboarding2View: View {
                  HStack(spacing: 10) {
                                 
                  Circle()
-                 .fill(Color(red: 0.88, green: 0.88, blue: 0.88))
+                 .fill(pageviewcontrollerdisabled)
                  .frame(width: 10, height: 10)
                      
                  Circle()
-                 .fill(Color(red: 0.29, green: 0.53, blue: 0.51))
+                 .fill(pageviewcontroller)
                  .frame(width: 10, height: 10)
                      
                             }
