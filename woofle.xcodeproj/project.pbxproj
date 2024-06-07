@@ -12,6 +12,9 @@
 		8820B9EC2C1159D300F01434 /* LevelDropdownExpanded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8820B9EB2C1159D300F01434 /* LevelDropdownExpanded.swift */; };
 		8820B9EE2C116C2600F01434 /* LevelDropdownNoActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8820B9ED2C116C2600F01434 /* LevelDropdownNoActivity.swift */; };
 		8820B9F02C1170F500F01434 /* LevelDropdownNewActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8820B9EF2C1170F500F01434 /* LevelDropdownNewActivity.swift */; };
+		880FC53D2C0FE7D700A78F3E /* nameInputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */; };
+		880FC53F2C0FEEF800A78F3E /* whyDownloadScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */; };
+		8820B9E52C11369000F01434 /* toggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8820B9E42C11369000F01434 /* toggleButton.swift */; };
 		88C425F12C0E904800ADECAD /* goalInputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C425F02C0E904800ADECAD /* goalInputScreen.swift */; };
 		B37BEF762C0FEE57004E34D8 /* WoofleActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37BEF752C0FEE57004E34D8 /* WoofleActionButton.swift */; };
 		B39B7CB52C0E9822000B9089 /* ActivitySelectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39B7CB42C0E9822000B9089 /* ActivitySelectionCard.swift */; };
@@ -53,6 +56,9 @@
 		8820B9EB2C1159D300F01434 /* LevelDropdownExpanded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelDropdownExpanded.swift; sourceTree = "<group>"; };
 		8820B9ED2C116C2600F01434 /* LevelDropdownNoActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelDropdownNoActivity.swift; sourceTree = "<group>"; };
 		8820B9EF2C1170F500F01434 /* LevelDropdownNewActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelDropdownNewActivity.swift; sourceTree = "<group>"; };
+		880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nameInputScreen.swift; sourceTree = "<group>"; };
+		880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whyDownloadScreen.swift; sourceTree = "<group>"; };
+		8820B9E42C11369000F01434 /* toggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toggleButton.swift; sourceTree = "<group>"; };
 		88C425F02C0E904800ADECAD /* goalInputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalInputScreen.swift; sourceTree = "<group>"; };
 		B37BEF752C0FEE57004E34D8 /* WoofleActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoofleActionButton.swift; sourceTree = "<group>"; };
 		B39B7CB42C0E9822000B9089 /* ActivitySelectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySelectionCard.swift; sourceTree = "<group>"; };
@@ -108,6 +114,12 @@
 				8820B9EF2C1170F500F01434 /* LevelDropdownNewActivity.swift */,
 			);
 			path = Level;
+		8820B9E32C11365500F01434 /* onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				8820B9E42C11369000F01434 /* toggleButton.swift */,
+			);
+			path = onboarding;
 			sourceTree = "<group>";
 		};
 		B37BEF722C0FEC1D004E34D8 /* Core */ = {
@@ -150,6 +162,8 @@
 				B3A8DC802C08095500ED5B9A /* Preview Content */,
 				88C425F02C0E904800ADECAD /* goalInputScreen.swift */,
 				8820B9E62C113E1300F01434 /* activitySelectedScreen.swift */,
+				880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */,
+				880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */,
 			);
 			path = woofle;
 			sourceTree = "<group>";
@@ -183,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				8820B9E82C113EDE00F01434 /* Level */,
+				8820B9E32C11365500F01434 /* onboarding */,
 				B37BEF722C0FEC1D004E34D8 /* Core */,
 				B3A8DCB52C0D65FD00ED5B9A /* activity */,
 			);
@@ -347,6 +362,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3A8DC7D2C08095400ED5B9A /* ContentView.swift in Sources */,
+				880FC53D2C0FE7D700A78F3E /* nameInputScreen.swift in Sources */,
 				D3AD359B2C0FF88E008BC3F6 /* MapView.swift in Sources */,
 				8820B9E72C113E1300F01434 /* activitySelectedScreen.swift in Sources */,
 				88C425F12C0E904800ADECAD /* goalInputScreen.swift in Sources */,
@@ -358,11 +375,13 @@
 				B3A8DCB02C0D635A00ED5B9A /* User.swift in Sources */,
 				B37BEF762C0FEE57004E34D8 /* WoofleActionButton.swift in Sources */,
 				B3A8DCB72C0D662100ED5B9A /* ActivitySelection.swift in Sources */,
+				8820B9E52C11369000F01434 /* toggleButton.swift in Sources */,
 				B3A8DCB22C0D63B200ED5B9A /* Goal.swift in Sources */,
 				B39B7CB52C0E9822000B9089 /* ActivitySelectionCard.swift in Sources */,
 				8820B9EA2C113F0400F01434 /* LevelDropdown.swift in Sources */,
 				8820B9EC2C1159D300F01434 /* LevelDropdownExpanded.swift in Sources */,
 				B3A8DCAC2C0D555000ED5B9A /* SampleSwiftController.swift in Sources */,
+				880FC53F2C0FEEF800A78F3E /* whyDownloadScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
