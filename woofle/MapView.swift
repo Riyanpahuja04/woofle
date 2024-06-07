@@ -10,6 +10,7 @@ import SwiftUI
 struct MapView: View {
     var body: some View {
         ZStack(alignment: .top) {
+            
             // Background color
             Color(red: 1, green: 0.99, blue: 0.95)
                 .ignoresSafeArea()
@@ -27,7 +28,7 @@ struct MapView: View {
                 .offset(y:490)
             
         }
-        .ignoresSafeArea()
+        //.ignoresSafeArea()
     }
 }
 

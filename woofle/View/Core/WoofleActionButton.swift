@@ -9,6 +9,8 @@ import SwiftUI
 
 struct WoofleActionButton: View {
     var text: String
+    var vPad: CGFloat = 14
+    var hPad: CGFloat = 25
     var action: () -> Void
     
     private let _buttonTextColor = Color(red: 0.15, green: 0.16, blue: 0.21)
@@ -16,15 +18,15 @@ struct WoofleActionButton: View {
     
     var body: some View {
         Button(action: action) {
-            Text("Submit")
+            Text(text)
                 .font(
                     Font.system(size: 16)
                 )
                 .fontWeight(.semibold)
                 .foregroundStyle(.white)
                 .frame(maxWidth: .infinity)
-                .padding(.vertical, 14)
-                .padding(.horizontal, 25)
+                .padding(.vertical, vPad)
+                .padding(.horizontal, hPad)
                 .background(_buttonBgColor)
                 .foregroundStyle(_buttonTextColor)
         }
