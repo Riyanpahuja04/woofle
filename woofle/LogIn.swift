@@ -43,9 +43,17 @@ struct WelcomePage: View {
     @State private var password: String = ""
     @State private var isLoading = false
     
+    // Colors
+    private let backgroundColorWoofle: Color = Color(red: 0.427, green: 0.6, blue: 0.518)
+    private let overlayStrokeColor: Color = Color(red: 0.157, green: 0.165, blue: 0.216)
+    private let loginBackgroundColors: Color = Color(red: 1, green: 0.62, blue: 0.29)
+    private let additionTextBlack: Color = Color(red: 0.16, green: 0.16, blue: 0.22)
+    private let iconBackgroundColor: Color = Color(red: 0.94, green: 0.94, blue: 0.94)
+    
+    
     var body: some View {
         ZStack {
-            Color(red: 0.427, green: 0.6, blue: 0.518)
+            Color(backgroundColorWoofle)
                 .ignoresSafeArea()
             
             VStack {
@@ -110,7 +118,7 @@ struct WelcomePage: View {
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
                             .inset(by: 0.5)
-                            .stroke(Color(red: 0.157, green: 0.165, blue: 0.216), lineWidth: 1)
+                            .stroke(overlayStrokeColor, lineWidth: 1)
                     )
                     .padding(.horizontal, 40)
                 
@@ -125,7 +133,7 @@ struct WelcomePage: View {
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
                             .inset(by: 0.5)
-                            .stroke(Color(red: 0.157, green: 0.165, blue: 0.216), lineWidth: 1)
+                            .stroke(overlayStrokeColor, lineWidth: 1)
                     )
                     .padding(.horizontal, 47)
                 
@@ -151,7 +159,7 @@ struct WelcomePage: View {
                     Text("Log In")
                         .foregroundColor(.white)
                         .frame(width: 296, height: 50)
-                        .background(Color(red: 1, green: 0.62, blue: 0.29))
+                        .background(loginBackgroundColors)
                         .cornerRadius(10)
                 }
                 
@@ -160,11 +168,10 @@ struct WelcomePage: View {
                 
                 Text("Or")
                     .font(
-                        Font.custom("SF Pro", size: 20)
-                            .weight(.medium)
-                    )
+                        .system(size: 20)
+                        .weight(.medium))
                     .multilineTextAlignment(.center)
-                    .foregroundColor(Color(red: 0.16, green: 0.16, blue: 0.22))
+                    .foregroundColor(additionTextBlack)
                 
                 Spacer()
                     .frame(height: 43)
@@ -172,7 +179,7 @@ struct WelcomePage: View {
                 HStack(spacing: 51) {
                     ZStack {
                         Rectangle()
-                            .foregroundColor(Color(red: 0.94, green: 0.94, blue: 0.94))
+                            .foregroundColor(iconBackgroundColor)
                             .frame(width: 49, height: 49)
                             .cornerRadius(10)
                         
@@ -188,7 +195,7 @@ struct WelcomePage: View {
                     
                     ZStack {
                         Rectangle()
-                            .foregroundColor(Color(red: 0.94, green: 0.94, blue: 0.94))
+                            .foregroundColor(iconBackgroundColor)
                             .frame(width: 49, height: 49)
                             .cornerRadius(10)
                         
@@ -203,7 +210,7 @@ struct WelcomePage: View {
                     
                     ZStack {
                         Rectangle()
-                            .foregroundColor(Color(red: 0.94, green: 0.94, blue: 0.94))
+                            .foregroundColor(iconBackgroundColor)
                             .frame(width: 49, height: 49)
                             .cornerRadius(10)
                         
@@ -223,14 +230,14 @@ struct WelcomePage: View {
 
                 HStack {
                     Text("Don’t have an account?")
-                        .font(Font.custom("SF Pro", size: 16))
+                        .font(.system(size: 16))
                         .foregroundColor(Color(hex: "#282A37"))
                     
                     Button(action: {
                         // Action for Sign Up button
                     }) {
                         Text("Sign Up")
-                            .font(Font.custom("SF Pro", size: 16))
+                            .font(.system(size: 16))
                             .foregroundColor(Color(hex: "#4E5FF5"))
                     }
                 }

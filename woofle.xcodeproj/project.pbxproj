@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		049E373F2C113AB800DD2F69 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E373E2C113AB800DD2F69 /* WelcomePage.swift */; };
+		049E37502C1168F800DD2F69 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E374F2C1168F800DD2F69 /* LogIn.swift */; };
 		880FC53D2C0FE7D700A78F3E /* nameInputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */; };
 		880FC53F2C0FEEF800A78F3E /* whyDownloadScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */; };
 		8820B9E52C11369000F01434 /* toggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8820B9E42C11369000F01434 /* toggleButton.swift */; };
-		049E373F2C113AB800DD2F69 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E373E2C113AB800DD2F69 /* WelcomePage.swift */; };
-		049E374D2C114A2700DD2F69 /* Darumadrop_One in Resources */ = {isa = PBXBuildFile; fileRef = 049E374C2C114A2700DD2F69 /* Darumadrop_One */; };
-		049E37502C1168F800DD2F69 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E374F2C1168F800DD2F69 /* LogIn.swift */; };
 		88C425F12C0E904800ADECAD /* goalInputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C425F02C0E904800ADECAD /* goalInputScreen.swift */; };
 		88FB78812C1295E400F61A74 /* LevelDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB787C2C1295E400F61A74 /* LevelDropdown.swift */; };
 		88FB78822C1295E400F61A74 /* LevelDropdownExpanded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB787D2C1295E400F61A74 /* LevelDropdownExpanded.swift */; };
@@ -58,13 +57,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		049E373E2C113AB800DD2F69 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
+		049E374E2C115DC200DD2F69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		049E374F2C1168F800DD2F69 /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
 		880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nameInputScreen.swift; sourceTree = "<group>"; };
 		880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whyDownloadScreen.swift; sourceTree = "<group>"; };
 		8820B9E42C11369000F01434 /* toggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toggleButton.swift; sourceTree = "<group>"; };
-		049E373E2C113AB800DD2F69 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
-		049E374C2C114A2700DD2F69 /* Darumadrop_One */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Darumadrop_One; path = ../../../../Downloads/Darumadrop_One; sourceTree = "<group>"; };
-		049E374E2C115DC200DD2F69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		049E374F2C1168F800DD2F69 /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
 		88C425F02C0E904800ADECAD /* goalInputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalInputScreen.swift; sourceTree = "<group>"; };
 		88FB787C2C1295E400F61A74 /* LevelDropdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelDropdown.swift; sourceTree = "<group>"; };
 		88FB787D2C1295E400F61A74 /* LevelDropdownExpanded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelDropdownExpanded.swift; sourceTree = "<group>"; };
@@ -188,7 +186,6 @@
 				B3A8DCA82C0D54A400ED5B9A /* View */,
 				B3A8DC7A2C08095400ED5B9A /* woofleApp.swift */,
 				D3AD359A2C0FF88E008BC3F6 /* MapView.swift */,
-				049E374C2C114A2700DD2F69 /* Darumadrop_One */,
 				B3A8DC7E2C08095500ED5B9A /* Assets.xcassets */,
 				049E373E2C113AB800DD2F69 /* WelcomePage.swift */,
 				049E374F2C1168F800DD2F69 /* LogIn.swift */,
@@ -369,7 +366,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				049E374D2C114A2700DD2F69 /* Darumadrop_One in Resources */,
 				B3A8DC822C08095500ED5B9A /* Preview Assets.xcassets in Resources */,
 				88FB788C2C129A8A00F61A74 /* Assets.xcassets in Resources */,
 				B3A8DC7F2C08095500ED5B9A /* Assets.xcassets in Resources */,
