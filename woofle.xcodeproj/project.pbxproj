@@ -11,7 +11,6 @@
 		049E37502C1168F800DD2F69 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E374F2C1168F800DD2F69 /* LogIn.swift */; };
 		880FC53D2C0FE7D700A78F3E /* nameInputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */; };
 		880FC53F2C0FEEF800A78F3E /* whyDownloadScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */; };
-		8820B9E52C11369000F01434 /* toggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8820B9E42C11369000F01434 /* toggleButton.swift */; };
 		88C425F12C0E904800ADECAD /* goalInputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C425F02C0E904800ADECAD /* goalInputScreen.swift */; };
 		88FB78812C1295E400F61A74 /* LevelDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB787C2C1295E400F61A74 /* LevelDropdown.swift */; };
 		88FB78822C1295E400F61A74 /* LevelDropdownExpanded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB787D2C1295E400F61A74 /* LevelDropdownExpanded.swift */; };
@@ -22,6 +21,9 @@
 		88FB788D2C129A8A00F61A74 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB78882C129A8A00F61A74 /* Onboarding.swift */; };
 		88FB788E2C129A8A00F61A74 /* Onboarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB78892C129A8A00F61A74 /* Onboarding2.swift */; };
 		88FB788F2C129A8A00F61A74 /* toggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB788A2C129A8A00F61A74 /* toggleButton.swift */; };
+		88FB78922C129BFE00F61A74 /* MapDots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB78912C129BFE00F61A74 /* MapDots.swift */; };
+		88FB78942C12A5A700F61A74 /* Dot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB78932C12A5A700F61A74 /* Dot.swift */; };
+		88FB78972C12BE9D00F61A74 /* RotateArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB78962C12BE9D00F61A74 /* RotateArrayExtension.swift */; };
 		B37BEF762C0FEE57004E34D8 /* WoofleActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37BEF752C0FEE57004E34D8 /* WoofleActionButton.swift */; };
 		B39B7CB52C0E9822000B9089 /* ActivitySelectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39B7CB42C0E9822000B9089 /* ActivitySelectionCard.swift */; };
 		B3A8DC7B2C08095400ED5B9A /* woofleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DC7A2C08095400ED5B9A /* woofleApp.swift */; };
@@ -62,7 +64,6 @@
 		049E374F2C1168F800DD2F69 /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
 		880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nameInputScreen.swift; sourceTree = "<group>"; };
 		880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whyDownloadScreen.swift; sourceTree = "<group>"; };
-		8820B9E42C11369000F01434 /* toggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toggleButton.swift; sourceTree = "<group>"; };
 		88C425F02C0E904800ADECAD /* goalInputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalInputScreen.swift; sourceTree = "<group>"; };
 		88FB787C2C1295E400F61A74 /* LevelDropdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelDropdown.swift; sourceTree = "<group>"; };
 		88FB787D2C1295E400F61A74 /* LevelDropdownExpanded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelDropdownExpanded.swift; sourceTree = "<group>"; };
@@ -73,6 +74,9 @@
 		88FB78882C129A8A00F61A74 /* Onboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		88FB78892C129A8A00F61A74 /* Onboarding2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding2.swift; sourceTree = "<group>"; };
 		88FB788A2C129A8A00F61A74 /* toggleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = toggleButton.swift; sourceTree = "<group>"; };
+		88FB78912C129BFE00F61A74 /* MapDots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDots.swift; sourceTree = "<group>"; };
+		88FB78932C12A5A700F61A74 /* Dot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dot.swift; sourceTree = "<group>"; };
+		88FB78962C12BE9D00F61A74 /* RotateArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotateArrayExtension.swift; sourceTree = "<group>"; };
 		B37BEF752C0FEE57004E34D8 /* WoofleActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoofleActionButton.swift; sourceTree = "<group>"; };
 		B39B7CB42C0E9822000B9089 /* ActivitySelectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySelectionCard.swift; sourceTree = "<group>"; };
 		B3A8DC772C08095400ED5B9A /* woofle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = woofle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,14 +122,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8820B9E32C11365500F01434 /* onboarding */ = {
-			isa = PBXGroup;
-			children = (
-				8820B9E42C11369000F01434 /* toggleButton.swift */,
-			);
-			path = onboarding;
-			sourceTree = "<group>";
-		};
 		88FB78802C1295E400F61A74 /* Level */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +142,15 @@
 				88FB788A2C129A8A00F61A74 /* toggleButton.swift */,
 			);
 			path = onboarding;
+			sourceTree = "<group>";
+		};
+		88FB78902C129BF400F61A74 /* MapDots */ = {
+			isa = PBXGroup;
+			children = (
+				88FB78912C129BFE00F61A74 /* MapDots.swift */,
+				88FB78932C12A5A700F61A74 /* Dot.swift */,
+			);
+			path = MapDots;
 			sourceTree = "<group>";
 		};
 		B37BEF722C0FEC1D004E34D8 /* Core */ = {
@@ -193,6 +198,7 @@
 				88C425F02C0E904800ADECAD /* goalInputScreen.swift */,
 				880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */,
 				880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */,
+				88FB78962C12BE9D00F61A74 /* RotateArrayExtension.swift */,
 			);
 			path = woofle;
 			sourceTree = "<group>";
@@ -225,9 +231,9 @@
 		B3A8DCA82C0D54A400ED5B9A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				88FB78902C129BF400F61A74 /* MapDots */,
 				88FB788B2C129A8A00F61A74 /* onboarding */,
 				88FB78802C1295E400F61A74 /* Level */,
-				8820B9E32C11365500F01434 /* onboarding */,
 				B37BEF722C0FEC1D004E34D8 /* Core */,
 				B3A8DCB52C0D65FD00ED5B9A /* activity */,
 			);
@@ -404,12 +410,13 @@
 				B3A8DC7B2C08095400ED5B9A /* woofleApp.swift in Sources */,
 				88FB788F2C129A8A00F61A74 /* toggleButton.swift in Sources */,
 				88FB788E2C129A8A00F61A74 /* Onboarding2.swift in Sources */,
+				88FB78942C12A5A700F61A74 /* Dot.swift in Sources */,
 				88FB78812C1295E400F61A74 /* LevelDropdown.swift in Sources */,
 				B3A8DCB02C0D635A00ED5B9A /* User.swift in Sources */,
 				B37BEF762C0FEE57004E34D8 /* WoofleActionButton.swift in Sources */,
 				88FB78842C1295E400F61A74 /* LevelDropdownNoActivity.swift in Sources */,
 				B3A8DCB72C0D662100ED5B9A /* ActivitySelection.swift in Sources */,
-				8820B9E52C11369000F01434 /* toggleButton.swift in Sources */,
+				88FB78972C12BE9D00F61A74 /* RotateArrayExtension.swift in Sources */,
 				B3A8DCB22C0D63B200ED5B9A /* Goal.swift in Sources */,
 				88FB78862C1295F400F61A74 /* activitySelectedScreen.swift in Sources */,
 				B39B7CB52C0E9822000B9089 /* ActivitySelectionCard.swift in Sources */,
@@ -419,6 +426,7 @@
 				B39B7CB52C0E9822000B9089 /* ActivitySelectionCard.swift in Sources */,
 				B3A8DCAC2C0D555000ED5B9A /* SampleSwiftController.swift in Sources */,
 				049E37502C1168F800DD2F69 /* LogIn.swift in Sources */,
+				88FB78922C129BFE00F61A74 /* MapDots.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
