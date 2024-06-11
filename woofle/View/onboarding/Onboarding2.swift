@@ -5,17 +5,17 @@
 //  Created by Archita Belvadi on 6/6/2024.
 //
 
-
 import SwiftUI
 
 struct Onboarding2View: View {
     
     private var backgroundColor: Color = Color(red: 0.63, green: 0.78, blue: 0.68)
-    private var pageviewcontroller : Color = Color(red: 0.29, green: 0.53, blue: 0.51)
-    private var pageviewcontrollerdisabled : Color = Color(red: 0.88, green: 0.88, blue: 0.88)
+    private var pageviewcontroller: Color = Color(red: 0.29, green: 0.53, blue: 0.51)
+    private var pageviewcontrollerdisabled: Color = Color(red: 0.88, green: 0.88, blue: 0.88)
+    @State private var isNavigationEnabled: Bool = false
     
     var body: some View {
-
+        
         ZStack {
             Color(backgroundColor)
             VStack {
@@ -36,40 +36,42 @@ struct Onboarding2View: View {
                         .padding(.top, 0)
                         .fixedSize(horizontal: false, vertical: true)
                 }
-                            
+                
                 Spacer()
-                            
+                
                 Image("Image-onboarding2")
-               .resizable()
-               .aspectRatio(contentMode: .fit)
-               .padding(.bottom, 20)
-                            
-                WoofleActionButton(text: "Let's Start!") {
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .padding(.bottom, 20)
+                
+                WoofleActionButton(text: "Let's Start!", action: {
+                    isNavigationEnabled.toggle()
+                })
+                .padding(.horizontal, 50)
+                .padding(.vertical, 30)
+                
+                HStack(spacing: 10) {
+                    
+                    Circle()
+                        .fill(pageviewcontrollerdisabled)
+                        .frame(width: 10, height: 10)
+                    
+                    Circle()
+                        .fill(pageviewcontroller)
+                        .frame(width: 10, height: 10)
                     
                 }
-                .padding(.horizontal, 50)
-                .padding (.vertical, 30)
-                            
-                 HStack(spacing: 10) {
-                                
-                 Circle()
-                 .fill(pageviewcontrollerdisabled)
-                 .frame(width: 10, height: 10)
-                     
-                 Circle()
-                 .fill(pageviewcontroller)
-                 .frame(width: 10, height: 10)
-                     
-                            }
-                 .padding(.bottom, 40)
-                        }
+                .padding(.bottom, 40)
+            }
+            .navigationDestination(isPresented: $isNavigationEnabled) {
+                nameInputScreen()
+            }
         }
+        .navigationBarBackButtonHidden(true)
         .edgesIgnoringSafeArea(.all)
     }
 }
 
-struct Onboarding2_Previews: PreviewProvider {
-    static var previews: some View {
-        Onboarding2View()
-    }
+#Preview {
+    Onboarding2View()
 }

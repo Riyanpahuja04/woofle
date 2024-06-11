@@ -11,6 +11,7 @@ struct goalInputScreen: View {
     
     @State private var userInputText: String = ""
     @State private var opacityMaskValue: Double = 1
+    @State private var canNavigate = false
     @State private var backgroundMaskColor: Color = Color(red: 255/255, green: 253/255, blue: 248/255)
     @State private var showHelp: Bool = false
     
@@ -41,7 +42,7 @@ struct goalInputScreen: View {
                 Image("woofle-standing")
                     .resizable()
                     .scaledToFit()
-                    .padding(.horizontal, 64)
+                    .padding(.horizontal, 100)
                 
                 
                 Text("What is your Goal?")
@@ -65,10 +66,6 @@ struct goalInputScreen: View {
                         .padding(.trailing, 30.0)
                         .padding(.leading, 5)
                         .onTapGesture {
-                            
-                            // TODO: Link to API when Implemented to Fetch Random Goal
-                            // Until Then, RETURN from a preset list of locally defined temp strings.
-                            
                             userInputText = _randomGoals.randomElement() ?? "Unable to retrieve random goal"
                         }
                     
@@ -93,18 +90,9 @@ struct goalInputScreen: View {
                     
                     Button("Submit")
                     {
-                        
-                        if !userInputText.isEmpty && !showHelp {
-                            
-                            // Function Call to Backend
-                            // Networking with ChatGPT, if prompt is compatable, return true
-                            
-                            // If Return Value == True
-                            // Switch to next page
-                            // Else; Try Again and show Error
-                            
+                        if !userInputText.isEmpty && userInputText.count <= 60 {
+                            canNavigate = true
                         }
-                        
                     }
                     .frame(minWidth: 160, maxWidth: .infinity)
                     .padding(.horizontal, 25)
@@ -118,9 +106,9 @@ struct goalInputScreen: View {
                     
                     Spacer().frame(minWidth: 0, maxWidth: 25)
                     
-                } 
+                }
                 .padding(.bottom, 20)
-                // END Submit Button HStack 
+                // END Submit Button HStack
                 
                 HStack(alignment: .center) {
                     Circle().fixedSize().foregroundColor(_buttonGrey)
@@ -172,6 +160,9 @@ struct goalInputScreen: View {
             }
             
         }
+        .navigationDestination(isPresented: $canNavigate) {
+            WhyDownloadScreen()
+        }
         
     }
     
@@ -182,46 +173,27 @@ struct goalInputScreen: View {
     private let _buttonGrey: Color = Color(red: 225/255, green: 225/255, blue: 225/255)
     private let _currentPageIndicatorColor: Color = Color(red: 75/255, green: 134/255, blue: 131/255)
     private let _helpScreenTextColor: Color = Color(red: 0.16, green: 0.16, blue: 0.21)
-    // END TEMP COLORS
-    
-    // Temp Strings for Random Goal Selection
     private let _randomGoals: [String] = [
         "Play 'stand by me' using basic chords on the guitar",
         "Learn how to program in Swift",
         "I need to learn how to swim",
         "Attend local book club once a month"
     ]
-    // END TEMP STRINGS
     
     func currentButtonColor() -> Color {
-        if !userInputText.isEmpty && userInputText.count < 61 {
-            
+        if !userInputText.isEmpty && userInputText.count <= 60 {
             return _orangeColor
-            
-            // Function Call to Backend
-            // Networking with ChatGPT, if prompt is compatable, return true
-            
-            // If Return Value == True
-            // Switch to next page
-            // Else; Try Again and show Error
-            
-        }
-        
-        else {
+        } else {
             return _grayColor
         }
     }
     
     func characterCounterColor() -> Color {
-        
         if userInputText.count > 60 {
             return .red
-        }
-        
-        else {
+        } else {
             return .black
         }
-        
     }
     
     func enableBackgroundMask() {
@@ -233,9 +205,7 @@ struct goalInputScreen: View {
         backgroundMaskColor = _defaultBackgroundColor
         opacityMaskValue = 1
     }
-    
 }
-
 
 #Preview {
     goalInputScreen()
