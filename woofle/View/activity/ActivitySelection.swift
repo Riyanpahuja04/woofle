@@ -3,6 +3,8 @@ import SwiftUI
 struct ActivitySelection: View {
     @State private var selectedTask: String?
     @State private var isSpinning: Bool = false
+    @StateObject private var data = ActivityController()
+    @State private var options = []
     
     private let _titleColor = Color(red: 0.28, green: 0.29, blue: 0.43)
     private let _subTitleColor = Color(red: 1, green: 0.99, blue: 0.95)
@@ -47,20 +49,25 @@ struct ActivitySelection: View {
                         Spacer()
                         
                         VStack {
-                            Text("LEVEL 0")
+                            Text(data.levels?[0].level ?? "Level 0")
                                 .font(.system(size: 24)
                                 )
                                 .fontWeight(.semibold)
                                 .multilineTextAlignment(.center)
                                 .foregroundStyle(_titleColor)
                                 .padding(.bottom, 30)
-                            ForEach(_sample.indices, id: \.self) { index in
-                                ActivitySelectionCard(
-                                    task: _sample[index]["task"]!,
-                                    description: _sample[index]["description"]!,
-                                    selectedTask: $selectedTask
-                                )
+                            if(data.levels != nil ) {
+                                ForEach(_sample.indices, id: \.self) { index in
+                                    ActivitySelectionCard(
+                                        task: _sample[index]["task"]!,
+                                        description: _sample[index]["description"]!,
+                                        selectedTask: $selectedTask
+                                    )
+                                }
                             }
+                        }
+                        .onAppear {
+                            print(data.levels?[0])
                         }
                         
                         Spacer()
