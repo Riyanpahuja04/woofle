@@ -13,12 +13,23 @@ struct Dot: View {
     
     var body: some View {
         
-        Group {
+        ZStack {
             
-            Image(dotLocations.3)
+            Image("token-mid")
                 .resizable()
                 .scaledToFit()
                 .position(x: dotLocations.0, y: dotLocations.1)
+            
+            if dotLocations.3 == "Green-Token" {
+                
+                
+                
+                Image("Green-Token")
+                    .resizable()
+                    .scaledToFit()
+                    .position(x: dotLocations.0, y: dotLocations.1)
+                    .transition(.offset(x: 160, y: -50).combined(with: .blurReplace))
+            }
             
         }.frame(width: dotLocations.2)
 

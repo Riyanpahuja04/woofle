@@ -26,7 +26,7 @@ struct MapDots: View {
     
         // Third Node
     (-80, 100, 70, "token-mid"), // Visual Node
-    (130, 120, 75, "Green-Token"), // Intermediate Node
+    (130, 120, 75, "token-mid"), // Intermediate Node
     
         // Final Node
     (-30, 170, 80, "Green-Token"), // Visual Node
