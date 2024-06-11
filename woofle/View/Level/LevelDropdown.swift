@@ -8,24 +8,19 @@
 import SwiftUI
 
 struct LevelDropdown: View {
-    
-    @State private var amDeployed: Bool = false
-    
-    // ViewModel will return these values once complete
-    @State private var currentLevel: String = "LEVEL 0"
-    @State private var levelName: String = "Playing “Stand By Me” Using Basic Chords On Guitar"
-    @State private var goal: String = "Learn Basic Chords"
+        
+    @ObservedObject var dropdownViewModel: DropdownViewModel
     
     var body: some View {
         
-        ZStack {
-            
-            VStack {
+            ZStack {
                 
-                Rectangle()
-                    .foregroundColor(_defaultBackgroundColor)
-                    .cornerRadius(20)
-                    .frame(width: .infinity, height: frameHeight())
+                VStack {
+                    
+                    Rectangle()
+                        .foregroundColor(_defaultBackgroundColor)
+                        .cornerRadius(20)
+                        .frame(width: .infinity, height: 200)
                     Capsule()
                         .trim(from: 0.05, to: 0.45)
                         .foregroundColor(_defaultBackgroundColor)
@@ -36,48 +31,52 @@ struct LevelDropdown: View {
                         }
                 }
                 .shadow(radius:2, x: 0, y: 4)
-            VStack {
+                VStack {
+                    
+                    Text(dropdownViewModel.currentLevel)
+                        .foregroundColor(_dropdownImageColor)
+                        .font(
+                            .system(size: 20)
+                            .weight(.bold)
+                        )
+                        .multilineTextAlignment(.center)
+                        .padding(.top, -5)
+                        .padding(.bottom, 10)
+                    
+                    Text(dropdownViewModel.levelName)
+                        .foregroundColor(_dropdownImageColor)
+                        .font(
+                            .system(size: 20)
+                            .weight(.semibold)
+                        )
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 20)
+                    
+                    Text(dropdownViewModel.goal)
+                        .frame(width: .infinity, height: 40)
+                        .font(
+                            .system(size: 20)
+                            .weight(.medium)
+                        )
+                        .padding(.horizontal, 60)
+                        .background(_greenHeaderColor)
+                        .cornerRadius(10)
+                        .foregroundColor(_defaultBackgroundColor)
+                    
+                }
                 
-                Text(currentLevel)
+                Image(systemName: "chevron.down")
+                    .font(.title)
+                    .padding(.horizontal, 30)
                     .foregroundColor(_dropdownImageColor)
-                    .font(
-                        .system(size: 20)
-                        .weight(.bold)
-                    )
-                    .multilineTextAlignment(.center)
-                    .padding(.top, 20)
-                    .padding(.bottom, 10)
+                    .padding(.top, 200 + 20)
+                    .onTapGesture{
+                        withAnimation(.interpolatingSpring) {
+                            dropdownViewModel.currentMenu = 1
+                        }
+                    }
                 
-                Text(levelName)
-                    .foregroundColor(_dropdownImageColor)
-                    .font(
-                        .system(size: 20)
-                        .weight(.semibold)
-                    )
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 20)
-                
-                Text(goal)
-                    .frame(width: .infinity, height: 40)
-                    .font(
-                        .system(size: 20)
-                        .weight(.medium)
-                    )
-                    .padding(.horizontal, 60)
-                    .background(_greenHeaderColor)
-                    .cornerRadius(10)
-                    .foregroundColor(_defaultBackgroundColor)
-                
-            }
-            
-            Image(systemName: "chevron.down")
-                .font(.title)
-                .padding(.horizontal, 30)
-                .foregroundColor(_dropdownImageColor)
-                .padding(.top, frameHeight() + 20)
-                
-        }
-        .ignoresSafeArea()
+            }.padding(.top, -40)
     }
     
     
@@ -92,14 +91,8 @@ struct LevelDropdown: View {
     private let _greenHeaderColor: Color = Color(red: 0.43, green: 0.6, blue: 0.59)
     // END TEMP COLORS
     
-    
-    func frameHeight() -> CGFloat {
-        if amDeployed { return 440 }
-        else { return 240 }
-    }
-    
 }
 
 #Preview {
-    LevelDropdown()
+    LevelDropdown(dropdownViewModel: DropdownViewModel())
 }

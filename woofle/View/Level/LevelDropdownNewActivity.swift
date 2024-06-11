@@ -9,12 +9,7 @@ import SwiftUI
 
 struct LevelDropdownNewActivity: View {
     
-    @State private var amDeployed: Bool = true
-    
-    // ViewModel will return these values once complete
-    @State private var currentLevel: String = "LEVEL 0"
-    @State private var levelName: String = "Playing “Stand By Me” Using Basic Chords On Guitar"
-    @State private var goal: String = "Learn Basic Chords"
+    @ObservedObject var dropdownViewModel: DropdownViewModel
     
     var body: some View {
         
@@ -26,7 +21,7 @@ struct LevelDropdownNewActivity: View {
                 Rectangle()
                     .foregroundColor(_defaultBackgroundColor)
                     .cornerRadius(20)
-                    .frame(width: .infinity, height: frameHeight())
+                    .frame(width: .infinity, height: 200)
                     Capsule()
                         .trim(from: 0.05, to: 0.45)
                         .foregroundColor(_defaultBackgroundColor)
@@ -39,7 +34,7 @@ struct LevelDropdownNewActivity: View {
                 .shadow(radius:2, x: 0, y: 4)
 
             VStack {
-                Text(levelName)
+                Text(dropdownViewModel.levelName)
                     .foregroundColor(_dropdownImageColor)
                     .font(
                         .system(size: 20)
@@ -47,7 +42,7 @@ struct LevelDropdownNewActivity: View {
                     )
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 20)
-                    .padding(.top, -40)
+                    .padding(.top, -70)
             }
             
             Text("Ready for the next level?")
@@ -57,7 +52,6 @@ struct LevelDropdownNewActivity: View {
                 )
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 20)
-                .padding(.top, 35)
             
             HStack {
                 Spacer().frame(width: 60)
@@ -65,16 +59,21 @@ struct LevelDropdownNewActivity: View {
                     //TODO: ADD CODE
                 }.frame(width: .infinity, height: 60)
                 Spacer().frame(width: 60)
-            }.padding(.top, 130)
+            }.padding(.top, 85)
             
             Image(systemName: "chevron.up")
                 .font(.title)
                 .padding(.horizontal, 30)
                 .foregroundColor(_dropdownImageColor)
-                .padding(.top, frameHeight() + 20)
+                .padding(.top, 200 + 20)
+                .onTapGesture{
+                    withAnimation(.interpolatingSpring) {
+                        dropdownViewModel.currentMenu = 3
+                    }
+                }
                 
         }
-        .ignoresSafeArea()
+        .padding(.top, -40)
     }
     
     
@@ -89,14 +88,5 @@ struct LevelDropdownNewActivity: View {
     private let _greenHeaderColor: Color = Color(red: 0.43, green: 0.6, blue: 0.59)
     // END TEMP COLORS
     
-    
-    func frameHeight() -> CGFloat {
-        if amDeployed { return 240 }
-        else { return 140 }
-    }
-    
 }
 
-#Preview {
-    LevelDropdownNewActivity()
-}
