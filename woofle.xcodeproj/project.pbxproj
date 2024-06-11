@@ -32,6 +32,8 @@
 		B37BEF762C0FEE57004E34D8 /* WoofleActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37BEF752C0FEE57004E34D8 /* WoofleActionButton.swift */; };
 		B37BEF782C128449004E34D8 /* ActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37BEF772C128449004E34D8 /* ActivityController.swift */; };
 		B37BEF7A2C128909004E34D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37BEF792C128909004E34D8 /* ContentView.swift */; };
+		B37BEFA82C129BBA004E34D8 /* ActivityApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37BEFA72C129BBA004E34D8 /* ActivityApiController.swift */; };
+		B37BEFAA2C12B26B004E34D8 /* InputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37BEFA92C12B26B004E34D8 /* InputScreen.swift */; };
 		B39B7CB52C0E9822000B9089 /* ActivitySelectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39B7CB42C0E9822000B9089 /* ActivitySelectionCard.swift */; };
 		B3A8DC7B2C08095400ED5B9A /* woofleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DC7A2C08095400ED5B9A /* woofleApp.swift */; };
 		B3A8DC7F2C08095500ED5B9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3A8DC7E2C08095500ED5B9A /* Assets.xcassets */; };
@@ -95,6 +97,8 @@
 		B37BEF752C0FEE57004E34D8 /* WoofleActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoofleActionButton.swift; sourceTree = "<group>"; };
 		B37BEF772C128449004E34D8 /* ActivityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityController.swift; sourceTree = "<group>"; };
 		B37BEF792C128909004E34D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B37BEFA72C129BBA004E34D8 /* ActivityApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityApiController.swift; sourceTree = "<group>"; };
+		B37BEFA92C12B26B004E34D8 /* InputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputScreen.swift; sourceTree = "<group>"; };
 		B39B7CB42C0E9822000B9089 /* ActivitySelectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySelectionCard.swift; sourceTree = "<group>"; };
 		B3A8DC772C08095400ED5B9A /* woofle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = woofle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3A8DC7A2C08095400ED5B9A /* woofleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = woofleApp.swift; sourceTree = "<group>"; };
@@ -279,6 +283,7 @@
 				B37BEF722C0FEC1D004E34D8 /* Core */,
 				B3A8DCB52C0D65FD00ED5B9A /* activity */,
 				B37BEF792C128909004E34D8 /* ContentView.swift */,
+				B37BEFA92C12B26B004E34D8 /* InputScreen.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 				88728A9D2C17D18600115B54 /* DropdownViewModel.swift */,
 				B3A8DCAB2C0D555000ED5B9A /* SampleSwiftController.swift */,
 				B37BEF772C128449004E34D8 /* ActivityController.swift */,
+				B37BEFA72C129BBA004E34D8 /* ActivityApiController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -471,6 +477,8 @@
 				88FB78942C12A5A700F61A74 /* Dot.swift in Sources */,
 				88FB78812C1295E400F61A74 /* LevelDropdown.swift in Sources */,
 				B3A8DCB02C0D635A00ED5B9A /* User.swift in Sources */,
+				B37BEFAA2C12B26B004E34D8 /* InputScreen.swift in Sources */,
+				B37BEFA82C129BBA004E34D8 /* ActivityApiController.swift in Sources */,
 				B37BEF762C0FEE57004E34D8 /* WoofleActionButton.swift in Sources */,
 				D30C7DEC2C17D57A0021483A /* goalCompletionScreen.swift in Sources */,
 				88FB78842C1295E400F61A74 /* LevelDropdownNoActivity.swift in Sources */,
