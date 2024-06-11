@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		049E373F2C113AB800DD2F69 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E373E2C113AB800DD2F69 /* WelcomePage.swift */; };
+		049E374D2C114A2700DD2F69 /* Darumadrop_One in Resources */ = {isa = PBXBuildFile; fileRef = 049E374C2C114A2700DD2F69 /* Darumadrop_One */; };
 		049E37502C1168F800DD2F69 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E374F2C1168F800DD2F69 /* LogIn.swift */; };
 		049E37522C12C37300DD2F69 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E37512C12C37300DD2F69 /* SignUp.swift */; };
 		049E37542C12C5DA00DD2F69 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E37532C12C5DA00DD2F69 /* ColorExtension.swift */; };
@@ -159,6 +160,15 @@
 			sourceTree = "<group>";
 		};
 		88728AA12C17EE8B00115B54 /* Dropdown-Objects */ = {
+		8820B9E32C11365500F01434 /* onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				8820B9E42C11369000F01434 /* toggleButton.swift */,
+			);
+			path = onboarding;
+			sourceTree = "<group>";
+		};
+		88FB78802C1295E400F61A74 /* Level */ = {
 			isa = PBXGroup;
 			children = (
 				88FB787C2C1295E400F61A74 /* LevelDropdown.swift */,
