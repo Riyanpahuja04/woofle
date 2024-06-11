@@ -11,7 +11,7 @@ struct ActivitySelection: View {
     
     // TODO: fetch api data to show
     var body: some View {
-            ScrollView {
+           // ScrollView {
                 ZStack {
                     Image("TopBgActivity")
                         .resizable()
@@ -19,19 +19,30 @@ struct ActivitySelection: View {
                     
                     VStack(spacing: 5) {
                         // TODO: populate data from api
-                        VStack(alignment:.leading, spacing: 7) {
-                            Text("Playing “Stand By Me” Using Basic Chords On Guitar")
-                                .font(.system(size: 20))
-                                .fontWeight(.medium)
-                                .foregroundStyle(_subTitleColor)
+                        ZStack {
+                            Image("pawprint")
+                                .resizable()
+                                .rotationEffect(Angle(degrees: 32.42))
+                                .frame(width: 138, height: 133)
+                                .offset(x:150)
+                           
+                            VStack(alignment:.leading, spacing: 7) {
+                               
+                                Text("Playing “Stand By Me” Using Basic Chords On Guitar")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.medium)
+                                    .foregroundStyle(_subTitleColor)
+                                
+                                
+                                Text("What activity do you want to do?")
+                                    .font(.system(size: 35))
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(_titleColor)
+                                
+                            }
+                            .frame(width: 320)
                             
-                            
-                            Text("What activity you want to do?")
-                                .font(.system(size: 35))
-                                .fontWeight(.semibold)
-                                .foregroundColor(_titleColor)
                         }
-                        .padding(.horizontal, 60)
                         
                         Spacer()
                         
@@ -89,8 +100,8 @@ struct ActivitySelection: View {
                         Spacer()
                     }
                     .safeAreaPadding(.top, 68)
-                }
-                .ignoresSafeArea()
+//                }
+//                .ignoresSafeArea()
             }
             .ignoresSafeArea()
     }
