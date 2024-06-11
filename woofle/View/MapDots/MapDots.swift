@@ -30,18 +30,25 @@ struct MapDots: View {
     
         // Final Node
     (-30, 170, 80), // Visual Node
-    (0, 260, 90), // Intermediate Node
+    (-190, 220, 90), // Intermediate Node
     
         // Invisible Animation Node
-    (-30, 260, 0), // Visual Node
-    (-30, 170, 0), // Intermediate Node
+    (-240, 220, 0), // Visual Node
+    (-140, 220, 0), // Intermediate Node
     ]
+    
+    @State private var pathIsExtended: Bool = true
     
     var body: some View {
         
         ZStack {
             
-            Image("Path")
+            Group {
+                if pathIsExtended {Image("Path-Back")
+                    .offset(x:-30,y:0)}
+                else {Image("Path")}
+            }
+            
             
             Dot(dotLocations: $dotLocations[0])
 
