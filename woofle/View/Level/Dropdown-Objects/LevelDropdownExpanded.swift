@@ -22,7 +22,7 @@ struct LevelDropdownExpanded: View {
                     Rectangle()
                         .foregroundColor(_defaultBackgroundColor)
                         .cornerRadius(20)
-                        .frame(width: .infinity, height: 430)
+                        .frame(width: .infinity, height: 420)
                     Capsule()
                         .trim(from: 0.05, to: 0.45)
                         .foregroundColor(_defaultBackgroundColor)
@@ -54,13 +54,13 @@ struct LevelDropdownExpanded: View {
                             )
                             .foregroundColor(_dropdownImageColor)
                             .frame(maxWidth: .infinity, alignment: .trailing)
-                            .padding(.bottom, 10)
                             .padding(.trailing, 50)
                             .onTapGesture {
                                 //TODO: ADD FEATURE
                             }
                         
-                    }
+                    }.padding(.top, 20)
+                        .padding(.bottom, 10)
                     
                     Text(dropdownViewModel.levelName)
                         .foregroundColor(_dropdownImageColor)
@@ -124,7 +124,7 @@ struct LevelDropdownExpanded: View {
                     .font(.title)
                     .padding(.horizontal, 30)
                     .foregroundColor(_dropdownImageColor)
-                    .padding(.top, 430)
+                    .padding(.top, 420)
                     .onTapGesture{
                         withAnimation(.interpolatingSpring) {
                             dropdownViewModel.currentMenu = 0
