@@ -9,16 +9,27 @@ import SwiftUI
 
 struct Dot: View {
     
-    @Binding var dotLocations: (CGFloat, CGFloat, CGFloat)
+    @Binding var dotLocations: (CGFloat, CGFloat, CGFloat, String)
     
     var body: some View {
         
-        Group {
-                Image("token-mid")
+        ZStack {
+            
+            Image("token-mid")
                 .resizable()
                 .scaledToFit()
                 .position(x: dotLocations.0, y: dotLocations.1)
-
+            
+            if dotLocations.3 == "Green-Token" {
+                
+                
+                
+                Image("Green-Token")
+                    .resizable()
+                    .scaledToFit()
+                    .position(x: dotLocations.0, y: dotLocations.1)
+                    .transition(.offset(x: 160, y: -50).combined(with: .blurReplace))
+            }
             
         }.frame(width: dotLocations.2)
 
