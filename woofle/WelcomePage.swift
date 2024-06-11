@@ -9,7 +9,8 @@ import SwiftUI
 
 struct _WelcomePage: View {
     @State private var isLoading = false
-    
+    @State private var navigateToLogin = false
+
     var body: some View {
         NavigationStack {
             ZStack {
@@ -98,42 +99,38 @@ struct _WelcomePage: View {
                         .foregroundColor(.white)
                     Spacer()
                         .frame(height: 60)
+                    
                     LoadingIndicator(isLoading: $isLoading)
                     Spacer()
                         .frame(height: 394 - 25)
                 }
+                .navigationDestination(isPresented: $navigateToLogin ) {
+                    LoginPage() .navigationBarBackButtonHidden(true)
+                }
             }
         }
+        .onAppear {
+            startLoading()
+        }
     }
-    
-//    var loadingIndicator: some View {
-//        ZStack {
-//            Circle()
-//                .stroke(Color(.systemGray5), lineWidth: 3)
-//                .frame(width: 30, height: 30)
-//            Circle()
-//                .trim(from: 0, to: 0.7)
-//                .stroke(Color(#colorLiteral(red: 0.250980406999588, green: 0.4117647111415863, blue: 0.5372549295425415, alpha: 1)), lineWidth: 3)
-//                .frame(width: 30, height: 30)
-//                .rotationEffect(Angle(degrees: isLoading ? 360 : 0))
-//                .animation(.linear(duration: 1).repeatForever(autoreverses: false))
-//        }
-//        .onAppear {
-//            self.isLoading = true
-//        }
-//    }
+
+    private func startLoading() {
+        isLoading = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            isLoading = false
+            navigateToLogin = true
+        }
+    }
 }
 
-
-
 struct LoadingIndicator: View {
-    
+
     private var animation: Animation {
-            .linear
-            .speed(0.5)
-            .repeatForever(autoreverses: false)
-        }
-    
+        .linear
+        .speed(0.5)
+        .repeatForever(autoreverses: false)
+    }
+
     @Binding var isLoading: Bool
     var body: some View {
         ZStack {
@@ -145,17 +142,17 @@ struct LoadingIndicator: View {
                 .stroke(Color(#colorLiteral(red: 0.250980406999588, green: 0.4117647111415863, blue: 0.5372549295425415, alpha: 1)), lineWidth: 3)
                 .frame(width: 30, height: 30)
                 .rotationEffect(Angle(degrees: isLoading ? 360 : 0))
-//                .animation(.linear(duration: 1).repeatForever(autoreverses: false))
         }
         .onAppear {
             withAnimation(animation) {
                 self.isLoading = true
             }
-            
         }
     }
 }
 
-#Preview {
+#Preview(body: {
     _WelcomePage()
-}
+})
+        
+
