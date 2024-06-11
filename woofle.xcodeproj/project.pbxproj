@@ -128,13 +128,23 @@
 			path = onboarding;
 			sourceTree = "<group>";
 		};
-		88FB78802C1295E400F61A74 /* Level */ = {
+		88728AA12C17EE8B00115B54 /* Dropdown-Objects */ = {
 			isa = PBXGroup;
 			children = (
 				88FB787C2C1295E400F61A74 /* LevelDropdown.swift */,
 				88FB787D2C1295E400F61A74 /* LevelDropdownExpanded.swift */,
 				88FB787E2C1295E400F61A74 /* LevelDropdownNewActivity.swift */,
 				88FB787F2C1295E400F61A74 /* LevelDropdownNoActivity.swift */,
+			);
+			path = "Dropdown-Objects";
+			sourceTree = "<group>";
+		};
+		88FB78802C1295E400F61A74 /* Level */ = {
+			isa = PBXGroup;
+			children = (
+				D3AD359A2C0FF88E008BC3F6 /* MapView.swift */,
+				88FB78852C1295F400F61A74 /* activitySelectedScreen.swift */,
+				88728AA12C17EE8B00115B54 /* Dropdown-Objects */,
 			);
 			path = Level;
 			sourceTree = "<group>";
@@ -181,14 +191,11 @@
 		B3A8DC792C08095400ED5B9A /* woofle */ = {
 			isa = PBXGroup;
 			children = (
-				88728A9D2C17D18600115B54 /* DropdownViewModel.swift */,
-				88FB78852C1295F400F61A74 /* activitySelectedScreen.swift */,
 				049E374E2C115DC200DD2F69 /* Info.plist */,
 				B3A8DCAA2C0D54C200ED5B9A /* Controller */,
 				B3A8DCA92C0D54BB00ED5B9A /* Model */,
 				B3A8DCA82C0D54A400ED5B9A /* View */,
 				B3A8DC7A2C08095400ED5B9A /* woofleApp.swift */,
-				D3AD359A2C0FF88E008BC3F6 /* MapView.swift */,
 				B3A8DC7E2C08095500ED5B9A /* Assets.xcassets */,
 				049E373E2C113AB800DD2F69 /* WelcomePage.swift */,
 				049E374F2C1168F800DD2F69 /* LogIn.swift */,
@@ -251,6 +258,7 @@
 		B3A8DCAA2C0D54C200ED5B9A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				88728A9D2C17D18600115B54 /* DropdownViewModel.swift */,
 				B3A8DCAB2C0D555000ED5B9A /* SampleSwiftController.swift */,
 			);
 			path = Controller;
