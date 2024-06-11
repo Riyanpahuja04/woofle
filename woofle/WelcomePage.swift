@@ -66,7 +66,7 @@ struct _WelcomePage: View {
                     HStack {
                         Spacer()
                             .frame(width: 40, height: 10)
-                        Image("woofle 1")
+                        Image("woofle-standing")
                             .resizable()
                             .frame(width: 220, height: 241)
                             .aspectRatio(contentMode: .fit)

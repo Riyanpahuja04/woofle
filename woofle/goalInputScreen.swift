@@ -38,7 +38,7 @@ struct goalInputScreen: View {
                         }
                 }
                 
-                Image("woofle 1")
+                Image("woofle-standing")
                     .resizable()
                     .scaledToFit()
                     .padding(.horizontal, 64)
