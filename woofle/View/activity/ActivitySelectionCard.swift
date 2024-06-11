@@ -11,9 +11,8 @@ import SwiftUI
 let _teal: Color = Color(red: 0.43, green: 0.6, blue: 0.59)
 
 struct ActivitySelectionCard: View {
-    var task: String
-    var description: String
-    @Binding var selectedTask: String?
+    var option: Option
+    @Binding var selectedOption: Option?
     
     let _taskColor: Color = Color(red: 0.09, green: 0.09, blue: 0.09)
     let _descriptionColor: Color = Color(red: 0.16, green: 0.16, blue: 0.22)
@@ -21,14 +20,14 @@ struct ActivitySelectionCard: View {
     var body: some View {
         VStack(spacing: 0) {
             Button(action: {
-                if selectedTask == task {
-                    selectedTask = nil
+                if selectedOption == option {
+                    selectedOption = nil
                 } else {
-                    selectedTask = task
+                    selectedOption = option
                 }
             }) {
                 // TODO: Add tappable functionality
-                Text(task)
+                Text(option.brief)
                     .font(
                         .system(size: 18)
                     )
@@ -47,8 +46,8 @@ struct ActivitySelectionCard: View {
             .cornerRadiusCustom(10, corners: isSelectedTask() ? [.topLeft, .topRight] : .allCorners)
             .padding(.horizontal, 50)
             
-            if(selectedTask == task) {
-                Text(description)
+            if(selectedOption == option) {
+                Text(option.description)
                     .font(
                         Font.system(size: 15)
                     )
@@ -67,11 +66,11 @@ struct ActivitySelectionCard: View {
                     .padding(.bottom, 17)
             }
         }
-        .animation(.easeInOut, value: selectedTask)
+        .animation(.easeInOut, value: selectedOption)
     }
     func isSelectedTask() -> Bool {
         withAnimation {
-            if selectedTask == task {
+            if selectedOption == option {
                 return true
             }
             return false
@@ -98,8 +97,4 @@ extension View {
         clipShape(RoundedCorner(radius: radius, corners: corners))
             .overlay(RoundedCorner(radius: radius, corners: corners).stroke(_teal, lineWidth: 1))
     }
-}
-
-#Preview {
-    ActivitySelectionCard(task: "Learn Basic Chords", description: "The four most common guitar chords are E-Minor, C, G and D. Youtube Tutorials would be a good place to start!", selectedTask: .constant("Learn Basic Chords"))
 }

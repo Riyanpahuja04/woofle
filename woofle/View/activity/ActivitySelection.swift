@@ -1,8 +1,12 @@
 import SwiftUI
 
 struct ActivitySelection: View {
-    @State private var selectedTask: String?
+    @State private var selectedOption: Option?
     @State private var isSpinning: Bool = false
+    @State private var currentLevel: Int = 0
+    @State private var canNavigate: Bool = false
+    private var goal = GoalManager()
+    @State private var options: [Option] = []
     
     private let _titleColor = Color(red: 0.28, green: 0.29, blue: 0.43)
     private let _subTitleColor = Color(red: 1, green: 0.99, blue: 0.95)
@@ -11,99 +15,103 @@ struct ActivitySelection: View {
     
     // TODO: fetch api data to show
     var body: some View {
-           // ScrollView {
-                ZStack {
-                    Image("TopBgActivity")
-                        .resizable()
-                        .scaledToFill()
-                    
-                    VStack(spacing: 5) {
-                        // TODO: populate data from api
-                        ZStack {
-                            Image("pawprint")
-                                .resizable()
-                                .rotationEffect(Angle(degrees: 32.42))
-                                .frame(width: 138, height: 133)
-                                .offset(x:150)
-                           
-                            VStack(alignment:.leading, spacing: 7) {
-                               
-                                Text("Playing “Stand By Me” Using Basic Chords On Guitar")
-                                    .font(.system(size: 20))
-                                    .fontWeight(.medium)
-                                    .foregroundStyle(_subTitleColor)
-                                
-                                
-                                Text("What activity do you want to do?")
-                                    .font(.system(size: 35))
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(_titleColor)
-                                
-                            }
-                            .frame(width: 320)
-                            
-                        }
+        ScrollView {
+            ZStack {
+                Image("TopBgActivity")
+                    .resizable()
+                    .scaledToFill()
+                
+                VStack(spacing: 5) {
+                    // TODO: populate data from api
+                    VStack(alignment: .leading, spacing: 7) {
+                        Text(goal.getCurrentTask())
+                            .font(.system(size: 20))
+                            .fontWeight(.medium)
+                            .foregroundStyle(_subTitleColor)
                         
-                        Spacer()
                         
-                        VStack {
-                            Text("LEVEL 0")
-                                .font(.system(size: 24)
-                                )
-                                .fontWeight(.semibold)
-                                .multilineTextAlignment(.center)
-                                .foregroundStyle(_titleColor)
-                                .padding(.bottom, 30)
-                            ForEach(_sample.indices, id: \.self) { index in
-                                ActivitySelectionCard(
-                                    task: _sample[index]["task"]!,
-                                    description: _sample[index]["description"]!,
-                                    selectedTask: $selectedTask
-                                )
-                            }
-                        }
-                        
-                        Spacer()
-                        
-                        HStack(spacing: 2) {
-                            Text("Don’t like these options?")
-                                .font(.system(size: 15))
-                                .multilineTextAlignment(.center)
-                                .foregroundStyle(_captionColor)
-                            
-                            
-                            Button(action: {
-                                isSpinning.toggle()
-                            }) {
-                                HStack(spacing: 2) {
-                                    Text("Refresh now")
-                                        .font(Font.system(size: 15))
-                                        .fontWeight(.medium)
-                                        .multilineTextAlignment(.center)
-                                        .foregroundStyle(_linkColor)
-                                    
-                                    Image(systemName: "arrow.triangle.2.circlepath")
-                                        .foregroundStyle(_linkColor)
-                                        .rotationEffect(.degrees(isSpinning ? 360 : 0))
-                                        .animation(Animation.linear(duration: 1).repeatCount(1, autoreverses: false), value: isSpinning)
-                                    
-                                    
-                                }
-                                
-                            }
-                        }
-                        .padding(.bottom, 30)
-                        
-                        // TODO: Add tappable functionality
-                        WoofleActionButton(text: "Submit", action: {})
-                        
-                        Spacer()
+                        Text("What activity you want to do?")
+                            .font(.system(size: 35))
+                            .fontWeight(.semibold)
+                            .foregroundColor(_titleColor)
                     }
-                    .safeAreaPadding(.top, 68)
-//                }
-//                .ignoresSafeArea()
+                    .padding(.horizontal, 60)
+                    
+                    Spacer()
+                    
+                    VStack {
+                        Text("Level \(currentLevel)")
+                            .font(.system(size: 24))
+                            .fontWeight(.semibold)
+                            .multilineTextAlignment(.center)
+                            .foregroundStyle(_titleColor)
+                            .padding(.bottom, 30)
+                        ForEach(options, id: \.self) { option in
+                            ActivitySelectionCard(
+                                option: option,
+                                selectedOption: $selectedOption
+                            )
+                        }
+                    }
+                    .onAppear {
+                        currentLevel = goal.getCurrentLevel()
+                        options = goal.getOptions()
+                    }
+                    
+                    Spacer()
+                    
+                    HStack(spacing: 2) {
+                        Text("Don’t like these options?")
+                            .font(.system(size: 15))
+                            .multilineTextAlignment(.center)
+                            .foregroundStyle(_captionColor)
+                        
+                        
+                        Button(action: {
+                            isSpinning.toggle()
+                            options = goal.getOptions()
+                        }) {
+                            HStack(spacing: 2) {
+                                Text("Refresh now")
+                                    .font(Font.system(size: 15))
+                                    .fontWeight(.medium)
+                                    .multilineTextAlignment(.center)
+                                    .foregroundStyle(_linkColor)
+                                
+                                Image(systemName: "arrow.triangle.2.circlepath")
+                                    .foregroundStyle(_linkColor)
+                                    .rotationEffect(.degrees(isSpinning ? 360 : 0))
+                                    .animation(Animation.linear(duration: 1).repeatCount(1, autoreverses: false), value: isSpinning)
+                                
+                                
+                            }
+                            
+                        }
+                        .disabled(canNavigate)
+                    }
+                    .padding(.bottom, 30)
+                    
+                    // TODO: Add tappable functionality
+                    WoofleActionButton(text: "Submit", action: {
+                        GlobalActivityTracker.shared.selectedOption = selectedOption
+                        GlobalActivityTracker.shared.currentGoal = goal.getCurrentTask()
+                        print(selectedOption ?? "error")
+                        if(selectedOption != nil) {
+                            canNavigate = true
+                            print(canNavigate)
+                        }
+                    })
+                    
+                    Spacer()
+                }
+                .safeAreaPadding(.top, 68)
+                .navigationDestination(isPresented: $canNavigate) {
+                    activitySelectedScreen()
+                }
             }
             .ignoresSafeArea()
+        }
+        .ignoresSafeArea()
     }
 }
 

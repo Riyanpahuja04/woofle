@@ -10,6 +10,7 @@ import SwiftUI
 struct LevelDropdownExpanded: View {
     
     @ObservedObject var dropdownViewModel: DropdownViewModel
+    @State var canNavigate = false
     
     var body: some View {
         
@@ -38,7 +39,7 @@ struct LevelDropdownExpanded: View {
                     
                     ZStack {
                         
-                        Text(dropdownViewModel.currentLevel)
+                        Text(String(GlobalActivityTracker.shared.level))
                             .foregroundColor(_dropdownImageColor)
                             .font(
                                 .system(size: 20)
@@ -62,7 +63,7 @@ struct LevelDropdownExpanded: View {
                     }.padding(.top, 20)
                         .padding(.bottom, 10)
                     
-                    Text(dropdownViewModel.levelName)
+                    Text(GlobalActivityTracker.shared.currentGoal)
                         .foregroundColor(_dropdownImageColor)
                         .font(
                             .system(size: 20)
@@ -82,7 +83,7 @@ struct LevelDropdownExpanded: View {
                                     .foregroundColor(_greenHeaderColor)
                                     .scaledToFill()
                                 
-                                Text(dropdownViewModel.goal)
+                                Text(GlobalActivityTracker.shared.selectedOption?.brief ?? "")
                                     .frame(width: .infinity, height: 50)
                                     .font(
                                         .system(size: 20)
@@ -93,7 +94,7 @@ struct LevelDropdownExpanded: View {
                                     .foregroundColor(_defaultBackgroundColor)
                             }
                             
-                            Text(dropdownViewModel.description)
+                            Text(GlobalActivityTracker.shared.selectedOption?.description ?? "")
                                 .frame(width: .infinity, height: 100)
                                 .font(
                                     .system(size: 15)
@@ -112,10 +113,15 @@ struct LevelDropdownExpanded: View {
                     HStack {
                         Spacer().frame(width: 80)
                         WoofleActionButton(text: "Complete") {
-                            //TODO: ADD CODE
+                            GlobalActivityTracker.shared.level += 1
+                            canNavigate = true
                         }.frame(width: .infinity, height: 60)
                         Spacer().frame(width: 80)
                     }.padding(.bottom, 30)
+                        .navigationDestination(isPresented: $canNavigate) {
+                            ActivitySelection()
+                                .navigationBarBackButtonHidden(true)
+                        }
                     
                     
                 }

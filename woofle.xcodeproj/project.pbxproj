@@ -30,6 +30,11 @@
 		88FB78942C12A5A700F61A74 /* Dot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB78932C12A5A700F61A74 /* Dot.swift */; };
 		88FB78972C12BE9D00F61A74 /* RotateArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB78962C12BE9D00F61A74 /* RotateArrayExtension.swift */; };
 		B37BEF762C0FEE57004E34D8 /* WoofleActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37BEF752C0FEE57004E34D8 /* WoofleActionButton.swift */; };
+		B37BEF782C128449004E34D8 /* ActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37BEF772C128449004E34D8 /* ActivityController.swift */; };
+		B37BEF7A2C128909004E34D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37BEF792C128909004E34D8 /* ContentView.swift */; };
+		B37BEFA82C129BBA004E34D8 /* GoalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37BEFA72C129BBA004E34D8 /* GoalManager.swift */; };
+		B37BEFAA2C12B26B004E34D8 /* InputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37BEFA92C12B26B004E34D8 /* InputScreen.swift */; };
+		B37BEFB22C17EF47004E34D8 /* constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37BEFB12C17EF47004E34D8 /* constant.swift */; };
 		B39B7CB52C0E9822000B9089 /* ActivitySelectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39B7CB42C0E9822000B9089 /* ActivitySelectionCard.swift */; };
 		B3A8DC7B2C08095400ED5B9A /* woofleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DC7A2C08095400ED5B9A /* woofleApp.swift */; };
 		B3A8DC7F2C08095500ED5B9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3A8DC7E2C08095500ED5B9A /* Assets.xcassets */; };
@@ -41,11 +46,12 @@
 		B3A8DCAE2C0D556100ED5B9A /* SampleSwiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DCAD2C0D556100ED5B9A /* SampleSwiftModel.swift */; };
 		B3A8DCB02C0D635A00ED5B9A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DCAF2C0D635A00ED5B9A /* User.swift */; };
 		B3A8DCB22C0D63B200ED5B9A /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DCB12C0D63B200ED5B9A /* Goal.swift */; };
-		B3A8DCB42C0D641400ED5B9A /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DCB32C0D641400ED5B9A /* Activity.swift */; };
+		B3A8DCB42C0D641400ED5B9A /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DCB32C0D641400ED5B9A /* Option.swift */; };
 		B3A8DCB72C0D662100ED5B9A /* ActivitySelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DCB62C0D662100ED5B9A /* ActivitySelection.swift */; };
 		D30C7DEC2C17D57A0021483A /* goalCompletionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C7DEB2C17D57A0021483A /* goalCompletionScreen.swift */; };
 		D30C7DEF2C17D5980021483A /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D30C7DEE2C17D5980021483A /* SDWebImageSwiftUI */; };
 		D30C7DF12C17D7DE0021483A /* animatedWoofles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C7DF02C17D7DE0021483A /* animatedWoofles.swift */; };
+		B3E093682C1811BE00434CBF /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E093672C1811BE00434CBF /* Level.swift */; };
 		D3AD359B2C0FF88E008BC3F6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AD359A2C0FF88E008BC3F6 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +97,11 @@
 		88FB78932C12A5A700F61A74 /* Dot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dot.swift; sourceTree = "<group>"; };
 		88FB78962C12BE9D00F61A74 /* RotateArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotateArrayExtension.swift; sourceTree = "<group>"; };
 		B37BEF752C0FEE57004E34D8 /* WoofleActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoofleActionButton.swift; sourceTree = "<group>"; };
+		B37BEF772C128449004E34D8 /* ActivityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityController.swift; sourceTree = "<group>"; };
+		B37BEF792C128909004E34D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B37BEFA72C129BBA004E34D8 /* GoalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalManager.swift; sourceTree = "<group>"; };
+		B37BEFA92C12B26B004E34D8 /* InputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputScreen.swift; sourceTree = "<group>"; };
+		B37BEFB12C17EF47004E34D8 /* constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constant.swift; sourceTree = "<group>"; };
 		B39B7CB42C0E9822000B9089 /* ActivitySelectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySelectionCard.swift; sourceTree = "<group>"; };
 		B3A8DC772C08095400ED5B9A /* woofle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = woofle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3A8DC7A2C08095400ED5B9A /* woofleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = woofleApp.swift; sourceTree = "<group>"; };
@@ -105,10 +116,11 @@
 		B3A8DCAD2C0D556100ED5B9A /* SampleSwiftModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSwiftModel.swift; sourceTree = "<group>"; };
 		B3A8DCAF2C0D635A00ED5B9A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B3A8DCB12C0D63B200ED5B9A /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
-		B3A8DCB32C0D641400ED5B9A /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		B3A8DCB32C0D641400ED5B9A /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
 		B3A8DCB62C0D662100ED5B9A /* ActivitySelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySelection.swift; sourceTree = "<group>"; };
 		D30C7DEB2C17D57A0021483A /* goalCompletionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalCompletionScreen.swift; sourceTree = "<group>"; };
 		D30C7DF02C17D7DE0021483A /* animatedWoofles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animatedWoofles.swift; sourceTree = "<group>"; };
+		B3E093672C1811BE00434CBF /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		D3AD359A2C0FF88E008BC3F6 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -274,6 +286,8 @@
 				88FB78802C1295E400F61A74 /* Level */,
 				B37BEF722C0FEC1D004E34D8 /* Core */,
 				B3A8DCB52C0D65FD00ED5B9A /* activity */,
+				B37BEF792C128909004E34D8 /* ContentView.swift */,
+				B37BEFA92C12B26B004E34D8 /* InputScreen.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -284,7 +298,8 @@
 				B3A8DCAD2C0D556100ED5B9A /* SampleSwiftModel.swift */,
 				B3A8DCAF2C0D635A00ED5B9A /* User.swift */,
 				B3A8DCB12C0D63B200ED5B9A /* Goal.swift */,
-				B3A8DCB32C0D641400ED5B9A /* Activity.swift */,
+				B3A8DCB32C0D641400ED5B9A /* Option.swift */,
+				B3E093672C1811BE00434CBF /* Level.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -294,6 +309,9 @@
 			children = (
 				88728A9D2C17D18600115B54 /* DropdownViewModel.swift */,
 				B3A8DCAB2C0D555000ED5B9A /* SampleSwiftController.swift */,
+				B37BEF772C128449004E34D8 /* ActivityController.swift */,
+				B37BEFA72C129BBA004E34D8 /* GoalManager.swift */,
+				B37BEFB12C17EF47004E34D8 /* constant.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -449,6 +467,9 @@
 				D3AD359B2C0FF88E008BC3F6 /* MapView.swift in Sources */,
 				88FB788D2C129A8A00F61A74 /* Onboarding.swift in Sources */,
 				88728A9E2C17D18600115B54 /* DropdownViewModel.swift in Sources */,
+				880FC53D2C0FE7D700A78F3E /* nameInputScreen.swift in Sources */,
+				D3AD359B2C0FF88E008BC3F6 /* MapView.swift in Sources */,
+				B37BEF7A2C128909004E34D8 /* ContentView.swift in Sources */,
 				88C425F12C0E904800ADECAD /* goalInputScreen.swift in Sources */,
 				B3A8DCAE2C0D556100ED5B9A /* SampleSwiftModel.swift in Sources */,
 				88FB78822C1295E400F61A74 /* LevelDropdownExpanded.swift in Sources */,
@@ -461,7 +482,12 @@
 				88FB788E2C129A8A00F61A74 /* Onboarding2.swift in Sources */,
 				88FB78942C12A5A700F61A74 /* Dot.swift in Sources */,
 				88FB78812C1295E400F61A74 /* LevelDropdown.swift in Sources */,
+				B3A8DCB42C0D641400ED5B9A /* Option.swift in Sources */,
+				B3A8DC7B2C08095400ED5B9A /* woofleApp.swift in Sources */,
+				B37BEFB22C17EF47004E34D8 /* constant.swift in Sources */,
 				B3A8DCB02C0D635A00ED5B9A /* User.swift in Sources */,
+				B37BEFAA2C12B26B004E34D8 /* InputScreen.swift in Sources */,
+				B37BEFA82C129BBA004E34D8 /* GoalManager.swift in Sources */,
 				B37BEF762C0FEE57004E34D8 /* WoofleActionButton.swift in Sources */,
 				D30C7DEC2C17D57A0021483A /* goalCompletionScreen.swift in Sources */,
 				88FB78842C1295E400F61A74 /* LevelDropdownNoActivity.swift in Sources */,
@@ -472,6 +498,8 @@
 				049E37542C12C5DA00DD2F69 /* ColorExtension.swift in Sources */,
 				B39B7CB52C0E9822000B9089 /* ActivitySelectionCard.swift in Sources */,
 				B3A8DCAC2C0D555000ED5B9A /* SampleSwiftController.swift in Sources */,
+				B37BEF782C128449004E34D8 /* ActivityController.swift in Sources */,
+				B3E093682C1811BE00434CBF /* Level.swift in Sources */,
 				880FC53F2C0FEEF800A78F3E /* whyDownloadScreen.swift in Sources */,
 				049E373F2C113AB800DD2F69 /* WelcomePage.swift in Sources */,
 				B39B7CB52C0E9822000B9089 /* ActivitySelectionCard.swift in Sources */,
