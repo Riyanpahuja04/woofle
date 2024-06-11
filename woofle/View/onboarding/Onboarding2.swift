@@ -10,8 +10,8 @@ import SwiftUI
 struct Onboarding2View: View {
     
     private var backgroundColor: Color = Color(red: 0.63, green: 0.78, blue: 0.68)
-    private var pageindicator: Color = Color(red: 0.29, green: 0.53, blue: 0.51)
-    private var pageindicatordisabled: Color = Color(red: 0.88, green: 0.88, blue: 0.88)
+    private var pageindicatorcolor: Color = Color(red: 0.29, green: 0.53, blue: 0.51)
+    private var pageindicatorcolordisabled: Color = Color(red: 0.88, green: 0.88, blue: 0.88)
     @State private var isNavigationEnabled: Bool = false
     
     var body: some View {
@@ -53,11 +53,11 @@ struct Onboarding2View: View {
                 HStack(spacing: 10) {
                     
                     Circle()
-                        .fill(pageindicatordisabled)
+                        .fill(pageindicatorcolordisabled)
                         .frame(width: 10, height: 10)
                     
                     Circle()
-                        .fill(pageindicator)
+                        .fill(pageindicatorcolor)
                         .frame(width: 10, height: 10)
                     
                 }
