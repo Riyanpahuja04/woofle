@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct Level: Codable {
+    let level: Int
+    let task: String
+    let options: [Option]
+}

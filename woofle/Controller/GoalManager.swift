@@ -1,10 +1,5 @@
 import Foundation
 
-// Define data structures according to the JSON structure
-
-
-
-
 // Class for managing goals
 
 class GoalManager {
