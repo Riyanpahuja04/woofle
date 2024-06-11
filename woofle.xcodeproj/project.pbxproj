@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		049E373F2C113AB800DD2F69 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E373E2C113AB800DD2F69 /* WelcomePage.swift */; };
 		049E37502C1168F800DD2F69 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E374F2C1168F800DD2F69 /* LogIn.swift */; };
+		049E37522C12C37300DD2F69 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E37512C12C37300DD2F69 /* SignUp.swift */; };
+		049E37542C12C5DA00DD2F69 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E37532C12C5DA00DD2F69 /* ColorExtension.swift */; };
+		049E37572C17CD7500DD2F69 /* SignUpOptoions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E37562C17CD7500DD2F69 /* SignUpOptoions.swift */; };
 		880FC53D2C0FE7D700A78F3E /* nameInputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */; };
 		880FC53F2C0FEEF800A78F3E /* whyDownloadScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */; };
 		88C425F12C0E904800ADECAD /* goalInputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C425F02C0E904800ADECAD /* goalInputScreen.swift */; };
@@ -65,6 +68,9 @@
 		049E373E2C113AB800DD2F69 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
 		049E374E2C115DC200DD2F69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		049E374F2C1168F800DD2F69 /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
+		049E37512C12C37300DD2F69 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		049E37532C12C5DA00DD2F69 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		049E37562C17CD7500DD2F69 /* SignUpOptoions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpOptoions.swift; sourceTree = "<group>"; };
 		880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nameInputScreen.swift; sourceTree = "<group>"; };
 		880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whyDownloadScreen.swift; sourceTree = "<group>"; };
 		88C425F02C0E904800ADECAD /* goalInputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalInputScreen.swift; sourceTree = "<group>"; };
@@ -128,6 +134,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		049E37552C12C62E00DD2F69 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				049E37562C17CD7500DD2F69 /* SignUpOptoions.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		88FB78802C1295E400F61A74 /* Level */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,12 +215,14 @@
 				049E373E2C113AB800DD2F69 /* WelcomePage.swift */,
 				049E374F2C1168F800DD2F69 /* LogIn.swift */,
 				D30C7DF02C17D7DE0021483A /* animatedWoofles.swift */,
+				049E37512C12C37300DD2F69 /* SignUp.swift */,
 				B3A8DC802C08095500ED5B9A /* Preview Content */,
 				88C425F02C0E904800ADECAD /* goalInputScreen.swift */,
 				D30C7DEB2C17D57A0021483A /* goalCompletionScreen.swift */,
 				880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */,
 				880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */,
 				88FB78962C12BE9D00F61A74 /* RotateArrayExtension.swift */,
+				049E37532C12C5DA00DD2F69 /* ColorExtension.swift */,
 			);
 			path = woofle;
 			sourceTree = "<group>";
@@ -240,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				88FB78902C129BF400F61A74 /* MapDots */,
+				049E37552C12C62E00DD2F69 /* Login */,
 				88FB788B2C129A8A00F61A74 /* onboarding */,
 				88FB78802C1295E400F61A74 /* Level */,
 				B37BEF722C0FEC1D004E34D8 /* Core */,
@@ -413,6 +430,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049E37572C17CD7500DD2F69 /* SignUpOptoions.swift in Sources */,
 				880FC53D2C0FE7D700A78F3E /* nameInputScreen.swift in Sources */,
 				D3AD359B2C0FF88E008BC3F6 /* MapView.swift in Sources */,
 				88FB788D2C129A8A00F61A74 /* Onboarding.swift in Sources */,
@@ -435,12 +453,14 @@
 				88FB78972C12BE9D00F61A74 /* RotateArrayExtension.swift in Sources */,
 				B3A8DCB22C0D63B200ED5B9A /* Goal.swift in Sources */,
 				88FB78862C1295F400F61A74 /* activitySelectedScreen.swift in Sources */,
+				049E37542C12C5DA00DD2F69 /* ColorExtension.swift in Sources */,
 				B39B7CB52C0E9822000B9089 /* ActivitySelectionCard.swift in Sources */,
 				B3A8DCAC2C0D555000ED5B9A /* SampleSwiftController.swift in Sources */,
 				880FC53F2C0FEEF800A78F3E /* whyDownloadScreen.swift in Sources */,
 				049E373F2C113AB800DD2F69 /* WelcomePage.swift in Sources */,
 				B39B7CB52C0E9822000B9089 /* ActivitySelectionCard.swift in Sources */,
 				B3A8DCAC2C0D555000ED5B9A /* SampleSwiftController.swift in Sources */,
+				049E37522C12C37300DD2F69 /* SignUp.swift in Sources */,
 				049E37502C1168F800DD2F69 /* LogIn.swift in Sources */,
 				88FB78922C129BFE00F61A74 /* MapDots.swift in Sources */,
 			);
