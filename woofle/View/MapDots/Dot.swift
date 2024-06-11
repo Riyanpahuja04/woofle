@@ -9,16 +9,16 @@ import SwiftUI
 
 struct Dot: View {
     
-    @Binding var dotLocations: (CGFloat, CGFloat, CGFloat)
+    @Binding var dotLocations: (CGFloat, CGFloat, CGFloat, String)
     
     var body: some View {
         
         Group {
-                Image("token-mid")
+            
+            Image(dotLocations.3)
                 .resizable()
                 .scaledToFit()
                 .position(x: dotLocations.0, y: dotLocations.1)
-
             
         }.frame(width: dotLocations.2)
 
