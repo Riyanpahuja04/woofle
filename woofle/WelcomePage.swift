@@ -105,7 +105,7 @@ struct _WelcomePage: View {
                         .frame(height: 394 - 25)
                 }
                 .navigationDestination(isPresented: $navigateToLogin ) {
-                    LoginPage() .navigationBarBackButtonHidden(true)
+                    LogInPage() .navigationBarBackButtonHidden(true)
                 }
             }
         }
