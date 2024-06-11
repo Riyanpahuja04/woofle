@@ -33,7 +33,7 @@ struct LevelDropdown: View {
                 .shadow(radius:2, x: 0, y: 4)
                 VStack {
                     
-                    Text(dropdownViewModel.currentLevel)
+                    Text("Level: \(GlobalActivityTracker.shared.level)")
                         .foregroundColor(_dropdownImageColor)
                         .font(
                             .system(size: 20)
@@ -43,7 +43,7 @@ struct LevelDropdown: View {
                         .padding(.top, -5)
                         .padding(.bottom, 10)
                     
-                    Text(dropdownViewModel.levelName)
+                    Text(GlobalActivityTracker.shared.currentGoal)
                         .foregroundColor(_dropdownImageColor)
                         .font(
                             .system(size: 20)
@@ -52,7 +52,7 @@ struct LevelDropdown: View {
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 20)
                     
-                    Text(dropdownViewModel.goal)
+                    Text(GlobalActivityTracker.shared.selectedOption?.brief ?? "Infinity")
                         .frame(width: .infinity, height: 40)
                         .font(
                             .system(size: 20)

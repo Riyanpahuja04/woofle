@@ -76,4 +76,6 @@ class GlobalActivityTracker {
     static var shared = GlobalActivityTracker()
     
     var level = 1
+    var currentGoal: String = "To Die"
+    var selectedOption: Option?
 }

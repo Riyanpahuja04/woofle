@@ -1,9 +1,10 @@
 import SwiftUI
 
 struct ActivitySelection: View {
-    @State private var selectedTask: String?
+    @State private var selectedOption: Option?
     @State private var isSpinning: Bool = false
     @State private var currentLevel: Int = 0
+    @State private var canNavigate: Bool = false
     private var goal = GoalManager()
     @State private var options: [Option] = []
     
@@ -22,7 +23,7 @@ struct ActivitySelection: View {
                 
                 VStack(spacing: 5) {
                     // TODO: populate data from api
-                    VStack(alignment:.leading, spacing: 7) {
+                    VStack(alignment: .leading, spacing: 7) {
                         Text(goal.getCurrentTask())
                             .font(.system(size: 20))
                             .fontWeight(.medium)
@@ -47,9 +48,8 @@ struct ActivitySelection: View {
                             .padding(.bottom, 30)
                         ForEach(options, id: \.self) { option in
                             ActivitySelectionCard(
-                                task: option.brief,
-                                description: option.description,
-                                selectedTask: $selectedTask
+                                option: option,
+                                selectedOption: $selectedOption
                             )
                         }
                     }
@@ -87,15 +87,27 @@ struct ActivitySelection: View {
                             }
                             
                         }
+                        .disabled(canNavigate)
                     }
                     .padding(.bottom, 30)
                     
                     // TODO: Add tappable functionality
-                    WoofleActionButton(text: "Submit", action: {})
+                    WoofleActionButton(text: "Submit", action: {
+                        GlobalActivityTracker.shared.selectedOption = selectedOption
+                        GlobalActivityTracker.shared.currentGoal = goal.getCurrentTask()
+                        print(selectedOption ?? "error")
+                        if(selectedOption != nil) {
+                            canNavigate = true
+                            print(canNavigate)
+                        }
+                    })
                     
                     Spacer()
                 }
                 .safeAreaPadding(.top, 68)
+                .navigationDestination(isPresented: $canNavigate) {
+                    activitySelectedScreen()
+                }
             }
             .ignoresSafeArea()
         }
