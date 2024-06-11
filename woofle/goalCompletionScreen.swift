@@ -16,6 +16,7 @@ private let _backgroundColor = Color(red: 1, green: 0.99, blue: 0.97)
 
 import SwiftUI
 import SDWebImageSwiftUI
+import PhotosUI
 
 struct goalCompletionView: View {
     
@@ -23,6 +24,8 @@ struct goalCompletionView: View {
     let caption = ["anxious", "sad", "happy", "content", "neutral"]
     @State private var scrollOffset: CGFloat = 0
     @State private var initialOffsetSet = false
+    @State private var selectedItem: PhotosPickerItem? = nil
+    @State private var selectedImageData: Data? = nil
     
     var body: some View {
         //ScrollView {
@@ -73,20 +76,54 @@ struct goalCompletionView: View {
                             .foregroundStyle(_subSubTitleColor)
                             .padding(.bottom,10)
                         
-                        ZStack {
-                            Rectangle()
-                                .frame(width: 280, height: 142)
-                                .cornerRadius(15)
-                            .foregroundColor(Color(red: 0.88, green: 0.88, blue: 0.89))
-                            Image(systemName: "photo.badge.plus.fill")
-                            .font(.system(size: 20))
-                            .multilineTextAlignment(.center)
-                            .frame(width: 42, alignment: .top)
-                            .foregroundColor(_subSubTitleColor)
-                        
+                        Group {
+                            
+                            PhotosPicker(
+                                
+                                selection: $selectedItem,
+                                matching: .images,
+                                photoLibrary: .shared()) {
+                                    
+                                    if let selectedImageData,
+                                       let uiImage = UIImage(data: selectedImageData) {
+                                        
+                                            ZStack {
+                                                Image(uiImage: uiImage)
+                                                    .resizable()
+                                                    .scaledToFill()
+                                                    .frame(maxWidth: 280, maxHeight: 150)
+                                                    .border(Color(red: 0.88, green: 0.88, blue: 0.89), width: 12)
+                                                    .cornerRadius(15)
+                                            }
+                                        
+                                    }
+                                    
+                                    else {
+                                        
+                                        ZStack {
+                                            Rectangle()
+                                                .frame(width: 280, height: 142)
+                                                .cornerRadius(15)
+                                                .foregroundColor(Color(red: 0.88, green: 0.88, blue: 0.89))
+                                            Image(systemName: "photo.badge.plus.fill")
+                                                .font(.system(size: 20))
+                                                .multilineTextAlignment(.center)
+                                                .frame(width: 42, alignment: .top)
+                                                .foregroundColor(_subSubTitleColor)
+                                            
+                                        }
+                                        
+                                    }
+                                }
+                                .onChange(of: selectedItem, { oldValue, newValue in
+                                    Task {
+                                        // Retrieve selected asset in the form of Data
+                                        if let data = try? await newValue?.loadTransferable(type: Data.self) {
+                                            selectedImageData = data
+                                        }
+                                    }
+                                })
                         }
-
-
                         
                         Text("How do you feel?")
                             .font(.system(size: 20)
@@ -94,7 +131,7 @@ struct goalCompletionView: View {
                             .fontWeight(.semibold)
                             .multilineTextAlignment(.center)
                             .foregroundStyle(_subSubTitleColor)
-                            .padding(.top,20)
+                            .padding(.top,10)
                         
                         
                         ZStack {
