@@ -14,7 +14,8 @@
 		049E37572C17CD7500DD2F69 /* SignUpOptoions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E37562C17CD7500DD2F69 /* SignUpOptoions.swift */; };
 		880FC53D2C0FE7D700A78F3E /* nameInputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */; };
 		880FC53F2C0FEEF800A78F3E /* whyDownloadScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */; };
-		881774802C18074000271BB8 /* testImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8817747F2C18074000271BB8 /* testImagePicker.swift */; };
+		8820B9E52C11369000F01434 /* toggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8820B9E42C11369000F01434 /* toggleButton.swift */; };
+		88728A9E2C17D18600115B54 /* DropdownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88728A9D2C17D18600115B54 /* DropdownViewModel.swift */; };
 		88C425F12C0E904800ADECAD /* goalInputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C425F02C0E904800ADECAD /* goalInputScreen.swift */; };
 		88FB78812C1295E400F61A74 /* LevelDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB787C2C1295E400F61A74 /* LevelDropdown.swift */; };
 		88FB78822C1295E400F61A74 /* LevelDropdownExpanded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB787D2C1295E400F61A74 /* LevelDropdownExpanded.swift */; };
@@ -74,7 +75,8 @@
 		049E37562C17CD7500DD2F69 /* SignUpOptoions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpOptoions.swift; sourceTree = "<group>"; };
 		880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nameInputScreen.swift; sourceTree = "<group>"; };
 		880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whyDownloadScreen.swift; sourceTree = "<group>"; };
-		8817747F2C18074000271BB8 /* testImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testImagePicker.swift; sourceTree = "<group>"; };
+		8820B9E42C11369000F01434 /* toggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toggleButton.swift; sourceTree = "<group>"; };
+		88728A9D2C17D18600115B54 /* DropdownViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownViewModel.swift; sourceTree = "<group>"; };
 		88C425F02C0E904800ADECAD /* goalInputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalInputScreen.swift; sourceTree = "<group>"; };
 		88FB787C2C1295E400F61A74 /* LevelDropdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelDropdown.swift; sourceTree = "<group>"; };
 		88FB787D2C1295E400F61A74 /* LevelDropdownExpanded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelDropdownExpanded.swift; sourceTree = "<group>"; };
@@ -144,13 +146,23 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		88FB78802C1295E400F61A74 /* Level */ = {
+		88728AA12C17EE8B00115B54 /* Dropdown-Objects */ = {
 			isa = PBXGroup;
 			children = (
 				88FB787C2C1295E400F61A74 /* LevelDropdown.swift */,
 				88FB787D2C1295E400F61A74 /* LevelDropdownExpanded.swift */,
 				88FB787E2C1295E400F61A74 /* LevelDropdownNewActivity.swift */,
 				88FB787F2C1295E400F61A74 /* LevelDropdownNoActivity.swift */,
+			);
+			path = "Dropdown-Objects";
+			sourceTree = "<group>";
+		};
+		88FB78802C1295E400F61A74 /* Level */ = {
+			isa = PBXGroup;
+			children = (
+				D3AD359A2C0FF88E008BC3F6 /* MapView.swift */,
+				88FB78852C1295F400F61A74 /* activitySelectedScreen.swift */,
+				88728AA12C17EE8B00115B54 /* Dropdown-Objects */,
 			);
 			path = Level;
 			sourceTree = "<group>";
@@ -206,13 +218,11 @@
 		B3A8DC792C08095400ED5B9A /* woofle */ = {
 			isa = PBXGroup;
 			children = (
-				88FB78852C1295F400F61A74 /* activitySelectedScreen.swift */,
 				049E374E2C115DC200DD2F69 /* Info.plist */,
 				B3A8DCAA2C0D54C200ED5B9A /* Controller */,
 				B3A8DCA92C0D54BB00ED5B9A /* Model */,
 				B3A8DCA82C0D54A400ED5B9A /* View */,
 				B3A8DC7A2C08095400ED5B9A /* woofleApp.swift */,
-				D3AD359A2C0FF88E008BC3F6 /* MapView.swift */,
 				B3A8DC7E2C08095500ED5B9A /* Assets.xcassets */,
 				049E373E2C113AB800DD2F69 /* WelcomePage.swift */,
 				049E374F2C1168F800DD2F69 /* LogIn.swift */,
@@ -282,6 +292,7 @@
 		B3A8DCAA2C0D54C200ED5B9A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				88728A9D2C17D18600115B54 /* DropdownViewModel.swift */,
 				B3A8DCAB2C0D555000ED5B9A /* SampleSwiftController.swift */,
 			);
 			path = Controller;
@@ -437,6 +448,7 @@
 				880FC53D2C0FE7D700A78F3E /* nameInputScreen.swift in Sources */,
 				D3AD359B2C0FF88E008BC3F6 /* MapView.swift in Sources */,
 				88FB788D2C129A8A00F61A74 /* Onboarding.swift in Sources */,
+				88728A9E2C17D18600115B54 /* DropdownViewModel.swift in Sources */,
 				88C425F12C0E904800ADECAD /* goalInputScreen.swift in Sources */,
 				B3A8DCAE2C0D556100ED5B9A /* SampleSwiftModel.swift in Sources */,
 				88FB78822C1295E400F61A74 /* LevelDropdownExpanded.swift in Sources */,

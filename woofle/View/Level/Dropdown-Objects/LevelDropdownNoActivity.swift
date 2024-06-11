@@ -9,12 +9,7 @@ import SwiftUI
 
 struct LevelDropdownNoActivity: View {
     
-    @State private var amDeployed: Bool = false
-    
-    // ViewModel will return these values once complete
-    @State private var currentLevel: String = "LEVEL 0"
-    @State private var levelName: String = "Playing “Stand By Me” Using Basic Chords On Guitar"
-    @State private var goal: String = "Learn Basic Chords"
+    @ObservedObject var dropdownViewModel: DropdownViewModel
     
     var body: some View {
         
@@ -26,7 +21,7 @@ struct LevelDropdownNoActivity: View {
                 Rectangle()
                     .foregroundColor(_defaultBackgroundColor)
                     .cornerRadius(20)
-                    .frame(width: .infinity, height: frameHeight())
+                    .frame(width: .infinity, height: 100)
                     Capsule()
                         .trim(from: 0.05, to: 0.45)
                         .foregroundColor(_defaultBackgroundColor)
@@ -39,7 +34,7 @@ struct LevelDropdownNoActivity: View {
                 .shadow(radius:2, x: 0, y: 4)
 
             VStack {
-                Text(levelName)
+                Text(dropdownViewModel.levelName)
                     .foregroundColor(_dropdownImageColor)
                     .font(
                         .system(size: 20)
@@ -47,17 +42,21 @@ struct LevelDropdownNoActivity: View {
                     )
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 20)
-                    .padding(.top, 20)
             }
             
             Image(systemName: "chevron.down")
                 .font(.title)
                 .padding(.horizontal, 30)
                 .foregroundColor(_dropdownImageColor)
-                .padding(.top, frameHeight() + 20)
+                .padding(.top, 100 + 20)
+                .onTapGesture{
+                    withAnimation(.interpolatingSpring) {
+                        dropdownViewModel.currentMenu = 2
+                    }
+                }
                 
         }
-        .ignoresSafeArea()
+        .padding(.top, -40)
     }
     
     
@@ -72,14 +71,5 @@ struct LevelDropdownNoActivity: View {
     private let _greenHeaderColor: Color = Color(red: 0.43, green: 0.6, blue: 0.59)
     // END TEMP COLORS
     
-    
-    func frameHeight() -> CGFloat {
-        if amDeployed { return 240 }
-        else { return 140 }
-    }
-    
 }
 
-#Preview {
-    LevelDropdownNoActivity()
-}
