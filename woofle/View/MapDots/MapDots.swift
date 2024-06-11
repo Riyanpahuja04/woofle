@@ -56,6 +56,9 @@ struct MapDots: View {
             Dot(dotLocations: $dotLocations[10])
             
         }.fixedSize()
+            .onTapGesture {
+                animateMovement()
+            }
         
     }
     
@@ -71,3 +74,6 @@ struct MapDots: View {
     
 }
 
+#Preview {
+    MapDots()
+}
