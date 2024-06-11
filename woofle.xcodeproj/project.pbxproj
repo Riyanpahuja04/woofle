@@ -36,6 +36,9 @@
 		B3A8DCB22C0D63B200ED5B9A /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DCB12C0D63B200ED5B9A /* Goal.swift */; };
 		B3A8DCB42C0D641400ED5B9A /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DCB32C0D641400ED5B9A /* Activity.swift */; };
 		B3A8DCB72C0D662100ED5B9A /* ActivitySelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DCB62C0D662100ED5B9A /* ActivitySelection.swift */; };
+		D30C7DEC2C17D57A0021483A /* goalCompletionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C7DEB2C17D57A0021483A /* goalCompletionScreen.swift */; };
+		D30C7DEF2C17D5980021483A /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D30C7DEE2C17D5980021483A /* SDWebImageSwiftUI */; };
+		D30C7DF12C17D7DE0021483A /* animatedWoofles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C7DF02C17D7DE0021483A /* animatedWoofles.swift */; };
 		D3AD359B2C0FF88E008BC3F6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AD359A2C0FF88E008BC3F6 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +93,8 @@
 		B3A8DCB12C0D63B200ED5B9A /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		B3A8DCB32C0D641400ED5B9A /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		B3A8DCB62C0D662100ED5B9A /* ActivitySelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySelection.swift; sourceTree = "<group>"; };
+		D30C7DEB2C17D57A0021483A /* goalCompletionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalCompletionScreen.swift; sourceTree = "<group>"; };
+		D30C7DF02C17D7DE0021483A /* animatedWoofles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animatedWoofles.swift; sourceTree = "<group>"; };
 		D3AD359A2C0FF88E008BC3F6 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D30C7DEF2C17D5980021483A /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,8 +195,10 @@
 				B3A8DC7E2C08095500ED5B9A /* Assets.xcassets */,
 				049E373E2C113AB800DD2F69 /* WelcomePage.swift */,
 				049E374F2C1168F800DD2F69 /* LogIn.swift */,
+				D30C7DF02C17D7DE0021483A /* animatedWoofles.swift */,
 				B3A8DC802C08095500ED5B9A /* Preview Content */,
 				88C425F02C0E904800ADECAD /* goalInputScreen.swift */,
+				D30C7DEB2C17D57A0021483A /* goalCompletionScreen.swift */,
 				880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */,
 				880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */,
 			);
@@ -278,6 +286,9 @@
 			dependencies = (
 			);
 			name = woofle;
+			packageProductDependencies = (
+				D30C7DEE2C17D5980021483A /* SDWebImageSwiftUI */,
+			);
 			productName = woofle;
 			productReference = B3A8DC772C08095400ED5B9A /* woofle.app */;
 			productType = "com.apple.product-type.application";
@@ -350,6 +361,9 @@
 				Base,
 			);
 			mainGroup = B3A8DC6E2C08095400ED5B9A;
+			packageReferences = (
+				D30C7DED2C17D5980021483A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = B3A8DC782C08095400ED5B9A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -399,6 +413,7 @@
 				88C425F12C0E904800ADECAD /* goalInputScreen.swift in Sources */,
 				B3A8DCAE2C0D556100ED5B9A /* SampleSwiftModel.swift in Sources */,
 				88FB78822C1295E400F61A74 /* LevelDropdownExpanded.swift in Sources */,
+				D30C7DF12C17D7DE0021483A /* animatedWoofles.swift in Sources */,
 				B3A8DCB42C0D641400ED5B9A /* Activity.swift in Sources */,
 				88FB78832C1295E400F61A74 /* LevelDropdownNewActivity.swift in Sources */,
 				B3A8DC7B2C08095400ED5B9A /* woofleApp.swift in Sources */,
@@ -407,6 +422,7 @@
 				88FB78812C1295E400F61A74 /* LevelDropdown.swift in Sources */,
 				B3A8DCB02C0D635A00ED5B9A /* User.swift in Sources */,
 				B37BEF762C0FEE57004E34D8 /* WoofleActionButton.swift in Sources */,
+				D30C7DEC2C17D57A0021483A /* goalCompletionScreen.swift in Sources */,
 				88FB78842C1295E400F61A74 /* LevelDropdownNoActivity.swift in Sources */,
 				B3A8DCB72C0D662100ED5B9A /* ActivitySelection.swift in Sources */,
 				8820B9E52C11369000F01434 /* toggleButton.swift in Sources */,
@@ -754,6 +770,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D30C7DED2C17D5980021483A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D30C7DEE2C17D5980021483A /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D30C7DED2C17D5980021483A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B3A8DC6F2C08095400ED5B9A /* Project object */;
 }
