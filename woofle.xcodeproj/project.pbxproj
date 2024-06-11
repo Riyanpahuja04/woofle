@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		049E373F2C113AB800DD2F69 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E373E2C113AB800DD2F69 /* WelcomePage.swift */; };
-		049E374D2C114A2700DD2F69 /* Darumadrop_One in Resources */ = {isa = PBXBuildFile; fileRef = 049E374C2C114A2700DD2F69 /* Darumadrop_One */; };
 		049E37502C1168F800DD2F69 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E374F2C1168F800DD2F69 /* LogIn.swift */; };
 		049E37522C12C37300DD2F69 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E37512C12C37300DD2F69 /* SignUp.swift */; };
 		049E37542C12C5DA00DD2F69 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E37532C12C5DA00DD2F69 /* ColorExtension.swift */; };
