@@ -27,7 +27,7 @@ struct SecureInputView: View {
                     TextField(title, text: $text)
                 }
             }.padding(.trailing, 32)
-
+            
             Button(action: {
                 isSecured.toggle()
             }) {
@@ -43,6 +43,7 @@ struct LogInPage: View {
     @State private var password: String = ""
     @State private var isLoading = false
     @State private var canNavigate = false
+    @StateObject private var viewModel = AuthViewModel.shared
     
     // Colors
     private let backgroundColorWoofle: Color = Color(red: 0.427, green: 0.6, blue: 0.518)
@@ -111,7 +112,7 @@ struct LogInPage: View {
                 Spacer()
                     .frame(height: 260)
                 
-                TextField("User Name or Email", text: $username)
+                TextField("User Name or Email", text: $viewModel.email)
                     .padding()
                     .frame(width: 296, height: 43)
                     .background(Color.white)
@@ -126,7 +127,7 @@ struct LogInPage: View {
                 Spacer()
                     .frame(height: 30)
                 
-                SecureInputView("Password", text: $password)
+                SecureInputView("Password", text: $viewModel.password)
                     .padding()
                     .frame(width: 296, height: 43)
                     .background(Color.white)
@@ -155,33 +156,44 @@ struct LogInPage: View {
                     .frame(height: 20)
                 
                 Button(action: {
-                    canNavigate = true
+                    if viewModel.isInputValid() {
+                        viewModel.signIn()
+                    }
                 }) {
-                    Text("Log In")
-                        .foregroundColor(.white)
-                        .frame(width: 296, height: 50)
-                        .background(loginBackgroundColors)
-                        .cornerRadius(10)
+                    if viewModel.isLoading {
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle())
+                            .foregroundColor(.white)
+                            .frame(width: 296, height: 50)
+                            .background(loginBackgroundColors)
+                            .cornerRadius(10)
+
+                    } else {
+                        Text("Log In")
+                            .foregroundColor(.white)
+                            .frame(width: 296, height: 50)
+                            .background(loginBackgroundColors)
+                            .cornerRadius(10)
+                    }
                 }
-                .navigationDestination(isPresented: $canNavigate) {
+                .navigationDestination(isPresented: $viewModel.isAuthenticated) {
                     nameInputScreen()
                 }
                 
                 Spacer()
                     .frame(height: 43)
- 
+                
                 SignUpOptoions()
                 
                 Spacer()
                     .frame(height: 20)
-
+                
                 HStack {
                     Text("Don’t have an account?")
                         .font(.system(size: 16))
                         .foregroundColor(Color(hex: "#282A37"))
                     
-                    Button(action: {
-                    }) {
+                    NavigationLink(destination: SignUpPage()) {
                         Text("Sign Up")
                             .font(.system(size: 16))
                             .foregroundColor(Color(hex: "#4E5FF5"))

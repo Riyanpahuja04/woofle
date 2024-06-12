@@ -161,7 +161,8 @@ struct goalInputScreen: View {
             
         }
         .navigationDestination(isPresented: $canNavigate) {
-            WhyDownloadScreen()
+            ActivitySelection()
+                .navigationBarBackButtonHidden(true)
         }
         
     }
