@@ -12,6 +12,7 @@
 		049E37522C12C37300DD2F69 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E37512C12C37300DD2F69 /* SignUp.swift */; };
 		049E37542C12C5DA00DD2F69 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E37532C12C5DA00DD2F69 /* ColorExtension.swift */; };
 		049E37572C17CD7500DD2F69 /* SignUpOptoions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E37562C17CD7500DD2F69 /* SignUpOptoions.swift */; };
+		049E37612C1923C900DD2F69 /* GetStarted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E37602C1923C900DD2F69 /* GetStarted.swift */; };
 		880FC53D2C0FE7D700A78F3E /* nameInputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */; };
 		880FC53F2C0FEEF800A78F3E /* whyDownloadScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */; };
 		88728A9E2C17D18600115B54 /* DropdownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88728A9D2C17D18600115B54 /* DropdownViewModel.swift */; };
@@ -51,8 +52,10 @@
 		D30C7DEC2C17D57A0021483A /* goalCompletionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C7DEB2C17D57A0021483A /* goalCompletionScreen.swift */; };
 		D30C7DEF2C17D5980021483A /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D30C7DEE2C17D5980021483A /* SDWebImageSwiftUI */; };
 		D30C7DF12C17D7DE0021483A /* animatedWoofles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C7DF02C17D7DE0021483A /* animatedWoofles.swift */; };
+
 		D30C7DF32C191B8F0021483A /* woofleCompletionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C7DF22C191B8F0021483A /* woofleCompletionScreen.swift */; };
 		D30C7DF62C191FDF0021483A /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D30C7DF52C191FDF0021483A /* ConfettiSwiftUI */; };
+
 		D3AD359B2C0FF88E008BC3F6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AD359A2C0FF88E008BC3F6 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +83,7 @@
 		049E37512C12C37300DD2F69 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		049E37532C12C5DA00DD2F69 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		049E37562C17CD7500DD2F69 /* SignUpOptoions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpOptoions.swift; sourceTree = "<group>"; };
+		049E37602C1923C900DD2F69 /* GetStarted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStarted.swift; sourceTree = "<group>"; };
 		880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nameInputScreen.swift; sourceTree = "<group>"; };
 		880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whyDownloadScreen.swift; sourceTree = "<group>"; };
 		88728A9D2C17D18600115B54 /* DropdownViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownViewModel.swift; sourceTree = "<group>"; };
@@ -121,7 +125,9 @@
 		B3E093672C1811BE00434CBF /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		D30C7DEB2C17D57A0021483A /* goalCompletionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalCompletionScreen.swift; sourceTree = "<group>"; };
 		D30C7DF02C17D7DE0021483A /* animatedWoofles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animatedWoofles.swift; sourceTree = "<group>"; };
+
 		D30C7DF22C191B8F0021483A /* woofleCompletionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = woofleCompletionScreen.swift; sourceTree = "<group>"; };
+
 		D3AD359A2C0FF88E008BC3F6 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +194,7 @@
 				88FB78882C129A8A00F61A74 /* Onboarding.swift */,
 				88FB78892C129A8A00F61A74 /* Onboarding2.swift */,
 				88FB788A2C129A8A00F61A74 /* toggleButton.swift */,
+				049E37602C1923C900DD2F69 /* GetStarted.swift */,
 			);
 			path = onboarding;
 			sourceTree = "<group>";
@@ -475,10 +482,13 @@
 				D3AD359B2C0FF88E008BC3F6 /* MapView.swift in Sources */,
 				B37BEF7A2C128909004E34D8 /* ContentView.swift in Sources */,
 				88C425F12C0E904800ADECAD /* goalInputScreen.swift in Sources */,
+				049E37612C1923C900DD2F69 /* GetStarted.swift in Sources */,
 				B3A8DCAE2C0D556100ED5B9A /* SampleSwiftModel.swift in Sources */,
 				88FB78822C1295E400F61A74 /* LevelDropdownExpanded.swift in Sources */,
 				D30C7DF12C17D7DE0021483A /* animatedWoofles.swift in Sources */,
+
 				D30C7DF32C191B8F0021483A /* woofleCompletionScreen.swift in Sources */,
+
 				B3A8DCB42C0D641400ED5B9A /* Option.swift in Sources */,
 				88FB78832C1295E400F61A74 /* LevelDropdownNewActivity.swift in Sources */,
 				B3A8DC7B2C08095400ED5B9A /* woofleApp.swift in Sources */,
