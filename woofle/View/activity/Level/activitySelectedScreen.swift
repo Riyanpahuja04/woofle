@@ -11,30 +11,39 @@ struct activitySelectedScreen: View {
     
     @ObservedObject var dropdownViewModel = DropdownViewModel()
     @State private var storesView: AnyView?
+    @State var backgroundBlur: CGFloat = 0
     
     var body: some View {
-        ZStack(alignment: .top) {
+        ZStack(alignment: returnAlignment()) {
             
-            MapView()
+            MapView(dropdownViewModel: dropdownViewModel).blur(radius: backgroundBlur)
             
-            VStack {
-                
-                Rectangle().ignoresSafeArea().frame(width: .infinity, height: 0).foregroundColor(_defaultBackgroundColor)
-                
-                switch dropdownViewModel.currentMenu {
-                case 0:
-                    _levelDropdown
-                case 1:
-                    _levelDropdownExpanded
-                case 2:
-                    _levelDropdownNewActivity
-                case 3:
-                    _levelDropdownNoActivity
-                default:
-                    _levelDropdown
-                }
-                
+            if dropdownViewModel.completionOverlayFlag {
+                woofleCompletionScreen(backgroundBlur: $backgroundBlur, dropdownViewModel: dropdownViewModel)
             }
+            
+            else {
+                VStack {
+                    
+                    Rectangle().ignoresSafeArea().frame(width: .infinity, height: 0).foregroundColor(_defaultBackgroundColor)
+                    
+                    switch dropdownViewModel.currentMenu {
+                    case 0:
+                        _levelDropdown
+                    case 1:
+                        _levelDropdownExpanded
+                    case 2:
+                        _levelDropdownNewActivity
+                    case 3:
+                        _levelDropdownNoActivity
+                    default:
+                        _levelDropdown
+                    }
+                    
+                }
+            }
+            
+            
             
         }
     }
@@ -44,6 +53,15 @@ struct activitySelectedScreen: View {
     var _levelDropdownNewActivity: some View {LevelDropdownNewActivity(dropdownViewModel: dropdownViewModel)}
     var _levelDropdownNoActivity: some View {LevelDropdownNoActivity(dropdownViewModel: dropdownViewModel)}
     
+    func returnAlignment() -> Alignment {
+        if dropdownViewModel.completionOverlayFlag { return .center }
+        else { return .top }
+    }
+    
+    func returnBlur() -> CGFloat {
+        if dropdownViewModel.completionOverlayFlag { 5 }
+        else { 0 }
+    }
     
     // Temp colors until global color variables are made (just for my reference)
     private let _grayColor: Color = (Color(red: 189/255, green: 189/255, blue: 189/255))
