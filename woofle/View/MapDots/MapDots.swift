@@ -12,7 +12,6 @@ struct MapDots: View {
     
     @ObservedObject var dropdownViewModel: DropdownViewModel
     @State var woofleWalkFlag: Bool = false
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     // (X, Y, Size) for each given point in animation
     @State private var dotLocations: [(CGFloat, CGFloat, CGFloat, String)] = [
