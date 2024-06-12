@@ -16,6 +16,7 @@
 		880FC53D2C0FE7D700A78F3E /* nameInputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */; };
 		880FC53F2C0FEEF800A78F3E /* whyDownloadScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */; };
 		88728A9E2C17D18600115B54 /* DropdownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88728A9D2C17D18600115B54 /* DropdownViewModel.swift */; };
+		889421072C19265A0075F636 /* goalSelectionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889421062C19265A0075F636 /* goalSelectionScreen.swift */; };
 		88C425F12C0E904800ADECAD /* goalInputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C425F02C0E904800ADECAD /* goalInputScreen.swift */; };
 		88FB78812C1295E400F61A74 /* LevelDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB787C2C1295E400F61A74 /* LevelDropdown.swift */; };
 		88FB78822C1295E400F61A74 /* LevelDropdownExpanded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB787D2C1295E400F61A74 /* LevelDropdownExpanded.swift */; };
@@ -83,6 +84,7 @@
 		880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nameInputScreen.swift; sourceTree = "<group>"; };
 		880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whyDownloadScreen.swift; sourceTree = "<group>"; };
 		88728A9D2C17D18600115B54 /* DropdownViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownViewModel.swift; sourceTree = "<group>"; };
+		889421062C19265A0075F636 /* goalSelectionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalSelectionScreen.swift; sourceTree = "<group>"; };
 		88C425F02C0E904800ADECAD /* goalInputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalInputScreen.swift; sourceTree = "<group>"; };
 		88FB787C2C1295E400F61A74 /* LevelDropdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelDropdown.swift; sourceTree = "<group>"; };
 		88FB787D2C1295E400F61A74 /* LevelDropdownExpanded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelDropdownExpanded.swift; sourceTree = "<group>"; };
@@ -167,6 +169,14 @@
 				88FB787F2C1295E400F61A74 /* LevelDropdownNoActivity.swift */,
 			);
 			path = "Dropdown-Objects";
+			sourceTree = "<group>";
+		};
+		889421082C19266D0075F636 /* Goal */ = {
+			isa = PBXGroup;
+			children = (
+				889421062C19265A0075F636 /* goalSelectionScreen.swift */,
+			);
+			path = Goal;
 			sourceTree = "<group>";
 		};
 		88FB78802C1295E400F61A74 /* Level */ = {
@@ -280,6 +290,7 @@
 		B3A8DCA82C0D54A400ED5B9A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				889421082C19266D0075F636 /* Goal */,
 				88FB78902C129BF400F61A74 /* MapDots */,
 				049E37552C12C62E00DD2F69 /* Login */,
 				88FB788B2C129A8A00F61A74 /* onboarding */,
@@ -485,6 +496,7 @@
 				B3A8DCB42C0D641400ED5B9A /* Option.swift in Sources */,
 				B3A8DC7B2C08095400ED5B9A /* woofleApp.swift in Sources */,
 				B37BEFB22C17EF47004E34D8 /* constant.swift in Sources */,
+				889421072C19265A0075F636 /* goalSelectionScreen.swift in Sources */,
 				B3A8DCB02C0D635A00ED5B9A /* User.swift in Sources */,
 				B37BEFAA2C12B26B004E34D8 /* InputScreen.swift in Sources */,
 				B37BEFA82C129BBA004E34D8 /* GoalManager.swift in Sources */,
