@@ -17,7 +17,6 @@
 		880FC53F2C0FEEF800A78F3E /* whyDownloadScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */; };
 		88728A9E2C17D18600115B54 /* DropdownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88728A9D2C17D18600115B54 /* DropdownViewModel.swift */; };
 		889421072C19265A0075F636 /* goalSelectionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889421062C19265A0075F636 /* goalSelectionScreen.swift */; };
-		8894210A2C1926890075F636 /* GoalSelectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889421092C1926890075F636 /* GoalSelectionCard.swift */; };
 		88C425F12C0E904800ADECAD /* goalInputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C425F02C0E904800ADECAD /* goalInputScreen.swift */; };
 		88FB78812C1295E400F61A74 /* LevelDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB787C2C1295E400F61A74 /* LevelDropdown.swift */; };
 		88FB78822C1295E400F61A74 /* LevelDropdownExpanded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB787D2C1295E400F61A74 /* LevelDropdownExpanded.swift */; };
@@ -86,7 +85,6 @@
 		880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whyDownloadScreen.swift; sourceTree = "<group>"; };
 		88728A9D2C17D18600115B54 /* DropdownViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownViewModel.swift; sourceTree = "<group>"; };
 		889421062C19265A0075F636 /* goalSelectionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalSelectionScreen.swift; sourceTree = "<group>"; };
-		889421092C1926890075F636 /* GoalSelectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSelectionCard.swift; sourceTree = "<group>"; };
 		88C425F02C0E904800ADECAD /* goalInputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalInputScreen.swift; sourceTree = "<group>"; };
 		88FB787C2C1295E400F61A74 /* LevelDropdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelDropdown.swift; sourceTree = "<group>"; };
 		88FB787D2C1295E400F61A74 /* LevelDropdownExpanded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelDropdownExpanded.swift; sourceTree = "<group>"; };
@@ -177,7 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				889421062C19265A0075F636 /* goalSelectionScreen.swift */,
-				889421092C1926890075F636 /* GoalSelectionCard.swift */,
 			);
 			path = Goal;
 			sourceTree = "<group>";
@@ -483,7 +480,6 @@
 				88728A9E2C17D18600115B54 /* DropdownViewModel.swift in Sources */,
 				880FC53D2C0FE7D700A78F3E /* nameInputScreen.swift in Sources */,
 				D3AD359B2C0FF88E008BC3F6 /* MapView.swift in Sources */,
-				8894210A2C1926890075F636 /* GoalSelectionCard.swift in Sources */,
 				B37BEF7A2C128909004E34D8 /* ContentView.swift in Sources */,
 				88C425F12C0E904800ADECAD /* goalInputScreen.swift in Sources */,
 				049E37612C1923C900DD2F69 /* GetStarted.swift in Sources */,
