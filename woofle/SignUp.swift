@@ -45,6 +45,8 @@ struct SignUpPage: View {
     @State private var passwordError = false
     @StateObject private var viewModel = AuthViewModel.shared
     
+    private let loginBackgroundColors: Color = Color(red: 1, green: 0.62, blue: 0.29)
+    
     var body: some View {
         ZStack {
             Color(red: 0.427, green: 0.6, blue: 0.518)
@@ -179,11 +181,21 @@ struct SignUpPage: View {
                         }
                     }
                 }) {
-                    Text("Sign Up")
-                        .foregroundColor(.white)
-                        .frame(width: 296, height: 50)
-                        .background(Color(red: 1, green: 0.62, blue: 0.29))
-                        .cornerRadius(10)
+                    if viewModel.isLoading {
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle())
+                            .foregroundColor(.white)
+                            .frame(width: 296, height: 50)
+                            .background(loginBackgroundColors)
+                            .cornerRadius(10)
+
+                    } else {
+                        Text("Sign Up")
+                            .foregroundColor(.white)
+                            .frame(width: 296, height: 50)
+                            .background(loginBackgroundColors)
+                            .cornerRadius(10)
+                    }
                 }
                 
                 Spacer()
