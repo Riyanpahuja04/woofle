@@ -53,6 +53,7 @@
 		D30C7DEF2C17D5980021483A /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D30C7DEE2C17D5980021483A /* SDWebImageSwiftUI */; };
 		D30C7DF12C17D7DE0021483A /* animatedWoofles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C7DF02C17D7DE0021483A /* animatedWoofles.swift */; };
 		D30C7DF92C192F730021483A /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D30C7DF82C192F730021483A /* ConfettiSwiftUI */; };
+		D30C7DFB2C192FB30021483A /* woofleCompletionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C7DFA2C192FB30021483A /* woofleCompletionScreen.swift */; };
 		D3AD359B2C0FF88E008BC3F6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AD359A2C0FF88E008BC3F6 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +123,7 @@
 		B3E093672C1811BE00434CBF /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		D30C7DEB2C17D57A0021483A /* goalCompletionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalCompletionScreen.swift; sourceTree = "<group>"; };
 		D30C7DF02C17D7DE0021483A /* animatedWoofles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animatedWoofles.swift; sourceTree = "<group>"; };
+		D30C7DFA2C192FB30021483A /* woofleCompletionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = woofleCompletionScreen.swift; sourceTree = "<group>"; };
 		D3AD359A2C0FF88E008BC3F6 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -246,6 +248,7 @@
 				B3A8DC802C08095500ED5B9A /* Preview Content */,
 				88C425F02C0E904800ADECAD /* goalInputScreen.swift */,
 				D30C7DEB2C17D57A0021483A /* goalCompletionScreen.swift */,
+				D30C7DFA2C192FB30021483A /* woofleCompletionScreen.swift */,
 				880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */,
 				880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */,
 				88FB78962C12BE9D00F61A74 /* RotateArrayExtension.swift */,
@@ -469,6 +472,7 @@
 				049E37572C17CD7500DD2F69 /* SignUpOptoions.swift in Sources */,
 				880FC53D2C0FE7D700A78F3E /* nameInputScreen.swift in Sources */,
 				D3AD359B2C0FF88E008BC3F6 /* MapView.swift in Sources */,
+				D30C7DFB2C192FB30021483A /* woofleCompletionScreen.swift in Sources */,
 				88FB788D2C129A8A00F61A74 /* Onboarding.swift in Sources */,
 				88728A9E2C17D18600115B54 /* DropdownViewModel.swift in Sources */,
 				880FC53D2C0FE7D700A78F3E /* nameInputScreen.swift in Sources */,
