@@ -69,7 +69,7 @@ struct ActivitySelection: View {
                         
                         Button(action: {
                             isSpinning.toggle()
-                            options = goal.getStaticGoalOptions()
+                            options = goal.getOptions()
                         }) {
                             HStack(spacing: 2) {
                                 Text("Refresh now")
