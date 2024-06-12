@@ -38,10 +38,11 @@ struct SecureInputView: View {
     }
 }
 
-struct WelcomePage: View {
+struct LogInPage: View {
     @State private var username: String = ""
     @State private var password: String = ""
     @State private var isLoading = false
+    @State private var canNavigate = false
     
     // Colors
     private let backgroundColorWoofle: Color = Color(red: 0.427, green: 0.6, blue: 0.518)
@@ -70,7 +71,7 @@ struct WelcomePage: View {
             
             VStack {
                 Spacer()
-                    .frame(height: -100)
+                    .frame(height: 100)
                 
                 HStack {
                     Spacer()
@@ -154,13 +155,16 @@ struct WelcomePage: View {
                     .frame(height: 20)
                 
                 Button(action: {
-                    
+                    canNavigate = true
                 }) {
                     Text("Log In")
                         .foregroundColor(.white)
                         .frame(width: 296, height: 50)
                         .background(loginBackgroundColors)
                         .cornerRadius(10)
+                }
+                .navigationDestination(isPresented: $canNavigate) {
+                    nameInputScreen()
                 }
                 
                 Spacer()
@@ -190,5 +194,5 @@ struct WelcomePage: View {
 }
 
 #Preview {
-    WelcomePage()
+    LogInPage()
 }
