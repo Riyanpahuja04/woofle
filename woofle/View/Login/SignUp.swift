@@ -39,10 +39,13 @@ struct SecureInputViewSignUp: View {
 }
 
 struct SignUpPage: View {
-    @State private var username: String = ""
     @State private var email: String = ""
+    @State private var reEnterPassword: String = ""
     @State private var password: String = ""
-    @State private var isLoading = false
+    @State private var passwordError = false
+    @StateObject private var viewModel = AuthViewModel.shared
+    
+    private let loginBackgroundColors: Color = Color(red: 1, green: 0.62, blue: 0.29)
     
     var body: some View {
         ZStack {
@@ -103,7 +106,7 @@ struct SignUpPage: View {
                 Spacer()
                     .frame(height: 200)
                 
-                TextField("User Name", text: $username)
+                TextField("Email", text: $viewModel.email)
                     .padding()
                     .frame(width: 296, height: 43)
                     .background(Color.white)
@@ -118,7 +121,7 @@ struct SignUpPage: View {
                 Spacer()
                     .frame(height: 20)
                 
-                TextField("Email", text: $email)
+                SecureInputViewSignUp("Password", text: $viewModel.password)
                     .padding()
                     .frame(width: 296, height: 43)
                     .background(Color.white)
@@ -133,7 +136,7 @@ struct SignUpPage: View {
                 Spacer()
                     .frame(height: 15)
                 
-                SecureInputViewSignUp("Password", text: $password)
+                SecureInputViewSignUp("Re-enter password", text: $reEnterPassword)
                     .padding()
                     .frame(width: 296, height: 43)
                     .background(Color.white)
@@ -144,6 +147,13 @@ struct SignUpPage: View {
                             .stroke(Color(red: 0.157, green: 0.165, blue: 0.216), lineWidth: 1)
                     )
                     .padding(.horizontal, 47)
+                
+                if passwordError {
+                    Text("Password doesn't match!")
+                        .foregroundStyle(Color.red)
+                        .font(.caption)
+                        .padding(.trailing, 145)
+                }
                 
                 Spacer()
                     .frame(height: 20)
@@ -162,13 +172,30 @@ struct SignUpPage: View {
                     .frame(height: 15)
                 
                 Button(action: {
-                    
+                    if(viewModel.password != reEnterPassword) {
+                        passwordError = true
+                    } else {
+                        passwordError = false
+                        if viewModel.isInputValid() {
+                            viewModel.signUp()
+                        }
+                    }
                 }) {
-                    Text("Sign Up")
-                        .foregroundColor(.white)
-                        .frame(width: 296, height: 50)
-                        .background(Color(red: 1, green: 0.62, blue: 0.29))
-                        .cornerRadius(10)
+                    if viewModel.isLoading {
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle())
+                            .foregroundColor(.white)
+                            .frame(width: 296, height: 50)
+                            .background(loginBackgroundColors)
+                            .cornerRadius(10)
+
+                    } else {
+                        Text("Sign Up")
+                            .foregroundColor(.white)
+                            .frame(width: 296, height: 50)
+                            .background(loginBackgroundColors)
+                            .cornerRadius(10)
+                    }
                 }
                 
                 Spacer()
@@ -181,17 +208,19 @@ struct SignUpPage: View {
 
                 HStack {
                     Text("Already have an account?")
-                        .font(Font.custom("SF Pro", size: 16))
+                        .font(Font.system(size: 16))
                         .foregroundColor(Color(hex: "#282A37"))
                     
-                    Button(action: {
-                    }) {
-                        Text("Log In")
-                            .font(Font.custom("SF Pro", size: 16))
+                    NavigationLink(destination: SignUpPage()) {
+                        Text("Sign Up")
+                            .font(.system(size: 16))
                             .foregroundColor(Color(hex: "#4E5FF5"))
                     }
                 }
-                .multilineTextAlignment(.center)
+                .multilineTextAlignment(.leading)
+            }
+            .navigationDestination(isPresented: $viewModel.isAuthenticated) {
+                OnboardingView()
             }
         }
     }

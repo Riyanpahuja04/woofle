@@ -30,11 +30,14 @@
 		88FB78922C129BFE00F61A74 /* MapDots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB78912C129BFE00F61A74 /* MapDots.swift */; };
 		88FB78942C12A5A700F61A74 /* Dot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB78932C12A5A700F61A74 /* Dot.swift */; };
 		88FB78972C12BE9D00F61A74 /* RotateArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB78962C12BE9D00F61A74 /* RotateArrayExtension.swift */; };
+		B35B21A02C19272F004459B8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B35B219F2C19272F004459B8 /* FirebaseAuth */; };
+		B35B21A22C19272F004459B8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B35B21A12C19272F004459B8 /* FirebaseFirestore */; };
+		B35B21A42C192900004459B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B35B21A32C192900004459B8 /* GoogleService-Info.plist */; };
+		B35B21A72C1929CA004459B8 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35B21A62C1929CA004459B8 /* AuthViewModel.swift */; };
 		B37BEF762C0FEE57004E34D8 /* WoofleActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37BEF752C0FEE57004E34D8 /* WoofleActionButton.swift */; };
 		B37BEF782C128449004E34D8 /* ActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37BEF772C128449004E34D8 /* ActivityController.swift */; };
 		B37BEF7A2C128909004E34D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37BEF792C128909004E34D8 /* ContentView.swift */; };
 		B37BEFA82C129BBA004E34D8 /* GoalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37BEFA72C129BBA004E34D8 /* GoalManager.swift */; };
-		B37BEFAA2C12B26B004E34D8 /* InputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37BEFA92C12B26B004E34D8 /* InputScreen.swift */; };
 		B37BEFB22C17EF47004E34D8 /* constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37BEFB12C17EF47004E34D8 /* constant.swift */; };
 		B39B7CB52C0E9822000B9089 /* ActivitySelectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39B7CB42C0E9822000B9089 /* ActivitySelectionCard.swift */; };
 		B3A8DC7B2C08095400ED5B9A /* woofleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8DC7A2C08095400ED5B9A /* woofleApp.swift */; };
@@ -100,11 +103,13 @@
 		88FB78912C129BFE00F61A74 /* MapDots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDots.swift; sourceTree = "<group>"; };
 		88FB78932C12A5A700F61A74 /* Dot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dot.swift; sourceTree = "<group>"; };
 		88FB78962C12BE9D00F61A74 /* RotateArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotateArrayExtension.swift; sourceTree = "<group>"; };
+		B35B21A32C192900004459B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B35B21A52C192919004459B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B35B21A62C1929CA004459B8 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		B37BEF752C0FEE57004E34D8 /* WoofleActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoofleActionButton.swift; sourceTree = "<group>"; };
 		B37BEF772C128449004E34D8 /* ActivityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityController.swift; sourceTree = "<group>"; };
 		B37BEF792C128909004E34D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B37BEFA72C129BBA004E34D8 /* GoalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalManager.swift; sourceTree = "<group>"; };
-		B37BEFA92C12B26B004E34D8 /* InputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputScreen.swift; sourceTree = "<group>"; };
 		B37BEFB12C17EF47004E34D8 /* constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constant.swift; sourceTree = "<group>"; };
 		B39B7CB42C0E9822000B9089 /* ActivitySelectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySelectionCard.swift; sourceTree = "<group>"; };
 		B3A8DC772C08095400ED5B9A /* woofle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = woofle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +141,8 @@
 			files = (
 				D30C7DF92C192F730021483A /* ConfettiSwiftUI in Frameworks */,
 				D30C7DEF2C17D5980021483A /* SDWebImageSwiftUI in Frameworks */,
+				B35B21A02C19272F004459B8 /* FirebaseAuth in Frameworks */,
+				B35B21A22C19272F004459B8 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				049E37562C17CD7500DD2F69 /* SignUpOptoions.swift */,
+				049E374F2C1168F800DD2F69 /* LogIn.swift */,
+				049E37512C12C37300DD2F69 /* SignUp.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -197,10 +206,13 @@
 			isa = PBXGroup;
 			children = (
 				88FB78872C129A8A00F61A74 /* Assets.xcassets */,
+				880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */,
 				88FB78882C129A8A00F61A74 /* Onboarding.swift */,
 				88FB78892C129A8A00F61A74 /* Onboarding2.swift */,
 				88FB788A2C129A8A00F61A74 /* toggleButton.swift */,
 				049E37602C1923C900DD2F69 /* GetStarted.swift */,
+				049E373E2C113AB800DD2F69 /* WelcomePage.swift */,
+				880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */,
 			);
 			path = onboarding;
 			sourceTree = "<group>";
@@ -217,6 +229,7 @@
 		B37BEF722C0FEC1D004E34D8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				049E37532C12C5DA00DD2F69 /* ColorExtension.swift */,
 				B37BEF752C0FEE57004E34D8 /* WoofleActionButton.swift */,
 			);
 			path = Core;
@@ -225,6 +238,7 @@
 		B3A8DC6E2C08095400ED5B9A = {
 			isa = PBXGroup;
 			children = (
+				B35B21A32C192900004459B8 /* GoogleService-Info.plist */,
 				B3A8DC792C08095400ED5B9A /* woofle */,
 				B3A8DC8A2C08095600ED5B9A /* woofleTests */,
 				B3A8DC942C08095600ED5B9A /* woofleUITests */,
@@ -246,23 +260,14 @@
 			isa = PBXGroup;
 			children = (
 				049E374E2C115DC200DD2F69 /* Info.plist */,
+				B35B21A52C192919004459B8 /* GoogleService-Info.plist */,
 				B3A8DCAA2C0D54C200ED5B9A /* Controller */,
 				B3A8DCA92C0D54BB00ED5B9A /* Model */,
 				B3A8DCA82C0D54A400ED5B9A /* View */,
 				B3A8DC7A2C08095400ED5B9A /* woofleApp.swift */,
 				B3A8DC7E2C08095500ED5B9A /* Assets.xcassets */,
-				049E373E2C113AB800DD2F69 /* WelcomePage.swift */,
-				049E374F2C1168F800DD2F69 /* LogIn.swift */,
 				D30C7DF02C17D7DE0021483A /* animatedWoofles.swift */,
-				049E37512C12C37300DD2F69 /* SignUp.swift */,
 				B3A8DC802C08095500ED5B9A /* Preview Content */,
-				88C425F02C0E904800ADECAD /* goalInputScreen.swift */,
-				D30C7DEB2C17D57A0021483A /* goalCompletionScreen.swift */,
-				D30C7DFA2C192FB30021483A /* woofleCompletionScreen.swift */,
-				880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */,
-				880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */,
-				88FB78962C12BE9D00F61A74 /* RotateArrayExtension.swift */,
-				049E37532C12C5DA00DD2F69 /* ColorExtension.swift */,
 			);
 			path = woofle;
 			sourceTree = "<group>";
@@ -299,11 +304,8 @@
 				88FB78902C129BF400F61A74 /* MapDots */,
 				049E37552C12C62E00DD2F69 /* Login */,
 				88FB788B2C129A8A00F61A74 /* onboarding */,
-				88FB78802C1295E400F61A74 /* Level */,
 				B37BEF722C0FEC1D004E34D8 /* Core */,
 				B3A8DCB52C0D65FD00ED5B9A /* activity */,
-				B37BEF792C128909004E34D8 /* ContentView.swift */,
-				B37BEFA92C12B26B004E34D8 /* InputScreen.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -323,11 +325,13 @@
 		B3A8DCAA2C0D54C200ED5B9A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				88FB78962C12BE9D00F61A74 /* RotateArrayExtension.swift */,
 				88728A9D2C17D18600115B54 /* DropdownViewModel.swift */,
 				B3A8DCAB2C0D555000ED5B9A /* SampleSwiftController.swift */,
 				B37BEF772C128449004E34D8 /* ActivityController.swift */,
 				B37BEFA72C129BBA004E34D8 /* GoalManager.swift */,
 				B37BEFB12C17EF47004E34D8 /* constant.swift */,
+				B35B21A62C1929CA004459B8 /* AuthViewModel.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -335,6 +339,11 @@
 		B3A8DCB52C0D65FD00ED5B9A /* activity */ = {
 			isa = PBXGroup;
 			children = (
+				88C425F02C0E904800ADECAD /* goalInputScreen.swift */,
+				D30C7DEB2C17D57A0021483A /* goalCompletionScreen.swift */,
+				D30C7DFA2C192FB30021483A /* woofleCompletionScreen.swift */,
+				B37BEF792C128909004E34D8 /* ContentView.swift */,
+				88FB78802C1295E400F61A74 /* Level */,
 				B3A8DCB62C0D662100ED5B9A /* ActivitySelection.swift */,
 				B39B7CB42C0E9822000B9089 /* ActivitySelectionCard.swift */,
 			);
@@ -360,6 +369,8 @@
 			packageProductDependencies = (
 				D30C7DEE2C17D5980021483A /* SDWebImageSwiftUI */,
 				D30C7DF82C192F730021483A /* ConfettiSwiftUI */,
+				B35B219F2C19272F004459B8 /* FirebaseAuth */,
+				B35B21A12C19272F004459B8 /* FirebaseFirestore */,
 			);
 			productName = woofle;
 			productReference = B3A8DC772C08095400ED5B9A /* woofle.app */;
@@ -436,6 +447,7 @@
 			packageReferences = (
 				D30C7DED2C17D5980021483A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				D30C7DF72C192F730021483A /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+				B35B219E2C19272F004459B8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = B3A8DC782C08095400ED5B9A /* Products */;
 			projectDirPath = "";
@@ -454,6 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3A8DC822C08095500ED5B9A /* Preview Assets.xcassets in Resources */,
+				B35B21A42C192900004459B8 /* GoogleService-Info.plist in Resources */,
 				88FB788C2C129A8A00F61A74 /* Assets.xcassets in Resources */,
 				B3A8DC7F2C08095500ED5B9A /* Assets.xcassets in Resources */,
 			);
@@ -506,7 +519,6 @@
 				B37BEFB22C17EF47004E34D8 /* constant.swift in Sources */,
 				889421072C19265A0075F636 /* goalSelectionScreen.swift in Sources */,
 				B3A8DCB02C0D635A00ED5B9A /* User.swift in Sources */,
-				B37BEFAA2C12B26B004E34D8 /* InputScreen.swift in Sources */,
 				B37BEFA82C129BBA004E34D8 /* GoalManager.swift in Sources */,
 				B37BEF762C0FEE57004E34D8 /* WoofleActionButton.swift in Sources */,
 				D30C7DEC2C17D57A0021483A /* goalCompletionScreen.swift in Sources */,
@@ -522,6 +534,7 @@
 				B3E093682C1811BE00434CBF /* Level.swift in Sources */,
 				880FC53F2C0FEEF800A78F3E /* whyDownloadScreen.swift in Sources */,
 				049E373F2C113AB800DD2F69 /* WelcomePage.swift in Sources */,
+				B35B21A72C1929CA004459B8 /* AuthViewModel.swift in Sources */,
 				B39B7CB52C0E9822000B9089 /* ActivitySelectionCard.swift in Sources */,
 				B3A8DCAC2C0D555000ED5B9A /* SampleSwiftController.swift in Sources */,
 				049E37522C12C37300DD2F69 /* SignUp.swift in Sources */,
@@ -864,6 +877,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B35B219E2C19272F004459B8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.27.0;
+			};
+		};
 		D30C7DED2C17D5980021483A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
@@ -883,6 +904,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B35B219F2C19272F004459B8 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B35B219E2C19272F004459B8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		B35B21A12C19272F004459B8 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B35B219E2C19272F004459B8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
 		D30C7DEE2C17D5980021483A /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D30C7DED2C17D5980021483A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
