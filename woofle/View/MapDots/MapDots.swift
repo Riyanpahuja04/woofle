@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MapDots: View {
     
+    @ObservedObject var dropdownViewModel: DropdownViewModel
+    
     // (X, Y, Size) for each given point in animation
     @State private var dotLocations: [(CGFloat, CGFloat, CGFloat, String)] = [
         
@@ -62,10 +64,14 @@ struct MapDots: View {
             
             Dot(dotLocations: $dotLocations[10])
             
+            
+            
         }.fixedSize()
-            .onTapGesture {
-                animateMovement()
-            }
+            .onReceive(dropdownViewModel.$completionOverlayFlag, perform: { _ in
+                if !dropdownViewModel.completionOverlayFlag {
+                    animateMovement()
+                }
+            })
         
     }
     
@@ -81,6 +87,3 @@ struct MapDots: View {
     
 }
 
-#Preview {
-    MapDots()
-}

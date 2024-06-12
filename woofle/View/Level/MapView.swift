@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MapView: View {
     
+    @ObservedObject var dropdownViewModel: DropdownViewModel
+    
     var body: some View {
         
         ZStack(alignment: .top) {
@@ -31,7 +33,7 @@ struct MapView: View {
             
             Rectangle().frame(width: .infinity, height: 60).foregroundColor(.backgroundGreen)
             
-            MapDots().offset(y: 540)
+            MapDots(dropdownViewModel: dropdownViewModel).offset(y: 540)
             
         }.ignoresSafeArea()
     }
@@ -52,5 +54,5 @@ struct MapView: View {
 
 
 #Preview {
-    MapView()
+    MapView(dropdownViewModel: DropdownViewModel())
 }

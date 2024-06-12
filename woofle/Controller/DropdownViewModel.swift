@@ -6,8 +6,11 @@
 //
 
 import Foundation
+import SwiftUI
 
 class DropdownViewModel: ObservableObject {
+    
+    @Published var completionOverlayFlag: Bool = true
     
     //TODO: Retrieve data from storage
     @Published var currentLevel: String = "LEVEL 0"
@@ -17,5 +20,6 @@ class DropdownViewModel: ObservableObject {
     
     //TODO: Retrieve current menu from Storage
     @Published var currentMenu: Int = 0
+    
     
 }

@@ -11,17 +11,21 @@ import ConfettiSwiftUI
 struct woofleCompletionScreen: View {
     @State private var bouncing = false
     @State private var counter: Int = 0
+    @Binding var backgroundBlur: CGFloat
+    @ObservedObject var dropdownViewModel: DropdownViewModel
+    
     var body: some View {
         
         ZStack {
-            MapView()
-                .blur(radius: 5)
 
             RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/10.0/*@END_MENU_TOKEN@*/)
                 .foregroundColor(_defaultBackgroundColor)
                 .frame(height: 240)
                 .padding(30)
                 .shadow(radius: 5)
+                .onAppear(perform: {
+                    backgroundBlur = 5
+                })
 
                 ZStack {
                     Image("woofle-trophy")
@@ -54,7 +58,13 @@ struct woofleCompletionScreen: View {
                     Rectangle()
                         .frame(width: 40,height:10)
                         .foregroundColor(.clear)
-                    WoofleActionButton(text: "Next task!", action: {})
+                    WoofleActionButton(text: "Next task!", action: {
+                        dropdownViewModel.completionOverlayFlag = false
+                        withAnimation(.snappy(duration: 0.4)) {
+                            backgroundBlur = 0
+                        }
+                        
+                    })
                     Rectangle()
                         .frame(width: 40, height:10)
                         .foregroundColor(.clear)
@@ -84,6 +94,3 @@ struct woofleCompletionScreen: View {
 }
 
 
-#Preview {
-    woofleCompletionScreen()
-}
