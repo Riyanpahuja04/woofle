@@ -74,6 +74,17 @@ struct LevelDropdownNewActivity: View {
                 
         }
         .padding(.top, -40)
+        ZStack {
+            Circle()
+                .frame(width: 80)
+                .foregroundColor(_defaultBackgroundColor)
+                .shadow(radius:2, x: 0, y: 4)
+            Image(systemName: "note.text")
+                .resizable()
+                .frame(width:40, height:40)
+                .foregroundColor(_dropdownImageColor)
+                
+        } .offset(x:130, y:40)
     }
     
     
