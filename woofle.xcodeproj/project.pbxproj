@@ -52,6 +52,7 @@
 		D30C7DEC2C17D57A0021483A /* goalCompletionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C7DEB2C17D57A0021483A /* goalCompletionScreen.swift */; };
 		D30C7DEF2C17D5980021483A /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D30C7DEE2C17D5980021483A /* SDWebImageSwiftUI */; };
 		D30C7DF12C17D7DE0021483A /* animatedWoofles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C7DF02C17D7DE0021483A /* animatedWoofles.swift */; };
+		D30C7DF92C192F730021483A /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D30C7DF82C192F730021483A /* ConfettiSwiftUI */; };
 		D3AD359B2C0FF88E008BC3F6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AD359A2C0FF88E008BC3F6 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D30C7DF92C192F730021483A /* ConfettiSwiftUI in Frameworks */,
 				D30C7DEF2C17D5980021483A /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +345,7 @@
 			name = woofle;
 			packageProductDependencies = (
 				D30C7DEE2C17D5980021483A /* SDWebImageSwiftUI */,
+				D30C7DF82C192F730021483A /* ConfettiSwiftUI */,
 			);
 			productName = woofle;
 			productReference = B3A8DC772C08095400ED5B9A /* woofle.app */;
@@ -418,6 +421,7 @@
 			mainGroup = B3A8DC6E2C08095400ED5B9A;
 			packageReferences = (
 				D30C7DED2C17D5980021483A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				D30C7DF72C192F730021483A /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
 			);
 			productRefGroup = B3A8DC782C08095400ED5B9A /* Products */;
 			projectDirPath = "";
@@ -852,6 +856,14 @@
 				minimumVersion = 3.0.4;
 			};
 		};
+		D30C7DF72C192F730021483A /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -859,6 +871,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D30C7DED2C17D5980021483A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		D30C7DF82C192F730021483A /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D30C7DF72C192F730021483A /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
