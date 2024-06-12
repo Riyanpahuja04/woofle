@@ -29,7 +29,7 @@ struct MapView: View {
             Image("rocks")
                 .offset(y:490)
             
-            Rectangle().frame(width: .infinity, height: 60).foregroundColor(_defaultBackgroundColor)
+            Rectangle().frame(width: .infinity, height: 60).foregroundColor(.backgroundGreen)
             
             MapDots().offset(y: 540)
             
