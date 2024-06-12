@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct MapDots: View {
     
     @ObservedObject var dropdownViewModel: DropdownViewModel
+    @State var woofleWalkFlag: Bool = false
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     // (X, Y, Size) for each given point in animation
     @State private var dotLocations: [(CGFloat, CGFloat, CGFloat, String)] = [
@@ -65,12 +68,34 @@ struct MapDots: View {
             
             Dot(dotLocations: $dotLocations[10])
             
+            if woofleWalkFlag {
+                AnimatedImage(url: URL(string: "https://i.imgur.com/l6eKr1D.gif"))
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 240, height: 240)
+                    .position(x:100, y: 155)
+            }
+            
+            else {
+                Image("woofle-standing")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 100, height: 100)
+                    .position(x:95, y: 130)
+            }
+            
             
             
         }.fixedSize()
-            .onReceive(dropdownViewModel.$completionOverlayFlag, perform: { _ in
+            .onReceive(dropdownViewModel.$completionOverlayFlag.dropFirst(), perform: { _ in
                 if !dropdownViewModel.completionOverlayFlag {
                     animateMovement()
+                    woofleWalkFlag = true
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) { 
+                        withAnimation(.smooth(duration: 0.1)) {
+                            woofleWalkFlag = false
+                        }
+                    }
                 }
             })
         
