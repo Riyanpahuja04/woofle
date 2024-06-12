@@ -70,6 +70,11 @@ class GoalManager {
     func getCurrentLevel() -> Int {
         return GlobalActivityTracker.shared.level
     }
+    
+    func getStaticGoalOptions() -> [Option] {
+        return [Option(brief: "Learn Basic Guitar Chords", description: "Learn the most common guitar chords and work towards playing various songs my the end of this goal!"), Option(brief: "Learn to Swim", description: "Introduce yourself to the water and increase your confidence by learning the basics of swimming technique"), Option(brief: "Buy a strong fan", description: "Have you tried dying?")]
+    }
+    
 }
 
 class GlobalActivityTracker {

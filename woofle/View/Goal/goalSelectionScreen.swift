@@ -1,9 +1,8 @@
 import SwiftUI
 
-struct ActivitySelection: View {
+struct GoalSelection: View {
     @State private var selectedOption: Option?
     @State private var isSpinning: Bool = false
-    @State private var currentLevel: Int = 0
     @State private var canNavigate: Bool = false
     private var goal = GoalManager()
     @State private var options: [Option] = []
@@ -13,6 +12,8 @@ struct ActivitySelection: View {
     private let _captionColor = Color(red: 0.09, green: 0.09, blue: 0.09)
     private let _linkColor = Color(red: 0.43, green: 0.6, blue: 0.59)
     
+    private let _defaultBackgroundColor: Color = Color(red: 255/255, green: 253/255, blue: 248/255)
+    
     // TODO: fetch api data to show
     var body: some View {
         ScrollView {
@@ -20,27 +21,34 @@ struct ActivitySelection: View {
                 Image("TopBgActivity")
                     .resizable()
                     .scaledToFill()
+                    .offset(x:0,y:-30)
+                
+                    Image("pawprint")
+                        .resizable()
+                        .rotationEffect(Angle(degrees: 32.42))
+                        .frame(width: 138, height: 133)
+                        .offset(x:160, y:-320)
                 
                 VStack(spacing: 5) {
                     // TODO: populate data from api
                     VStack(alignment: .leading, spacing: 7) {
-                        Text(goal.getCurrentTask())
+                        Text(" ")
                             .font(.system(size: 20))
                             .fontWeight(.medium)
                             .foregroundStyle(_subTitleColor)
                         
                         
-                        Text("What activity you want to do?")
+                        Text("What is your goal?")
                             .font(.system(size: 35))
                             .fontWeight(.semibold)
                             .foregroundColor(_titleColor)
                     }
-                    .padding(.horizontal, 60)
+                    .padding(.horizontal, 20)
                     
                     Spacer()
                     
                     VStack {
-                        Text("Level \(currentLevel)")
+                        Text("Select an option below:")
                             .font(.system(size: 24))
                             .fontWeight(.semibold)
                             .multilineTextAlignment(.center)
@@ -54,14 +62,13 @@ struct ActivitySelection: View {
                         }
                     }
                     .onAppear {
-                        currentLevel = goal.getCurrentLevel()
-                        options = goal.getOptions()
+                        options = goal.getStaticGoalOptions()
                     }
                     
-                    Spacer()
+                    Spacer().frame(height: 60)
                     
                     HStack(spacing: 2) {
-                        Text("Don’t like these options?")
+                        Text(" ")
                             .font(.system(size: 15))
                             .multilineTextAlignment(.center)
                             .foregroundStyle(_captionColor)
@@ -69,34 +76,26 @@ struct ActivitySelection: View {
                         
                         Button(action: {
                             isSpinning.toggle()
-                            options = goal.getStaticGoalOptions()
+                            options = goal.getOptions()
                         }) {
                             HStack(spacing: 2) {
-                                Text("Refresh now")
+                                Text(" ")
                                     .font(Font.system(size: 15))
                                     .fontWeight(.medium)
                                     .multilineTextAlignment(.center)
                                     .foregroundStyle(_linkColor)
-                                
-                                Image(systemName: "arrow.triangle.2.circlepath")
-                                    .foregroundStyle(_linkColor)
-                                    .rotationEffect(.degrees(isSpinning ? 360 : 0))
-                                    .animation(Animation.linear(duration: 1).repeatCount(1, autoreverses: false), value: isSpinning)
-                                
                                 
                             }
                             
                         }
                         .disabled(canNavigate)
                     }
-                    .padding(.bottom, 30)
                     
                     // TODO: Add tappable functionality
                     WoofleActionButton(text: "Submit", action: {
-                        GlobalActivityTracker.shared.selectedOption = selectedOption
-                        GlobalActivityTracker.shared.currentGoal = goal.getCurrentTask()
                         print(selectedOption ?? "error")
                         if(selectedOption != nil) {
+                            GlobalActivityTracker.shared.currentGoal = selectedOption?.brief ?? "Error"
                             canNavigate = true
                             print(canNavigate)
                         }
@@ -111,26 +110,11 @@ struct ActivitySelection: View {
             }
             .ignoresSafeArea()
         }
+        .background(_defaultBackgroundColor)
         .ignoresSafeArea()
     }
 }
 
 #Preview {
-    ActivitySelection()
+    GoalSelection()
 }
-
-// TODO: Delete this once API is ready
-let _sample = [
-    [
-        "task": "Learn Basic Chords",
-        "description": "The four most common guitar chords are E-Minor, C, G and D. Youtube Tutorials would be a good place to start!"
-    ],
-    [
-        "task": "Learn the Song Structure",
-        "description": "Learn the Song Structure: Identify verses, chorus, bridge. Online sources like Yousician might give you a best way to learn!"
-    ],
-    [
-        "task": "Learn to Read Chord Diagrams",
-        "description": "Learn the Song Structure: Identify verses, chorus, bridge. Online sources like Yousician might give you a best way to learn!"
-    ]
-]
