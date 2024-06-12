@@ -38,6 +38,7 @@ struct MapDots: View {
     ]
     
     @State private var pathIsExtended: Bool = true
+    //@ObservedObject 
     
     var body: some View {
         
@@ -63,9 +64,6 @@ struct MapDots: View {
             Dot(dotLocations: $dotLocations[10])
             
         }.fixedSize()
-            .onTapGesture {
-                animateMovement()
-            }
         
     }
     

@@ -34,7 +34,7 @@ struct LevelDropdownNoActivity: View {
                 .shadow(radius:2, x: 0, y: 4)
 
             VStack {
-                Text(dropdownViewModel.levelName)
+                Text(GlobalActivityTracker.shared.currentGoal)
                     .foregroundColor(_dropdownImageColor)
                     .font(
                         .system(size: 20)
@@ -73,3 +73,6 @@ struct LevelDropdownNoActivity: View {
     
 }
 
+#Preview {
+    LevelDropdownNoActivity(dropdownViewModel: DropdownViewModel())
+}

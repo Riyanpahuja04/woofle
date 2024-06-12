@@ -40,7 +40,7 @@ struct ActivitySelection: View {
                     Spacer()
                     
                     VStack {
-                        Text("Level \(currentLevel)")
+                        Text("Level \(GlobalActivityTracker.shared.level)")
                             .font(.system(size: 24))
                             .fontWeight(.semibold)
                             .multilineTextAlignment(.center)
