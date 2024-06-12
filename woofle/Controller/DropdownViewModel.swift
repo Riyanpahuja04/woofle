@@ -10,7 +10,7 @@ import SwiftUI
 
 class DropdownViewModel: ObservableObject {
     
-    @Published var completionOverlayFlag: Bool = true
+    @Published var completionOverlayFlag: Bool = false
     
     //TODO: Retrieve data from storage
     @Published var currentLevel: String = "LEVEL 0"
