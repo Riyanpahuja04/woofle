@@ -30,6 +30,10 @@
 		88FB78922C129BFE00F61A74 /* MapDots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB78912C129BFE00F61A74 /* MapDots.swift */; };
 		88FB78942C12A5A700F61A74 /* Dot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB78932C12A5A700F61A74 /* Dot.swift */; };
 		88FB78972C12BE9D00F61A74 /* RotateArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB78962C12BE9D00F61A74 /* RotateArrayExtension.swift */; };
+		B35B21A02C19272F004459B8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B35B219F2C19272F004459B8 /* FirebaseAuth */; };
+		B35B21A22C19272F004459B8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B35B21A12C19272F004459B8 /* FirebaseFirestore */; };
+		B35B21A42C192900004459B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B35B21A32C192900004459B8 /* GoogleService-Info.plist */; };
+		B35B21A72C1929CA004459B8 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35B21A62C1929CA004459B8 /* AuthViewModel.swift */; };
 		B37BEF762C0FEE57004E34D8 /* WoofleActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37BEF752C0FEE57004E34D8 /* WoofleActionButton.swift */; };
 		B37BEF782C128449004E34D8 /* ActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37BEF772C128449004E34D8 /* ActivityController.swift */; };
 		B37BEF7A2C128909004E34D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37BEF792C128909004E34D8 /* ContentView.swift */; };
@@ -100,6 +104,9 @@
 		88FB78912C129BFE00F61A74 /* MapDots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDots.swift; sourceTree = "<group>"; };
 		88FB78932C12A5A700F61A74 /* Dot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dot.swift; sourceTree = "<group>"; };
 		88FB78962C12BE9D00F61A74 /* RotateArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotateArrayExtension.swift; sourceTree = "<group>"; };
+		B35B21A32C192900004459B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B35B21A52C192919004459B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B35B21A62C1929CA004459B8 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		B37BEF752C0FEE57004E34D8 /* WoofleActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoofleActionButton.swift; sourceTree = "<group>"; };
 		B37BEF772C128449004E34D8 /* ActivityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityController.swift; sourceTree = "<group>"; };
 		B37BEF792C128909004E34D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -136,6 +143,8 @@
 			files = (
 				D30C7DF92C192F730021483A /* ConfettiSwiftUI in Frameworks */,
 				D30C7DEF2C17D5980021483A /* SDWebImageSwiftUI in Frameworks */,
+				B35B21A02C19272F004459B8 /* FirebaseAuth in Frameworks */,
+				B35B21A22C19272F004459B8 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +234,7 @@
 		B3A8DC6E2C08095400ED5B9A = {
 			isa = PBXGroup;
 			children = (
+				B35B21A32C192900004459B8 /* GoogleService-Info.plist */,
 				B3A8DC792C08095400ED5B9A /* woofle */,
 				B3A8DC8A2C08095600ED5B9A /* woofleTests */,
 				B3A8DC942C08095600ED5B9A /* woofleUITests */,
@@ -246,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				049E374E2C115DC200DD2F69 /* Info.plist */,
+				B35B21A52C192919004459B8 /* GoogleService-Info.plist */,
 				B3A8DCAA2C0D54C200ED5B9A /* Controller */,
 				B3A8DCA92C0D54BB00ED5B9A /* Model */,
 				B3A8DCA82C0D54A400ED5B9A /* View */,
@@ -328,6 +339,7 @@
 				B37BEF772C128449004E34D8 /* ActivityController.swift */,
 				B37BEFA72C129BBA004E34D8 /* GoalManager.swift */,
 				B37BEFB12C17EF47004E34D8 /* constant.swift */,
+				B35B21A62C1929CA004459B8 /* AuthViewModel.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -360,6 +372,8 @@
 			packageProductDependencies = (
 				D30C7DEE2C17D5980021483A /* SDWebImageSwiftUI */,
 				D30C7DF82C192F730021483A /* ConfettiSwiftUI */,
+				B35B219F2C19272F004459B8 /* FirebaseAuth */,
+				B35B21A12C19272F004459B8 /* FirebaseFirestore */,
 			);
 			productName = woofle;
 			productReference = B3A8DC772C08095400ED5B9A /* woofle.app */;
@@ -436,6 +450,7 @@
 			packageReferences = (
 				D30C7DED2C17D5980021483A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				D30C7DF72C192F730021483A /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+				B35B219E2C19272F004459B8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = B3A8DC782C08095400ED5B9A /* Products */;
 			projectDirPath = "";
@@ -454,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3A8DC822C08095500ED5B9A /* Preview Assets.xcassets in Resources */,
+				B35B21A42C192900004459B8 /* GoogleService-Info.plist in Resources */,
 				88FB788C2C129A8A00F61A74 /* Assets.xcassets in Resources */,
 				B3A8DC7F2C08095500ED5B9A /* Assets.xcassets in Resources */,
 			);
@@ -522,6 +538,7 @@
 				B3E093682C1811BE00434CBF /* Level.swift in Sources */,
 				880FC53F2C0FEEF800A78F3E /* whyDownloadScreen.swift in Sources */,
 				049E373F2C113AB800DD2F69 /* WelcomePage.swift in Sources */,
+				B35B21A72C1929CA004459B8 /* AuthViewModel.swift in Sources */,
 				B39B7CB52C0E9822000B9089 /* ActivitySelectionCard.swift in Sources */,
 				B3A8DCAC2C0D555000ED5B9A /* SampleSwiftController.swift in Sources */,
 				049E37522C12C37300DD2F69 /* SignUp.swift in Sources */,
@@ -864,6 +881,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B35B219E2C19272F004459B8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.27.0;
+			};
+		};
 		D30C7DED2C17D5980021483A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
@@ -883,6 +908,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B35B219F2C19272F004459B8 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B35B219E2C19272F004459B8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		B35B21A12C19272F004459B8 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B35B219E2C19272F004459B8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
 		D30C7DEE2C17D5980021483A /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D30C7DED2C17D5980021483A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
