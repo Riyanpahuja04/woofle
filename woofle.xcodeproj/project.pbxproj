@@ -12,6 +12,7 @@
 		049E37522C12C37300DD2F69 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E37512C12C37300DD2F69 /* SignUp.swift */; };
 		049E37542C12C5DA00DD2F69 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E37532C12C5DA00DD2F69 /* ColorExtension.swift */; };
 		049E37572C17CD7500DD2F69 /* SignUpOptoions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E37562C17CD7500DD2F69 /* SignUpOptoions.swift */; };
+		049E375F2C181C9600DD2F69 /* GetReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E375E2C181C9600DD2F69 /* GetReady.swift */; };
 		880FC53D2C0FE7D700A78F3E /* nameInputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */; };
 		880FC53F2C0FEEF800A78F3E /* whyDownloadScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */; };
 		8820B9E52C11369000F01434 /* toggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8820B9E42C11369000F01434 /* toggleButton.swift */; };
@@ -79,6 +80,7 @@
 		049E37512C12C37300DD2F69 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		049E37532C12C5DA00DD2F69 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		049E37562C17CD7500DD2F69 /* SignUpOptoions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpOptoions.swift; sourceTree = "<group>"; };
+		049E375E2C181C9600DD2F69 /* GetReady.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReady.swift; sourceTree = "<group>"; };
 		880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nameInputScreen.swift; sourceTree = "<group>"; };
 		880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whyDownloadScreen.swift; sourceTree = "<group>"; };
 		8820B9E42C11369000F01434 /* toggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toggleButton.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				B3A8DC7E2C08095500ED5B9A /* Assets.xcassets */,
 				049E373E2C113AB800DD2F69 /* WelcomePage.swift */,
 				049E374F2C1168F800DD2F69 /* LogIn.swift */,
+				049E375E2C181C9600DD2F69 /* GetReady.swift */,
 				D30C7DF02C17D7DE0021483A /* animatedWoofles.swift */,
 				049E37512C12C37300DD2F69 /* SignUp.swift */,
 				B3A8DC802C08095500ED5B9A /* Preview Content */,
@@ -486,6 +489,7 @@
 				D30C7DF12C17D7DE0021483A /* animatedWoofles.swift in Sources */,
 				B3A8DCB42C0D641400ED5B9A /* Activity.swift in Sources */,
 				88FB78832C1295E400F61A74 /* LevelDropdownNewActivity.swift in Sources */,
+				049E375F2C181C9600DD2F69 /* GetReady.swift in Sources */,
 				B3A8DC7B2C08095400ED5B9A /* woofleApp.swift in Sources */,
 				88FB788F2C129A8A00F61A74 /* toggleButton.swift in Sources */,
 				88FB788E2C129A8A00F61A74 /* Onboarding2.swift in Sources */,
