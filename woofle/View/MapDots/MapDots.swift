@@ -40,6 +40,7 @@ struct MapDots: View {
     ]
     
     @State private var pathIsExtended: Bool = true
+    //@ObservedObject 
     
     var body: some View {
         

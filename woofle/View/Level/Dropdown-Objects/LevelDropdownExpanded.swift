@@ -39,7 +39,7 @@ struct LevelDropdownExpanded: View {
                     
                     ZStack {
                         
-                        Text(String(GlobalActivityTracker.shared.level))
+                        Text("LEVEL \(GlobalActivityTracker.shared.level)")
                             .foregroundColor(_dropdownImageColor)
                             .font(
                                 .system(size: 20)
@@ -83,7 +83,7 @@ struct LevelDropdownExpanded: View {
                                     .foregroundColor(_greenHeaderColor)
                                     .scaledToFill()
                                 
-                                Text(GlobalActivityTracker.shared.selectedOption?.brief ?? "")
+                                Text(GlobalActivityTracker.shared.selectedOption?.brief ?? "Not Found")
                                     .frame(width: .infinity, height: 50)
                                     .font(
                                         .system(size: 20)
@@ -94,7 +94,7 @@ struct LevelDropdownExpanded: View {
                                     .foregroundColor(_defaultBackgroundColor)
                             }
                             
-                            Text(GlobalActivityTracker.shared.selectedOption?.description ?? "")
+                            Text(GlobalActivityTracker.shared.selectedOption?.description ?? "Not Found")
                                 .frame(width: .infinity, height: 100)
                                 .font(
                                     .system(size: 15)
@@ -156,3 +156,6 @@ struct LevelDropdownExpanded: View {
     
 }
 
+#Preview {
+    LevelDropdownExpanded(dropdownViewModel: DropdownViewModel())
+}
