@@ -45,16 +45,15 @@ struct LogInPage: View {
     @State private var canNavigate = false
     
     // Colors
-    private let backgroundColorWoofle: Color = Color(red: 0.427, green: 0.6, blue: 0.518)
     private let overlayStrokeColor: Color = Color(red: 0.157, green: 0.165, blue: 0.216)
     private let loginBackgroundColors: Color = Color(red: 1, green: 0.62, blue: 0.29)
     private let additionTextBlack: Color = Color(red: 0.16, green: 0.16, blue: 0.22)
     private let iconBackgroundColor: Color = Color(red: 0.94, green: 0.94, blue: 0.94)
     
-    
     var body: some View {
         ZStack {
-            Color(backgroundColorWoofle)
+            Image("LogInBackground")
+                .resizable()
                 .ignoresSafeArea()
             
             VStack {
@@ -71,41 +70,15 @@ struct LogInPage: View {
             
             VStack {
                 Spacer()
-                    .frame(height: 100)
-                
-                HStack {
-                    Spacer()
-                        .frame(width: 72.1, height: 30)
-                    Rectangle()
-                        .foregroundColor(.clear)
-                        .frame(width: 245, height: 107)
-                        .background(
-                            Image("logo")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 245, height: 107)
-                                .clipped()
-                        )
-                        .rotationEffect(Angle(degrees: 2.07))
-                    Spacer()
-                        .frame(width: 72.2, height: 40)
-                }
+                    .frame(height: 300)
+
+                Rectangle()
+                    .foregroundColor(Color(red: 1, green: 0.99, blue: 0.97))
+                    .frame(width: 392, height: 592)
+                    .cornerRadius(50)
                 
                 Spacer()
-                    .frame(height: 180)
-                
-                Spacer()
-                    .frame(height: 344)
             }
-            
-            VStack {
-                Spacer()
-                Image("loginsquare")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 390, height: 551)
-            }
-            .ignoresSafeArea(edges: .bottom)
             
             VStack {
                 Spacer()

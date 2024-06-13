@@ -40,20 +40,28 @@ struct SecureInputViewSignUp: View {
 
 struct SignUpPage: View {
     @State private var username: String = ""
-    @State private var email: String = ""
     @State private var password: String = ""
     @State private var isLoading = false
+    @State private var canNavigate = false
+    
+    // Colors
+    private let overlayStrokeColor: Color = Color(red: 0.157, green: 0.165, blue: 0.216)
+    private let loginBackgroundColors: Color = Color(red: 1, green: 0.62, blue: 0.29)
+    private let additionTextBlack: Color = Color(red: 0.16, green: 0.16, blue: 0.22)
+    private let iconBackgroundColor: Color = Color(red: 0.94, green: 0.94, blue: 0.94)
     
     var body: some View {
         ZStack {
-            Color(red: 0.427, green: 0.6, blue: 0.518)
+            Image("LogInBackground")
+                .resizable()
+                .scaledToFill()
                 .ignoresSafeArea()
             
             VStack {
                 HStack {
                     Spacer()
                         .frame(height: 100)
-                    Image("upperrightcolorblock2")
+                    Image("upperrightcolorblock")
                         .resizable()
                         .frame(width: 257, height: 312)
                 }
@@ -63,45 +71,21 @@ struct SignUpPage: View {
             
             VStack {
                 Spacer()
-                    .frame(height: -100)
-                
-                HStack {
-                    Spacer()
-                        .frame(width: 72.1, height: 30)
+                    .frame(height: 200)
+
+                GeometryReader { geometry in
                     Rectangle()
-                        .foregroundColor(.clear)
-                        .frame(width: 245, height: 107)
-                        .background(
-                            Image("logo2")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 245, height: 107)
-                                .clipped()
-                        )
-                        .rotationEffect(Angle(degrees: 2.07))
-                    Spacer()
-                        .frame(width: 72.2, height: 40)
+                        .foregroundColor(Color(red: 1, green: 0.99, blue: 0.97))
+                        .frame(width: geometry.size.width, height: 692)
+                        .cornerRadius(50)
                 }
                 
                 Spacer()
-                    .frame(height: 180)
-                
-                Spacer()
-                    .frame(height: 344)
             }
             
             VStack {
                 Spacer()
-                Image("loginsquare2")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(maxWidth: .infinity)
-            }
-            .ignoresSafeArea(edges: .bottom)
-            
-            VStack {
-                Spacer()
-                    .frame(height: 200)
+                    .frame(height: 160) 
                 
                 TextField("User Name", text: $username)
                     .padding()
@@ -111,14 +95,14 @@ struct SignUpPage: View {
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
                             .inset(by: 0.5)
-                            .stroke(Color(red: 0.157, green: 0.165, blue: 0.216), lineWidth: 1)
+                            .stroke(overlayStrokeColor, lineWidth: 1)
                     )
                     .padding(.horizontal, 40)
                 
                 Spacer()
-                    .frame(height: 20)
+                    .frame(height: 30)
                 
-                TextField("Email", text: $email)
+                TextField("Email", text: $username)
                     .padding()
                     .frame(width: 296, height: 43)
                     .background(Color.white)
@@ -126,12 +110,12 @@ struct SignUpPage: View {
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
                             .inset(by: 0.5)
-                            .stroke(Color(red: 0.157, green: 0.165, blue: 0.216), lineWidth: 1)
+                            .stroke(overlayStrokeColor, lineWidth: 1)
                     )
-                    .padding(.horizontal, 20)
+                    .padding(.horizontal, 40)
                 
                 Spacer()
-                    .frame(height: 15)
+                    .frame(height: 30)
                 
                 SecureInputViewSignUp("Password", text: $password)
                     .padding()
@@ -141,12 +125,12 @@ struct SignUpPage: View {
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
                             .inset(by: 0.5)
-                            .stroke(Color(red: 0.157, green: 0.165, blue: 0.216), lineWidth: 1)
+                            .stroke(overlayStrokeColor, lineWidth: 1)
                     )
                     .padding(.horizontal, 47)
                 
                 Spacer()
-                    .frame(height: 20)
+                    .frame(height: 10)
                 
                 Button(action: {
                     
@@ -156,38 +140,41 @@ struct SignUpPage: View {
                         .foregroundColor(Color(hex: "#BDBDBD"))
                 }
                 .padding(.leading, 208)
-                .padding(.trailing, 40)
+                .padding(.trailing, 47)
                 
                 Spacer()
-                    .frame(height: 15)
+                    .frame(height: 20)
                 
                 Button(action: {
-                    
+                    canNavigate = true
                 }) {
                     Text("Sign Up")
                         .foregroundColor(.white)
                         .frame(width: 296, height: 50)
-                        .background(Color(red: 1, green: 0.62, blue: 0.29))
+                        .background(loginBackgroundColors)
                         .cornerRadius(10)
+                }
+                .navigationDestination(isPresented: $canNavigate) {
+                    nameInputScreen()
                 }
                 
                 Spacer()
-                    .frame(height: 30)
+                    .frame(height: 43)
  
                 SignUpOptoions()
                 
                 Spacer()
-                    .frame(height: 15)
+                    .frame(height: 20)
 
                 HStack {
                     Text("Already have an account?")
-                        .font(Font.custom("SF Pro", size: 16))
+                        .font(.system(size: 16))
                         .foregroundColor(Color(hex: "#282A37"))
                     
                     Button(action: {
                     }) {
                         Text("Log In")
-                            .font(Font.custom("SF Pro", size: 16))
+                            .font(.system(size: 16))
                             .foregroundColor(Color(hex: "#4E5FF5"))
                     }
                 }

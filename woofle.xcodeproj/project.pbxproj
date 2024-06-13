@@ -13,6 +13,7 @@
 		049E37542C12C5DA00DD2F69 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E37532C12C5DA00DD2F69 /* ColorExtension.swift */; };
 		049E37572C17CD7500DD2F69 /* SignUpOptoions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E37562C17CD7500DD2F69 /* SignUpOptoions.swift */; };
 		049E37612C1923C900DD2F69 /* GetStarted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E37602C1923C900DD2F69 /* GetStarted.swift */; };
+		049E37632C194AE500DD2F69 /* reviewprogress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E37622C194AE500DD2F69 /* reviewprogress.swift */; };
 		880FC53D2C0FE7D700A78F3E /* nameInputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */; };
 		880FC53F2C0FEEF800A78F3E /* whyDownloadScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */; };
 		88728A9E2C17D18600115B54 /* DropdownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88728A9D2C17D18600115B54 /* DropdownViewModel.swift */; };
@@ -80,6 +81,7 @@
 		049E37532C12C5DA00DD2F69 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		049E37562C17CD7500DD2F69 /* SignUpOptoions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpOptoions.swift; sourceTree = "<group>"; };
 		049E37602C1923C900DD2F69 /* GetStarted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStarted.swift; sourceTree = "<group>"; };
+		049E37622C194AE500DD2F69 /* reviewprogress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reviewprogress.swift; sourceTree = "<group>"; };
 		880FC53C2C0FE7D700A78F3E /* nameInputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nameInputScreen.swift; sourceTree = "<group>"; };
 		880FC53E2C0FEEF800A78F3E /* whyDownloadScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whyDownloadScreen.swift; sourceTree = "<group>"; };
 		88728A9D2C17D18600115B54 /* DropdownViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownViewModel.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				B3A8DC7E2C08095500ED5B9A /* Assets.xcassets */,
 				049E373E2C113AB800DD2F69 /* WelcomePage.swift */,
 				049E374F2C1168F800DD2F69 /* LogIn.swift */,
+				049E37622C194AE500DD2F69 /* reviewprogress.swift */,
 				D30C7DF02C17D7DE0021483A /* animatedWoofles.swift */,
 				049E37512C12C37300DD2F69 /* SignUp.swift */,
 				B3A8DC802C08095500ED5B9A /* Preview Content */,
@@ -470,6 +473,7 @@
 				880FC53D2C0FE7D700A78F3E /* nameInputScreen.swift in Sources */,
 				D3AD359B2C0FF88E008BC3F6 /* MapView.swift in Sources */,
 				B37BEF7A2C128909004E34D8 /* ContentView.swift in Sources */,
+				049E37632C194AE500DD2F69 /* reviewprogress.swift in Sources */,
 				88C425F12C0E904800ADECAD /* goalInputScreen.swift in Sources */,
 				049E37612C1923C900DD2F69 /* GetStarted.swift in Sources */,
 				B3A8DCAE2C0D556100ED5B9A /* SampleSwiftModel.swift in Sources */,
