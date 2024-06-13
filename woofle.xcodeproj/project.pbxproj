@@ -40,6 +40,8 @@
 		B35B21A02C19272F004459B8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B35B219F2C19272F004459B8 /* FirebaseAuth */; };
 		B35B21A22C19272F004459B8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B35B21A12C19272F004459B8 /* FirebaseFirestore */; };
 		B35B21A72C1929CA004459B8 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35B21A62C1929CA004459B8 /* AuthViewModel.swift */; };
+		B368DA592C1A909B00D0F0BA /* FetchingApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B368DA582C1A909B00D0F0BA /* FetchingApi.swift */; };
+		B368DA5C2C1AAB7B00D0F0BA /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B368DA5B2C1AAB7B00D0F0BA /* FirebaseFirestoreSwift */; };
 		B37BEF762C0FEE57004E34D8 /* WoofleActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37BEF752C0FEE57004E34D8 /* WoofleActionButton.swift */; };
 		B37BEF782C128449004E34D8 /* ActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37BEF772C128449004E34D8 /* ActivityController.swift */; };
 		B37BEF7A2C128909004E34D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37BEF792C128909004E34D8 /* ContentView.swift */; };
@@ -116,6 +118,7 @@
 		88FB78912C129BFE00F61A74 /* MapDots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDots.swift; sourceTree = "<group>"; };
 		88FB78932C12A5A700F61A74 /* Dot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dot.swift; sourceTree = "<group>"; };
 		B35B21A62C1929CA004459B8 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		B368DA582C1A909B00D0F0BA /* FetchingApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchingApi.swift; sourceTree = "<group>"; };
 		B37BEF752C0FEE57004E34D8 /* WoofleActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoofleActionButton.swift; sourceTree = "<group>"; };
 		B37BEF772C128449004E34D8 /* ActivityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityController.swift; sourceTree = "<group>"; };
 		B37BEF792C128909004E34D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -148,6 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B368DA5C2C1AAB7B00D0F0BA /* FirebaseFirestoreSwift in Frameworks */,
 				D30C7DF92C192F730021483A /* ConfettiSwiftUI in Frameworks */,
 				D30C7DEF2C17D5980021483A /* SDWebImageSwiftUI in Frameworks */,
 				B35B21A02C19272F004459B8 /* FirebaseAuth in Frameworks */,
@@ -244,6 +248,13 @@
 			path = MapDots;
 			sourceTree = "<group>";
 		};
+		B368DA5A2C1AAB7B00D0F0BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B37BEF722C0FEC1D004E34D8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +271,7 @@
 				B3A8DC8A2C08095600ED5B9A /* woofleTests */,
 				B3A8DC942C08095600ED5B9A /* woofleUITests */,
 				B3A8DC782C08095400ED5B9A /* Products */,
+				B368DA5A2C1AAB7B00D0F0BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -353,6 +365,7 @@
 				B37BEFB12C17EF47004E34D8 /* constant.swift */,
 				B35B21A62C1929CA004459B8 /* AuthViewModel.swift */,
 				887DD1B82C1A972C00AEE95B /* SavedExperienceController.swift */,
+				B368DA582C1A909B00D0F0BA /* FetchingApi.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -392,6 +405,7 @@
 				D30C7DF82C192F730021483A /* ConfettiSwiftUI */,
 				B35B219F2C19272F004459B8 /* FirebaseAuth */,
 				B35B21A12C19272F004459B8 /* FirebaseFirestore */,
+				B368DA5B2C1AAB7B00D0F0BA /* FirebaseFirestoreSwift */,
 			);
 			productName = woofle;
 			productReference = B3A8DC772C08095400ED5B9A /* woofle.app */;
@@ -529,6 +543,7 @@
 				D30C7DF12C17D7DE0021483A /* animatedWoofles.swift in Sources */,
 				B3A8DCB42C0D641400ED5B9A /* Option.swift in Sources */,
 				88FB78832C1295E400F61A74 /* LevelDropdownNewActivity.swift in Sources */,
+				B368DA592C1A909B00D0F0BA /* FetchingApi.swift in Sources */,
 				B3A8DC7B2C08095400ED5B9A /* woofleApp.swift in Sources */,
 				88FB788F2C129A8A00F61A74 /* toggleButton.swift in Sources */,
 				88551FEF2C1964A500E799A5 /* RotateArrayExtension.swift in Sources */,
@@ -938,6 +953,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B35B219E2C19272F004459B8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		B368DA5B2C1AAB7B00D0F0BA /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B35B219E2C19272F004459B8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
 		};
 		D30C7DEE2C17D5980021483A /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;

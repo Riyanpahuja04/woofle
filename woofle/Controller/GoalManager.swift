@@ -43,7 +43,7 @@ class GoalManager {
         for _ in 0...3 {
             indexesToAccess.append(Int.random(in: 0...8))
         }
-        if let options = data.levels.first(where: { $0.level == level })?.options.shuffled() {
+        if let options = data.levels?.first(where: { $0.level == level })?.options?.shuffled() {
             var returnOptions: [Option] = []
             var index = 0
             while index < 3 {
@@ -64,7 +64,7 @@ class GoalManager {
             return "Task Infinity"
         }
         
-        return data.levels.first { $0.level == level }?.task ?? "Task Infinity"
+        return data.levels?.first { $0.level == level }?.task ?? "Task Infinity"
     }
     
     func getCurrentLevel() -> Int {

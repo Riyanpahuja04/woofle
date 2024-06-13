@@ -1,5 +1,8 @@
 import Foundation
+import FirebaseFirestoreSwift
 
-struct Goal: Codable {
-    let levels: [Level]
+struct Goal: Identifiable, Codable {
+    @DocumentID var id: String? = UUID().uuidString
+    var goal: String
+    var levels: [Level]? = []
 }

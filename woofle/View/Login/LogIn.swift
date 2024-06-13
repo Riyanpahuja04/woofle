@@ -211,6 +211,9 @@ struct LogInPage: View {
                     }
                 }
                 .multilineTextAlignment(.center)
+                .onAppear {
+                    print("\(FirestoreService.shared.goals.first?.levels?.count ?? 1)")
+                }
             }
         }
     }

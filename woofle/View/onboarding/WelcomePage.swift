@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct _WelcomePage: View {
-    @State private var isLoading = false
+    @StateObject var firestoreService = FirestoreService.shared
     @State private var navigateToLogin = false
 
     var body: some View {
@@ -100,55 +100,45 @@ struct _WelcomePage: View {
                     Spacer()
                         .frame(height: 60)
                     
-                    LoadingIndicator(isLoading: $isLoading)
+                    LoadingIndicator()
                     Spacer()
                         .frame(height: 394 - 25)
                 }
                 .navigationDestination(isPresented: $navigateToLogin ) {
-                    LogInPage() .navigationBarBackButtonHidden(true)
+                    LogInPage()
+                        .navigationBarBackButtonHidden(true)
                 }
             }
         }
         .onAppear {
-            startLoading()
-        }
-    }
-
-    private func startLoading() {
-        isLoading = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            isLoading = false
-            navigateToLogin = true
+            firestoreService.fetchAllGoals{ completion in
+                navigateToLogin = completion
+                
+            }
         }
     }
 }
 
 struct LoadingIndicator: View {
+    @State private var isLoading: Bool = false
 
-    private var animation: Animation {
-        .linear
-        .speed(0.5)
-        .repeatForever(autoreverses: false)
-    }
-
-    @Binding var isLoading: Bool
-    var body: some View {
-        ZStack {
-            Circle()
-                .stroke(Color(.systemGray5), lineWidth: 3)
-                .frame(width: 30, height: 30)
-            Circle()
-                .trim(from: 0, to: 0.7)
-                .stroke(Color(#colorLiteral(red: 0.250980406999588, green: 0.4117647111415863, blue: 0.5372549295425415, alpha: 1)), lineWidth: 3)
-                .frame(width: 30, height: 30)
-                .rotationEffect(Angle(degrees: isLoading ? 360 : 0))
-        }
-        .onAppear {
-            withAnimation(animation) {
-                self.isLoading = true
+        var body: some View {
+            ZStack {
+                Circle()
+                    .stroke(Color(.systemGray5), lineWidth: 3)
+                    .frame(width: 30, height: 30)
+                Circle()
+                    .trim(from: 0, to: 0.7)
+                    .stroke(Color(#colorLiteral(red: 0.250980406999588, green: 0.4117647111415863, blue: 0.5372549295425415, alpha: 1)), lineWidth: 3)
+                    .frame(width: 30, height: 30)
+                    .rotationEffect(Angle(degrees: isLoading ? 360 : 0))
+            }
+            .onAppear {
+                withAnimation(.linear(duration: 1).repeatForever(autoreverses: false)) {
+                    isLoading = true
+                }
             }
         }
-    }
 }
 
 #Preview(body: {

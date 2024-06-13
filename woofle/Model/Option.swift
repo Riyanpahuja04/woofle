@@ -1,4 +1,8 @@
-struct Option: Codable, Hashable {
-    let brief: String
-    let description: String
+import Foundation
+import FirebaseFirestoreSwift
+
+struct Option: Identifiable, Codable, Equatable {
+    @DocumentID var id: String? = UUID().uuidString
+    var brief: String
+    var description: String
 }

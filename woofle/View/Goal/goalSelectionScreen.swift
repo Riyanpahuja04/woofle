@@ -54,7 +54,7 @@ struct GoalSelection: View {
                             .multilineTextAlignment(.center)
                             .foregroundStyle(_titleColor)
                             .padding(.bottom, 30)
-                        ForEach(options, id: \.self) { option in
+                        ForEach(options, id: \.id) { option in
                             ActivitySelectionCard(
                                 option: option,
                                 selectedOption: $selectedOption
