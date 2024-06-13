@@ -14,21 +14,8 @@ class GoalManager {
     
     // Function to parse the JSON data and store it in the class
     private func parseLearningToSwimJSON() {
-        
-        // Convert JSON string to Data
-        guard let jsonData = _jsonString.data(using: .utf8) else {
-            print("Failed to convert JSON string to Data.")
-            return
-        }
-        
         // Decode the JSON data
-        do {
-            let decoder = JSONDecoder()
-            let goal = try decoder.decode(Goal.self, from: jsonData)
-            self.goal = goal
-        } catch {
-            print("Failed to decode JSON: \(error)")
-        }
+        self.goal = GlobalActivityTracker.shared.selectedGoalToAchieve
     }
     
     // Example function to get the options for a specific level
@@ -79,7 +66,7 @@ class GoalManager {
 
 class GlobalActivityTracker {
     static var shared = GlobalActivityTracker()
-    
+    var selectedGoalToAchieve: Goal?
     var level = 1
     var currentGoal: String = "To Die"
     var selectedOption: Option?

@@ -5,6 +5,7 @@ struct ActivitySelection: View {
     @State private var isSpinning: Bool = false
     @State private var currentLevel: Int = 0
     @State private var canNavigate: Bool = false
+    @State private var currentTask: String = ""
     private var goal = GoalManager()
     @State private var options: [Option] = []
     
@@ -32,7 +33,7 @@ struct ActivitySelection: View {
                        
                         VStack(alignment:.leading, spacing: 7) {
                            
-                            Text("Water familiarisation")
+                            Text(currentTask)
                                 .font(.system(size: 20))
                                 .fontWeight(.medium)
                                 .foregroundStyle(_subTitleColor)
@@ -67,6 +68,7 @@ struct ActivitySelection: View {
                     .onAppear {
                         currentLevel = goal.getCurrentLevel()
                         options = goal.getOptions()
+                        currentTask = goal.getCurrentTask()
                     }
                     
                     Spacer()

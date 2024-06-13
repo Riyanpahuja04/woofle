@@ -66,7 +66,9 @@ struct goalInputScreen: View {
                         .padding(.trailing, 30.0)
                         .padding(.leading, 5)
                         .onTapGesture {
-                            userInputText = _randomGoals.randomElement() ?? "Unable to retrieve random goal"
+                            let goal = FirestoreService.shared.goals.randomElement()
+                            GlobalActivityTracker.shared.selectedGoalToAchieve = goal
+                            userInputText = goal?.goal ?? "Unable to retrieve random goal"
                         }
                     
                     
