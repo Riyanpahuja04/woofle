@@ -105,7 +105,7 @@ struct GoalSelection: View {
                 }
                 .safeAreaPadding(.top, 68)
                 .navigationDestination(isPresented: $canNavigate) {
-                    activitySelectedScreen()
+                    ActivitySelection()
                 }
             }
             .ignoresSafeArea()

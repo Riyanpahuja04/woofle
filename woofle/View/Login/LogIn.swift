@@ -177,7 +177,7 @@ struct LogInPage: View {
                     }
                 }
                 .navigationDestination(isPresented: $viewModel.isAuthenticated) {
-                    nameInputScreen()
+                    OnboardingView()
                 }
                 
                 Spacer()

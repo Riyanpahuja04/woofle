@@ -21,14 +21,6 @@ struct activitySelectedScreen: View {
             
             if dropdownViewModel.completionOverlayFlag {
                 woofleCompletionScreen(backgroundBlur: $backgroundBlur, dropdownViewModel: dropdownViewModel)
-                
-                Image("woofle-ball")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 100, height: 100)
-                    .position(x:125, y: 620)
-                    .blur(radius: backgroundBlur)
-                
             }
             
             else {
@@ -52,7 +44,6 @@ struct activitySelectedScreen: View {
                 }
                 
             }
-            
         }
     }
     

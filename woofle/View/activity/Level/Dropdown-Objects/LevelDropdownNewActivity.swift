@@ -10,6 +10,7 @@ import SwiftUI
 struct LevelDropdownNewActivity: View {
     
     @ObservedObject var dropdownViewModel: DropdownViewModel
+    @State var canNavigate = false
     
     var body: some View {
         
@@ -56,7 +57,7 @@ struct LevelDropdownNewActivity: View {
             HStack {
                 Spacer().frame(width: 60)
                 WoofleActionButton(text: "Let's do it!") {
-                    //TODO: ADD CODE
+                    canNavigate = true
                 }.frame(width: .infinity, height: 60)
                 Spacer().frame(width: 60)
             }.padding(.top, 85)
@@ -85,6 +86,11 @@ struct LevelDropdownNewActivity: View {
                 .foregroundColor(_dropdownImageColor)
                 
         } .offset(x:130, y:40)
+            .navigationBarBackButtonHidden(true)
+            .navigationDestination(isPresented: $canNavigate) {
+                ActivitySelection()
+                    .navigationBarBackButtonHidden(true)
+            }
     }
     
     

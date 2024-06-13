@@ -21,5 +21,14 @@ class DropdownViewModel: ObservableObject {
     //TODO: Retrieve current menu from Storage
     @Published var currentMenu: Int = 0
     
+    init() {
+        
+    }
+    
+    init(completionOverlayFlag: Bool, currentMenu: Int) {
+        self.completionOverlayFlag = completionOverlayFlag
+        self.currentMenu = currentMenu
+    }
+    
     
 }

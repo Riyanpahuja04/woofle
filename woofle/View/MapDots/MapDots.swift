@@ -76,11 +76,23 @@ struct MapDots: View {
             }
             
             else {
-                Image("woofle-standing")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 100, height: 100)
-                    .position(x:95, y: 130)
+                
+                if dropdownViewModel.completionOverlayFlag {
+                    
+                    Image("woofle-ball")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 100, height: 100)
+                        .position(x:95, y: 130)
+                }
+                
+                else {
+                    Image("woofle-standing")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 100, height: 100)
+                        .position(x:95, y: 130)
+                }
             }
             
             
@@ -112,3 +124,6 @@ struct MapDots: View {
     
 }
 
+#Preview {
+    MapDots(dropdownViewModel: DropdownViewModel(completionOverlayFlag: true, currentMenu: 3))
+}

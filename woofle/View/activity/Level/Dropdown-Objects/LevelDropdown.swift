@@ -88,6 +88,7 @@ struct LevelDropdown: View {
                 .foregroundColor(_dropdownImageColor)
                 
         } .offset(x:130, y:40)
+            .navigationBarBackButtonHidden(true)
             
     }
     

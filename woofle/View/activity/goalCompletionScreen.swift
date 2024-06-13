@@ -26,6 +26,9 @@ struct goalCompletionView: View {
     @State private var initialOffsetSet = false
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var selectedImageData: Data? = nil
+    @State private var canNavigate = false
+    @ObservedObject var dropdownViewModel: DropdownViewModel
+    @State private var globalActivityTracker = GlobalActivityTracker.shared
     
     var body: some View {
         //ScrollView {
@@ -46,13 +49,13 @@ struct goalCompletionView: View {
                        
                         VStack(alignment:.leading, spacing: 7) {
                            
-                            Text("Playing “Stand By Me” Using Basic Chords On Guitar")
+                            Text(globalActivityTracker.selectedOption?.brief ?? globalActivityTracker.currentGoal)
                                 .font(.system(size: 20))
                                 .fontWeight(.medium)
                                 .foregroundStyle(_subTitleColor)
                             
                             
-                            Text("Learn Basic\nChords")
+                            Text(globalActivityTracker.currentGoal)
                                 .font(.system(size: 35))
                                 .fontWeight(.semibold)
                                 .foregroundColor(_titleColor)
@@ -246,7 +249,9 @@ struct goalCompletionView: View {
                         Rectangle()
                             .frame(width: 1, height: 10)
                             .foregroundColor(.clear)
-                        WoofleActionButton(text: "Submit", action: {})
+                        WoofleActionButton(text: "Submit", action: {
+                            canNavigate = true
+                        })
                     }
                     
                     Spacer()
@@ -254,9 +259,11 @@ struct goalCompletionView: View {
                 .safeAreaPadding(.top, 68)
             }
             .ignoresSafeArea()
+            .navigationDestination(isPresented: $canNavigate) {
+                activitySelectedScreen(dropdownViewModel: DropdownViewModel(completionOverlayFlag: true, currentMenu: 2))
+            }
         }
-//        .ignoresSafeArea()
-//}
+    
 }
     
     
@@ -265,7 +272,7 @@ struct goalCompletionView: View {
     
     struct goalCompletionView_Previews: PreviewProvider {
         static var previews: some View {
-            goalCompletionView()
+            goalCompletionView(dropdownViewModel: DropdownViewModel())
         }
     }
     

@@ -119,7 +119,7 @@ struct LevelDropdownExpanded: View {
                         Spacer().frame(width: 80)
                     }.padding(.bottom, 30)
                         .navigationDestination(isPresented: $canNavigate) {
-                            ActivitySelection()
+                            goalCompletionView(dropdownViewModel: dropdownViewModel)
                                 .navigationBarBackButtonHidden(true)
                         }
                     
@@ -139,6 +139,7 @@ struct LevelDropdownExpanded: View {
                 
             }
         }.padding(.top, -40)
+            .navigationBarBackButtonHidden(true)
     }
     
     
