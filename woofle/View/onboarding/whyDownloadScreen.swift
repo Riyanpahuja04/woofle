@@ -155,7 +155,7 @@ struct WhyDownloadScreen: View {
             }
         }
         .navigationDestination(isPresented: $canNavigate) {
-            GoalSelection()
+            goalInputScreen()
         }
     }
     
