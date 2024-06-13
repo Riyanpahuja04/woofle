@@ -176,12 +176,23 @@ struct LogInPage: View {
                             .cornerRadius(10)
                     }
                 }
+                
+                Spacer()
+                    .frame(height: 10)
+                    Button(action: {
+                        viewModel.isAuthenticated = true
+                    }) {
+                        Text("Skip Login")
+                            .font(.system(size: 16))
+                            .foregroundColor(Color(hex: "#BDBDBD"))
+                }
+                
                 .navigationDestination(isPresented: $viewModel.isAuthenticated) {
                     OnboardingView()
                 }
                 
                 Spacer()
-                    .frame(height: 43)
+                    .frame(height: 30)
                 
                 SignUpOptoions()
                 

@@ -21,6 +21,12 @@ struct pastCompletionScreen: View {
         @State private var initialOffsetSet = false
 
         @State private var selectedImageData: Data? = nil
+    
+        @State var globalActivityTracker = GlobalActivityTracker.shared
+    
+        @State var data = globalSavedExperience.shared.savedExperienceArray
+    
+        
         
         var body: some View {
             ScrollView {
@@ -45,7 +51,7 @@ struct pastCompletionScreen: View {
                             VStack(alignment:.leading, spacing: 7) {
                                
                                 
-                                Text("Playing “Stand By Me” Using Basic Chords On Guitar")
+                                Text(globalActivityTracker.currentGoal)
                                     .font(.system(size: 20))
                                     .fontWeight(.medium)
                                     .foregroundStyle(_subTitleColor)
@@ -65,29 +71,12 @@ struct pastCompletionScreen: View {
                           .fill(.clear)
                           .frame(height:20)
                         
-                        VStack (alignment: .leading) {
-                            HStack {
-                                Image("filler-image")
-                                    .resizable()
-                                    .frame(width:50, height:50)
+                        ScrollView {
                             
-                            VStack (alignment: .leading) {
-                                Text("Level 1")
-                                    .font(Font.custom("Darumadrop One", size: 30))
-                                    .foregroundColor(.backgroundGreen)
-                                HStack {
-                                    Text("Learn Basic Chords")
-                                        .font(.subheadline)
-                                        .foregroundColor(_subSubTitleColor)
-                                    Spacer()
-                                    Image(systemName: "arrow.right")
-                                        .foregroundColor(_subSubTitleColor)
-                                       
-        
-                                }
+                            ForEach(data) { data in
+                                CompletedLevelButton(buttonData: data)
+                                
                             }
-                        }
-                            .padding()
 
  
                     

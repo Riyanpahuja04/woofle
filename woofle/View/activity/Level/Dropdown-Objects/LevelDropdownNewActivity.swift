@@ -11,6 +11,7 @@ struct LevelDropdownNewActivity: View {
     
     @ObservedObject var dropdownViewModel: DropdownViewModel
     @State var canNavigate = false
+    @State var historyNavFlag = false
     
     var body: some View {
         
@@ -85,7 +86,14 @@ struct LevelDropdownNewActivity: View {
                 .frame(width:40, height:40)
                 .foregroundColor(_dropdownImageColor)
                 
-        } .offset(x:130, y:40)
+        } 
+        .onTapGesture{
+            historyNavFlag = true
+        }
+        .navigationDestination(isPresented: $historyNavFlag) {
+            pastCompletionScreen()
+        }
+        .offset(x:130, y:40)
             .navigationBarBackButtonHidden(true)
             .navigationDestination(isPresented: $canNavigate) {
                 ActivitySelection()

@@ -21,6 +21,10 @@
 		88551FF12C1964CF00E799A5 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88551FF02C1964CF00E799A5 /* ColorExtension.swift */; };
 		88728A9E2C17D18600115B54 /* DropdownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88728A9D2C17D18600115B54 /* DropdownViewModel.swift */; };
 		887DD1B42C1A78DC00AEE95B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 887DD1B32C1A78DC00AEE95B /* GoogleService-Info.plist */; };
+		887DD1B72C1A95F400AEE95B /* CompletedLevelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887DD1B62C1A95F400AEE95B /* CompletedLevelButton.swift */; };
+		887DD1B92C1A972C00AEE95B /* SavedExperienceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887DD1B82C1A972C00AEE95B /* SavedExperienceController.swift */; };
+		887DD1BB2C1A979700AEE95B /* SavedExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887DD1BA2C1A979700AEE95B /* SavedExperience.swift */; };
+		887DD1BD2C1A9AD500AEE95B /* reviewprogress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887DD1BC2C1A9AD500AEE95B /* reviewprogress.swift */; };
 		889421072C19265A0075F636 /* goalSelectionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889421062C19265A0075F636 /* goalSelectionScreen.swift */; };
 		88FB78812C1295E400F61A74 /* LevelDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB787C2C1295E400F61A74 /* LevelDropdown.swift */; };
 		88FB78822C1295E400F61A74 /* LevelDropdownExpanded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB787D2C1295E400F61A74 /* LevelDropdownExpanded.swift */; };
@@ -95,6 +99,10 @@
 		88551FF02C1964CF00E799A5 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		88728A9D2C17D18600115B54 /* DropdownViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownViewModel.swift; sourceTree = "<group>"; };
 		887DD1B32C1A78DC00AEE95B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		887DD1B62C1A95F400AEE95B /* CompletedLevelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedLevelButton.swift; sourceTree = "<group>"; };
+		887DD1B82C1A972C00AEE95B /* SavedExperienceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedExperienceController.swift; sourceTree = "<group>"; };
+		887DD1BA2C1A979700AEE95B /* SavedExperience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedExperience.swift; sourceTree = "<group>"; };
+		887DD1BC2C1A9AD500AEE95B /* reviewprogress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = reviewprogress.swift; sourceTree = "<group>"; };
 		889421062C19265A0075F636 /* goalSelectionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalSelectionScreen.swift; sourceTree = "<group>"; };
 		88FB787C2C1295E400F61A74 /* LevelDropdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelDropdown.swift; sourceTree = "<group>"; };
 		88FB787D2C1295E400F61A74 /* LevelDropdownExpanded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelDropdownExpanded.swift; sourceTree = "<group>"; };
@@ -183,6 +191,15 @@
 				88FB787F2C1295E400F61A74 /* LevelDropdownNoActivity.swift */,
 			);
 			path = "Dropdown-Objects";
+			sourceTree = "<group>";
+		};
+		887DD1B52C1A95E400AEE95B /* CompletedLevels */ = {
+			isa = PBXGroup;
+			children = (
+				887DD1BC2C1A9AD500AEE95B /* reviewprogress.swift */,
+				887DD1B62C1A95F400AEE95B /* CompletedLevelButton.swift */,
+			);
+			path = CompletedLevels;
 			sourceTree = "<group>";
 		};
 		889421082C19266D0075F636 /* Goal */ = {
@@ -301,6 +318,7 @@
 		B3A8DCA82C0D54A400ED5B9A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				887DD1B52C1A95E400AEE95B /* CompletedLevels */,
 				889421082C19266D0075F636 /* Goal */,
 				88FB78902C129BF400F61A74 /* MapDots */,
 				049E37552C12C62E00DD2F69 /* Login */,
@@ -319,6 +337,7 @@
 				B3A8DCB12C0D63B200ED5B9A /* Goal.swift */,
 				B3A8DCB32C0D641400ED5B9A /* Option.swift */,
 				B3E093672C1811BE00434CBF /* Level.swift */,
+				887DD1BA2C1A979700AEE95B /* SavedExperience.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -333,6 +352,7 @@
 				B37BEFA72C129BBA004E34D8 /* GoalManager.swift */,
 				B37BEFB12C17EF47004E34D8 /* constant.swift */,
 				B35B21A62C1929CA004459B8 /* AuthViewModel.swift */,
+				887DD1B82C1A972C00AEE95B /* SavedExperienceController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -497,6 +517,7 @@
 				049E37572C17CD7500DD2F69 /* SignUpOptoions.swift in Sources */,
 				D3AD359B2C0FF88E008BC3F6 /* MapView.swift in Sources */,
 				88FB788D2C129A8A00F61A74 /* Onboarding.swift in Sources */,
+				887DD1BD2C1A9AD500AEE95B /* reviewprogress.swift in Sources */,
 				88551FE52C19645300E799A5 /* woofleCompletionScreen.swift in Sources */,
 				88551FEC2C19649900E799A5 /* nameInputScreen.swift in Sources */,
 				88728A9E2C17D18600115B54 /* DropdownViewModel.swift in Sources */,
@@ -513,6 +534,7 @@
 				88551FEF2C1964A500E799A5 /* RotateArrayExtension.swift in Sources */,
 				88FB788E2C129A8A00F61A74 /* Onboarding2.swift in Sources */,
 				88FB78942C12A5A700F61A74 /* Dot.swift in Sources */,
+				887DD1BB2C1A979700AEE95B /* SavedExperience.swift in Sources */,
 				88FB78812C1295E400F61A74 /* LevelDropdown.swift in Sources */,
 				B3A8DCB42C0D641400ED5B9A /* Option.swift in Sources */,
 				B3A8DC7B2C08095400ED5B9A /* woofleApp.swift in Sources */,
@@ -532,11 +554,13 @@
 				B3A8DCAC2C0D555000ED5B9A /* SampleSwiftController.swift in Sources */,
 				88551FE92C19648900E799A5 /* goalCompletionScreen.swift in Sources */,
 				B37BEF782C128449004E34D8 /* ActivityController.swift in Sources */,
+				887DD1B72C1A95F400AEE95B /* CompletedLevelButton.swift in Sources */,
 				D30C7DFD2C1943E10021483A /* pastCompletionScreen.swift in Sources */,
 				B3E093682C1811BE00434CBF /* Level.swift in Sources */,
 				049E373F2C113AB800DD2F69 /* WelcomePage.swift in Sources */,
 				B35B21A72C1929CA004459B8 /* AuthViewModel.swift in Sources */,
 				B39B7CB52C0E9822000B9089 /* ActivitySelectionCard.swift in Sources */,
+				887DD1B92C1A972C00AEE95B /* SavedExperienceController.swift in Sources */,
 				B3A8DCAC2C0D555000ED5B9A /* SampleSwiftController.swift in Sources */,
 				049E37522C12C37300DD2F69 /* SignUp.swift in Sources */,
 				049E37502C1168F800DD2F69 /* LogIn.swift in Sources */,

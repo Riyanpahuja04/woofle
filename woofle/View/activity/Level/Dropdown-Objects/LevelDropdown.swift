@@ -10,6 +10,7 @@ import SwiftUI
 struct LevelDropdown: View {
         
     @ObservedObject var dropdownViewModel: DropdownViewModel
+    @State var historyNavFlag: Bool = false
     
     var body: some View {
         
@@ -88,6 +89,12 @@ struct LevelDropdown: View {
                 .foregroundColor(_dropdownImageColor)
                 
         } .offset(x:130, y:40)
+            .onTapGesture{
+                historyNavFlag = true
+            }
+            .navigationDestination(isPresented: $historyNavFlag) {
+                pastCompletionScreen()
+            }
             .navigationBarBackButtonHidden(true)
             
     }

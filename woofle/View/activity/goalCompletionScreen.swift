@@ -29,6 +29,7 @@ struct goalCompletionView: View {
     @State private var canNavigate = false
     @ObservedObject var dropdownViewModel: DropdownViewModel
     @State private var globalActivityTracker = GlobalActivityTracker.shared
+    @State private var submitExperience = globalSavedExperience.shared
     
     var body: some View {
         //ScrollView {
@@ -250,6 +251,7 @@ struct goalCompletionView: View {
                             .frame(width: 1, height: 10)
                             .foregroundColor(.clear)
                         WoofleActionButton(text: "Submit", action: {
+                            submitExperience.saveExperience(level: globalActivityTracker.level, photo: selectedImageData, title: globalActivityTracker.selectedOption?.brief ?? "Activity Title", description: globalActivityTracker.selectedOption?.description, mood: scrollOffset)
                             canNavigate = true
                         })
                     }

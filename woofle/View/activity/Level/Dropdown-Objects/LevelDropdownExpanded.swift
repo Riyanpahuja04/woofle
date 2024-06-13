@@ -11,6 +11,7 @@ struct LevelDropdownExpanded: View {
     
     @ObservedObject var dropdownViewModel: DropdownViewModel
     @State var canNavigate = false
+    @State var historyNavFlag = false
     
     var body: some View {
         
@@ -139,6 +140,12 @@ struct LevelDropdownExpanded: View {
                 
             }
         }.padding(.top, -40)
+            .onTapGesture{
+                historyNavFlag = true
+            }
+            .navigationDestination(isPresented: $historyNavFlag) {
+                pastCompletionScreen()
+            }
             .navigationBarBackButtonHidden(true)
     }
     

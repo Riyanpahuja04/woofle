@@ -34,7 +34,7 @@ class GoalManager {
     // Example function to get the options for a specific level
     func getOptions() -> [Option] {
         let level = getCurrentLevel()
-        let errorString = [Option(brief: "Have you tried dying?", description: "Have you tried dying?"), Option(brief: "Google where to buy a rope", description: "Have you tried dying?"), Option(brief: "Buy a strong fan", description: "Have you tried dying?")]
+        let errorString = [Option(brief: "Goal Completed!", description: "Goal Completed!"), Option(brief: "Goal Completed!", description: "Goal Completed!"), Option(brief: "Goal Completed!", description: "Goal Completed!")]
         guard let data = goal else {
             print("Oh No! Error!")
             return errorString

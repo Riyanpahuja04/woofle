@@ -20,7 +20,7 @@ struct SignUpOptoions: View {
             .foregroundColor(Color(red: 0.16, green: 0.16, blue: 0.22))
         
         Spacer()
-            .frame(height: 43)
+            .frame(height: 30)
         
         HStack(spacing: 51) {
             ZStack {
@@ -75,7 +75,7 @@ struct SignUpOptoions: View {
         
         
         Spacer()
-            .frame(height: 40)
+            .frame(height: 30)
 
 
     }
