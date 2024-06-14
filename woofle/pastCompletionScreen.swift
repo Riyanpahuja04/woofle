@@ -29,14 +29,13 @@ struct pastCompletionScreen: View {
         
         
         var body: some View {
-            ScrollView {
             
                 ZStack {
                     Color(_backgroundColor)
                         
                     Image("TopBgActivity")
                         .resizable()
-                        .offset(y:-100)
+//                        .offset(y:-100)
         
                     
                     VStack(spacing: 5) {
@@ -104,8 +103,6 @@ struct pastCompletionScreen: View {
                     .safeAreaPadding(.top, 68)
                 }
                 .ignoresSafeArea()
-            }
-            .ignoresSafeArea()
     }
 
     

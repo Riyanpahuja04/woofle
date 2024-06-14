@@ -83,20 +83,11 @@ struct WhyDownloadScreen: View {
                         
                         Spacer().frame(minWidth: 0, maxWidth: 25)
                         
-                        Button("Submit") {
+                        WoofleActionButton(text: "Submit") {
                             if selectedButtonState.values.contains(true) {
                                 canNavigate = true
                             }
                         }
-                        .frame(minWidth: 160, maxWidth: .infinity)
-                        .padding(.horizontal, 25)
-                        .padding(.vertical, 14)
-                        .foregroundColor(.white)
-                        .background(currentButtonColor())
-                        .font(.system(size: 16))
-                        .fontWeight(.semibold)
-                        .cornerRadius(8)
-                        .scaledToFit()
                         
                         Spacer().frame(minWidth: 0, maxWidth: 25)
                         

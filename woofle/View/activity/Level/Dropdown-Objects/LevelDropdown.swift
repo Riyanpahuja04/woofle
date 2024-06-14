@@ -66,16 +66,17 @@ struct LevelDropdown: View {
                 
             }
             
-            Image(systemName: "chevron.down")
-                .font(.title)
-                .padding(.horizontal, 30)
-                .foregroundColor(_dropdownImageColor)
-                .padding(.top, 200 + 20)
-                .onTapGesture{
-                    withAnimation(.interpolatingSpring) {
-                        dropdownViewModel.currentMenu = 1
-                    }
+            Button(action: {
+                withAnimation(.interpolatingSpring) {
+                    dropdownViewModel.currentMenu = 1
                 }
+            }, label: {
+                Image(systemName: "chevron.down")
+                    .font(.title)
+                    .padding(.horizontal, 30)
+                    .foregroundColor(_dropdownImageColor)
+                    .padding(.top, 200 + 20)
+            })
             
         }.padding(.top, -40)
         ZStack {

@@ -45,16 +45,17 @@ struct LevelDropdownNoActivity: View {
                     .padding(.horizontal, 20)
             }
             
-            Image(systemName: "chevron.down")
-                .font(.title)
-                .padding(.horizontal, 30)
-                .foregroundColor(_dropdownImageColor)
-                .padding(.top, 100 + 20)
-                .onTapGesture{
-                    withAnimation(.interpolatingSpring) {
-                        dropdownViewModel.currentMenu = 2
-                    }
+            Button(action: {
+                withAnimation(.interpolatingSpring) {
+                    dropdownViewModel.currentMenu = 2
                 }
+            }, label: {
+                Image(systemName: "chevron.down")
+                    .font(.title)
+                    .padding(.horizontal, 30)
+                    .foregroundColor(_dropdownImageColor)
+                    .padding(.top, 100 + 20)
+            })
                 
         }
         .padding(.top, -40)

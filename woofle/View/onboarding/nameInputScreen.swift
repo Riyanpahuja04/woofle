@@ -67,21 +67,11 @@ struct nameInputScreen: View {
                 
                 Spacer().frame(minWidth: 0, maxWidth: 25)
                 
-                Button("Submit")
-                {
-                    if !userInputText.isEmpty && userInputText.count <= 30 {
+                WoofleActionButton(text: "Submit") {
+                    if !userInputText.isEmpty && userInputText.count <= 60 {
                         canNavigate = true
                     }
                 }
-                .frame(minWidth: 160, maxWidth: .infinity)
-                .padding(.horizontal, 25)
-                .padding(.vertical, 14)
-                .foregroundColor(.white)
-                .background(currentButtonColor())
-                .font(.system(size: 16))
-                .fontWeight(.semibold)
-                .cornerRadius(8)
-                .scaledToFit()
                 
                 Spacer().frame(minWidth: 0, maxWidth: 25)
                 

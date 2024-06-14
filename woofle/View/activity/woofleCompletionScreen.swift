@@ -16,9 +16,9 @@ struct woofleCompletionScreen: View {
     
     var body: some View {
         
+        
         ZStack {
-
-            RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/10.0/*@END_MENU_TOKEN@*/)
+            RoundedRectangle(cornerRadius: 10)
                 .foregroundColor(_defaultBackgroundColor)
                 .frame(height: 240)
                 .padding(30)
@@ -33,12 +33,12 @@ struct woofleCompletionScreen: View {
                         .frame(width: 200, height: 250)
                         .shadow(color: .circleYellow, radius: 20)
                         .offset(y: bouncing ? -200 : -180)
-                        .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true), value: bouncing)
+//                        .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true), value: bouncing)
                         .onAppear {
                             self.bouncing.toggle()
                             self.counter += 1
                         }
-                    .confettiCannon(counter: $counter)
+                        .confettiCannon(counter: $counter, num: 50, openingAngle: Angle(degrees: 0), closingAngle: Angle(degrees: 360), radius: 200)
                 }
 
             VStack {
@@ -76,6 +76,7 @@ struct woofleCompletionScreen: View {
                 
             
         }
+        .navigationBarBackButtonHidden(true)
         
     }
     
